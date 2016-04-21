@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>scala_text previews</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  </head>
+  <body>
+    <ul id="branches">
+    </ul>
+  </body>
+
+<script>
+(function(){
+  var callback = function(data){
+    for(var i = 0; i < data.tree.length; i++){
+      var tree = data.tree[i]
+      if(tree.type === "tree"){
+        var path = tree.path
+        $("#branches").append("<li><a target='_blank' href='" + path + "'>" + path + "</a></li>")
+      }
+    }
+  }
+  $.get("https://api.github.com/repos/dwango/scala_text_previews/git/trees/gh-pages", {}, callback)
+})()
+</script>
+</html>
