@@ -4,7 +4,7 @@
 		module="trait-refactored-example-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160522130051"
+		publication="20160523083637"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
