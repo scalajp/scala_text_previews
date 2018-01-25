@@ -47,9 +47,9 @@ def average[A](lst: List[A])(implicit m: Additive[A]): A = {
 ```
 
 残念ながら、このコードはコンパイルを通りません。何故ならば、 `A` 型の値を `A` 型で割ろうとしているのですが、その方法がわからないから
-です。ここで、`Additive` をより一般化して、引き算、掛け算、割り算をサポートした型 `Num` を考えてみます。`Num` は次のようになるでしょう。
-ここで、 `Nums` は、対話環境でコンパニオンクラス/オブジェクトを扱うために便宜的に作った名前空間であり、通常のScalaプログラムでは必要
-ありません。
+です。ここで、`Additive` をより一般化して、引き算、掛け算、割り算をサポートした型 `Num` を考えてみます。掛け算の
+メソッドを `multiply` 、割り算のメソッドを `divide` とすると、 `Num` は次のようになるでしょう。
+ここで、 `Nums` は、対話環境でコンパニオンクラス/オブジェクトを扱うために便宜的に作った名前空間であり、通常のScalaプログラムでは必要ありません。
 
 ```scala
 scala> object Nums {
@@ -80,9 +80,8 @@ scala> object Nums {
 defined object Nums
 ```
 
-また、 `average` 関数は、リストの長さ、つまり整数で割る必要があるので、整数を `A` 型に変換するための型
-`FromInt` も用意します。 `FromInt` は次のようになります。 `to` は `Int` 型を対象の型に変換するメソッド
-です。
+また、 `average` メソッドは、リストの長さ、つまり整数で割る必要があるので、整数を `A` 型に変換するための型
+`FromInt` も用意します。 `FromInt` は次のようになります。 `to` は `Int` 型を対象の型に変換するメソッドです。
 
 ```scala
 scala> object FromInts {
@@ -127,4 +126,24 @@ scala> average(List(1.5, 2.5, 3.5))
 res1: Double = 0.0
 ```
 
-このようにして、複数の型クラスを組み合わせることで、より大きな柔軟性を手に入れることができました。
+このようにして、複数の型クラスを組み合わせることで、より大きな柔軟性を手に入れることができました。ちなみに、
+上記のコードは、context boundsというシンタックスシュガーを使うことで、次のように書き換えることもできます。
+
+```scala
+scala> import Nums._
+import Nums._
+
+scala> import FromInts._
+import FromInts._
+
+scala> def average[A:Num:FromInt](lst: List[A]): A = {
+     |   val a = implicitly[Num[A]]
+     |   val b = implicitly[FromInt[A]]
+     |   val length = lst.length
+     |   a.divide(lst.foldLeft(a.zero)((x, y) => a.plus(x, y)), b.to(length))
+     | }
+average: [A](lst: List[A])(implicit evidence$1: Nums.Num[A], implicit evidence$2: FromInts.FromInt[A])A
+```
+
+implicit parameterの名前 `a` と `b` が引数から見えなくなりましたが、 `implicitly[Type]` とすることで、
+`Type` 型のimplicit paramerterの値を取得することができます。
