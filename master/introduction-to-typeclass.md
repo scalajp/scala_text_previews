@@ -192,9 +192,9 @@ scala> import FromInts._
 import FromInts._
 
 scala> def median[A:Num:Ordering:FromInt](lst: List[A]): A = {
-     |   val a = implicitly[Num[A]]
-     |   val b = implicitly[Ordering[A]]
-     |   val c = implicitly[FromInt[A]]
+     |   val num = implicitly[Num[A]]
+     |   val ord = implicitly[Ordering[A]]
+     |   val int = implicitly[FromInt[A]]
      |   val size = lst.size
      |   require(size > 0)
      |   val sorted = lst.sorted
@@ -203,7 +203,7 @@ scala> def median[A:Num:Ordering:FromInt](lst: List[A]): A = {
      |   } else {
      |     val fst = sorted((size / 2) - 1)
      |     val snd = sorted((size / 2))
-     |     a.divide(a.plus(fst, snd), c.to(2))
+     |     num.divide(num.plus(fst, snd), int.to(2))
      |   }
      | }
 median: [A](lst: List[A])(implicit evidence$1: Nums.Num[A], implicit evidence$2: Ordering[A], implicit evidence$3: FromInts.FromInt[A])A
