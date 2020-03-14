@@ -532,7 +532,7 @@ p1 + p2
 }
 
 <span class="hljs-keyword">val</span> adder = <span class="hljs-keyword">new</span> <span class="hljs-type">Adder</span>()
-<span class="hljs-comment">// adder: Adder = repl.Session$App$Adder$1@1c4882d</span>
+<span class="hljs-comment">// adder: Adder = repl.Session$App$Adder$1@12a31277</span>
 
 adder.add(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)
 <span class="hljs-comment">// res1: Int = 5</span>
@@ -549,7 +549,7 @@ fun(<span class="hljs-number">3</span>)
 }
 
 <span class="hljs-keyword">val</span> adder = <span class="hljs-keyword">new</span> <span class="hljs-type">Adder</span>()
-<span class="hljs-comment">// adder: Adder = repl.Session$App$Adder$2@16d5240d</span>
+<span class="hljs-comment">// adder: Adder = repl.Session$App$Adder$2@34edadc</span>
 
 adder.add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
 <span class="hljs-comment">// res3: Int = 5</span>
@@ -611,27 +611,6 @@ fun(<span class="hljs-number">3</span>)
     println(<span class="hljs-string">&quot;B&quot;</span>)
   }
 }
-<span class="hljs-comment">// error: Point is already defined as class Point</span>
-<span class="hljs-comment">// class Point(val x: Int, val y: Int)</span>
-<span class="hljs-comment">// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-<span class="hljs-comment">// error: Point is already defined as class Point</span>
-<span class="hljs-comment">// class Point(val x: Int, val y: Int) {</span>
-<span class="hljs-comment">// ^</span>
-<span class="hljs-comment">// error: Point is already defined as class Point</span>
-<span class="hljs-comment">// class Point(val x: Int, val y: Int) {</span>
-<span class="hljs-comment">// ^</span>
-<span class="hljs-comment">// error: Adder is already defined as class Adder</span>
-<span class="hljs-comment">// class Adder {</span>
-<span class="hljs-comment">// ^</span>
-<span class="hljs-comment">// error: adder is already defined as value adder</span>
-<span class="hljs-comment">// val adder = new Adder()</span>
-<span class="hljs-comment">//     ^^^^^</span>
-<span class="hljs-comment">// error: fun is already defined as value fun</span>
-<span class="hljs-comment">// val fun: Int =&gt; Int = adder.add(2, _)</span>
-<span class="hljs-comment">//     ^^^</span>
-<span class="hljs-comment">// error: BPrinter is already defined as class BPrinter</span>
-<span class="hljs-comment">// class BPrinter() extends APrinter {</span>
-<span class="hljs-comment">// ^</span>
 </code></pre>
 <p>Java&#x3067;&#x306F;&#x3057;&#x3070;&#x3057;&#x3070;&#x3001;&#x6C17;&#x4ED8;&#x304B;&#x305A;&#x306B;&#x65E2;&#x5B58;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30E9;&#x30A4;&#x30C9;&#x3059;&#x308B;&#x3064;&#x3082;&#x308A;&#x3067;&#x65B0;&#x3057;&#x3044;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;&#x3068;&#x3044;&#x3046;&#x30DF;&#x30B9;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;Scala&#x3067;&#x306F;<code>override</code>&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x8A00;&#x8A9E;&#x30EC;&#x30D9;&#x30EB;&#x3067;&#x3053;&#x306E;&#x554F;&#x984C;&#x306B;&#x5BFE;&#x51E6;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3059;&#x3002;</p>
 <h3 id="class_ex1"><a name="class_ex1" class="plugin-anchor" href="#class_ex1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7DF4;&#x7FD2;&#x554F;&#x984C; </h3>
@@ -699,7 +678,7 @@ println(p.z) <span class="hljs-comment">// 30</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"クラス","level":"1.9","depth":1,"next":{"title":"オブジェクト","level":"1.10","depth":1,"path":"object.md","ref":"object.md","articles":[]},"previous":{"title":"Scalaの制御構文","level":"1.8","depth":1,"path":"control-syntax.md","ref":"control-syntax.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./gitbook","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"class.md","mtime":"2020-02-29T08:19:41.648Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-02-29T08:20:11.660Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"クラス","level":"1.9","depth":1,"next":{"title":"オブジェクト","level":"1.10","depth":1,"path":"object.md","ref":"object.md","articles":[]},"previous":{"title":"Scalaの制御構文","level":"1.8","depth":1,"path":"control-syntax.md","ref":"control-syntax.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./gitbook","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"class.md","mtime":"2020-03-14T07:34:20.037Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-03-14T07:34:48.649Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

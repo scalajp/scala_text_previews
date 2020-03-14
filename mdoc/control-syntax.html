@@ -792,59 +792,6 @@ lst <span class="hljs-keyword">match</span> {
   <span class="hljs-keyword">case</span> <span class="hljs-type">List</span>(a) | <span class="hljs-type">Some</span>(a) =&gt;
     println(a)
 }
-<span class="hljs-comment">// error: age  is already defined as variable age</span>
-<span class="hljs-comment">// var age: Int = 5</span>
-<span class="hljs-comment">// ^^^^^^^^^^^^^^^^</span>
-<span class="hljs-comment">// error: lst is already defined as value lst</span>
-<span class="hljs-comment">// val lst = List(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)</span>
-<span class="hljs-comment">//     ^^^</span>
-<span class="hljs-comment">// error: lst is already defined as value lst</span>
-<span class="hljs-comment">// val lst = List(List(&quot;A&quot;), List(&quot;B&quot;, &quot;C&quot;))</span>
-<span class="hljs-comment">//     ^^^</span>
-<span class="hljs-comment">// error: ambiguous reference to overloaded definition,</span>
-<span class="hljs-comment">// both variable age in object App of type =&gt; &lt;error&gt;</span>
-<span class="hljs-comment">// and  variable age in object App of type =&gt; Int</span>
-<span class="hljs-comment">// match expected type ?</span>
-<span class="hljs-comment">// if(age &lt; 18) {</span>
-<span class="hljs-comment">//    ^^^</span>
-<span class="hljs-comment">// error: ambiguous reference to overloaded definition,</span>
-<span class="hljs-comment">// both variable age in object App of type =&gt; &lt;error&gt;</span>
-<span class="hljs-comment">// and  variable age in object App of type =&gt; Int</span>
-<span class="hljs-comment">// match expected type ?</span>
-<span class="hljs-comment">// if(age &lt; 18) {</span>
-<span class="hljs-comment">//    ^^^</span>
-<span class="hljs-comment">// error: ambiguous reference to overloaded definition,</span>
-<span class="hljs-comment">// both variable age in object App of type =&gt; &lt;error&gt;</span>
-<span class="hljs-comment">// and  variable age in object App of type =&gt; Int</span>
-<span class="hljs-comment">// match expected type ?</span>
-<span class="hljs-comment">// if(1 &lt;= age &amp;&amp; age &lt;= 6 &amp;&amp; !isSchoolStarted) {</span>
-<span class="hljs-comment">//         ^^^</span>
-<span class="hljs-comment">// error: ambiguous reference to overloaded definition,</span>
-<span class="hljs-comment">// both variable age in object App of type =&gt; &lt;error&gt;</span>
-<span class="hljs-comment">// and  variable age in object App of type =&gt; Int</span>
-<span class="hljs-comment">// match expected type ?</span>
-<span class="hljs-comment">// if(1 &lt;= age &amp;&amp; age &lt;= 6 &amp;&amp; !isSchoolStarted) {</span>
-<span class="hljs-comment">//                ^^^</span>
-<span class="hljs-comment">// error: ambiguous reference to overloaded definition,</span>
-<span class="hljs-comment">// both method loopFrom0To9 in object App of type ()Unit</span>
-<span class="hljs-comment">// and  method loopFrom0To9 in object App of type ()Unit</span>
-<span class="hljs-comment">// match argument types ()</span>
-<span class="hljs-comment">// loopFrom0To9()</span>
-<span class="hljs-comment">// ^^^^^^^^^^^^</span>
-<span class="hljs-comment">// error: illegal variable in pattern alternative</span>
-<span class="hljs-comment">//   case List(a) | Some(a) =&gt;</span>
-<span class="hljs-comment">//             ^</span>
-<span class="hljs-comment">// error: illegal variable in pattern alternative</span>
-<span class="hljs-comment">//   case List(a) | Some(a) =&gt;</span>
-<span class="hljs-comment">//                       ^</span>
-<span class="hljs-comment">// error: method indexOf is defined twice;</span>
-<span class="hljs-comment">//   the conflicting method indexOf was defined at line 50:5</span>
-<span class="hljs-comment">// def indexOf(array: Array[String], target: String): Int = {</span>
-<span class="hljs-comment">// ^</span>
-<span class="hljs-comment">// error: method loopFrom0To9 is defined twice;</span>
-<span class="hljs-comment">//   the conflicting method loopFrom0To9 was defined at line 36:5</span>
-<span class="hljs-comment">// def loopFrom0To9(): Unit = {</span>
-<span class="hljs-comment">// ^</span>
 </code></pre>
 <p>&#x5024;&#x3092;&#x53D6;&#x308A;&#x51FA;&#x3055;&#x306A;&#x3044;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x306F;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
 <pre><code class="lang-scala">(<span class="hljs-type">List</span>(<span class="hljs-string">&quot;a&quot;</span>): <span class="hljs-type">Any</span>) <span class="hljs-keyword">match</span> {
@@ -975,7 +922,7 @@ obj <span class="hljs-keyword">match</span> {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scalaの制御構文","level":"1.8","depth":1,"next":{"title":"クラス","level":"1.9","depth":1,"path":"class.md","ref":"class.md","articles":[]},"previous":{"title":"記法","level":"1.7","depth":1,"path":"notation.md","ref":"notation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./gitbook","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"control-syntax.md","mtime":"2020-02-29T08:19:33.935Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-02-29T08:20:11.660Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scalaの制御構文","level":"1.8","depth":1,"next":{"title":"クラス","level":"1.9","depth":1,"path":"class.md","ref":"class.md","articles":[]},"previous":{"title":"記法","level":"1.7","depth":1,"path":"notation.md","ref":"notation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./gitbook","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"control-syntax.md","mtime":"2020-03-14T07:34:12.766Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2020-03-14T07:34:48.649Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
