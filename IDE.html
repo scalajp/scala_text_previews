@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Introduction · Scala研修テキスト</title>
+        <title>IDE(IntelliJ IDEA) · Scala研修テキスト</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.6.16">
@@ -66,8 +66,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="introduction-to-scala.html" />
+    <link rel="next" href="notation.html" />
     
+    
+    <link rel="prev" href="sbt-compile-execute.html" />
     
 
     </head>
@@ -96,7 +98,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -161,7 +163,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="IDE.html">
+        <li class="chapter active" data-level="1.6" data-path="IDE.html">
             
                 <a href="IDE.html">
             
@@ -438,7 +440,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >IDE(IntelliJ IDEA)</a>
     </h1>
 </div>
 
@@ -453,52 +455,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h1 id="はじめに"><a name="はじめに" class="plugin-anchor" href="#はじめに"><i class="fa fa-link" aria-hidden="true"></i></a>はじめに</h1>
-<p>本資料は、Scala初学者向けの学習テキストです。本資料を読み進めることで、</p>
-<ul>
-<li>プログラミング言語Scalaを用いたアプリケーションを開発できるようになること</li>
-<li><a href="https://book.impress.co.jp/books/1116101021" target="_blank">『Scala スケーラブルプログラミング』（第三版）</a>（通称コップ本）を通読して理解できるようになること</li>
-<li><a href="https://book.impress.co.jp/books/1114101091" target="_blank">『Scala関数型デザイン&amp;プログラミング ―Scalazコントリビューターによる関数型徹底ガイド』</a>（通称FP in Scala）を通読して理解できるようになること</li>
-</ul>
-<p>が主な目的です。</p>
-<p>『Scalaスケーラブルプログラミング』は、Scalaの言語設計者であるOderskyさんらにより書かれた解説書で、Scalaの言語機能について詳細に書かれており、Scalaプログラマにとってはバイブルと言える本です。この本は決して読みにくい本ではないのですが、本の分量が多いのと、関数型など他の言語でのプログラミング経験がないとわかりにくい箇所があります。本テキストを通じてScalaに入門することによって、この『コップ本』も読みやすくなるでしょう。</p>
-<p>『Scala関数型デザイン&amp;プログラミング』は、<a href="https://github.com/scalaz/scalaz" target="_blank">Scalaz</a><sup><a href="#fn_1" id="reffn_1">1</a></sup>コントリビューターであるPaul Chiusanoさん、Rúnar Bjarnasonさんらにより書かれた関数型プログラミングについての本です。あくまで関数型プログラミングの本なのでScalaやScalazについての解説はあまりありません。ただしScalaについての最低限の文法の説明は随時行われています。「本文中で一から自作」というスタンスが徹底されており、型クラスのみならず、List、Stream、Futureなど、Scala標準ライブラリに存在するものまで、一から自作しています。そのため「単にパターンを覚えて使う」のではなく、それぞれの関数型の色々な型クラスやパターンが「なぜそういう仕組になっているのか？」という根本的な考え方が分かるようになっています。細かいScala自体の言語仕様やテクニック、（標準ライブラリと外部のライブラリ含めた）既存の実在するライブラリの使い方は一切説明せず、とにかく「考え方や概念」のみを重点的に説明しているので、この本を読んで身につけた知識は古くなりにくいという点でおすすめできる一冊です。</p>
-<p>読者層としては、</p>
-<ul>
-<li>大学の情報学部卒である</li>
-<li>Java言語の基本知識がある</li>
-<li>何か意味のあるアプリケーションを作ったことがある</li>
-<li>趣味でTwitter APIなどを触ったり、プログラミングを行っている</li>
-</ul>
-<p>人（相当）を仮定しています。なお、上記の指標はこの資料を読むにあたってのあくまで目安であり、特に大学の情報学部卒でなければ理解できないといったことはありません。ただし、本資料は1つ以上のプログラミング言語でアプリケーションを作れることを最低限の前提にしていますので、その点留意ください。</p>
-<h2 id="フォーマット"><a name="フォーマット" class="plugin-anchor" href="#フォーマット"><i class="fa fa-link" aria-hidden="true"></i></a>フォーマット</h2>
-<p>このテキストは下記のフォーマットで提供されています。</p>
-<ul>
-<li>HTML版：<a href="https://scala-text.github.io/scala_text/" target="_blank">https://scala-text.github.io/scala_text/</a></li>
-<li>PDF版：<a href="https://scala-text.github.io/scala_text_pdf/scala_text.pdf" target="_blank">https://scala-text.github.io/scala_text_pdf/scala_text.pdf</a></li>
-<li>EPUB版：<a href="https://scala-text.github.io/scala_text/scala_text.epub" target="_blank">https://scala-text.github.io/scala_text/scala_text.epub</a></li>
-</ul>
-<h2 id="フィードバック"><a name="フィードバック" class="plugin-anchor" href="#フィードバック"><i class="fa fa-link" aria-hidden="true"></i></a>フィードバック</h2>
-<ul>
-<li>誤字・脱字の指摘や修正、および明確な技術的誤りの指摘や修正：<ul>
-<li><a href="https://github.com/scala-text/scala_text" target="_blank">scala_text</a>のissue欄およびpull requestへ</li>
-</ul>
-</li>
-<li>それ以外の改善要望や感想：<ul>
-<li><a href="https://github.com/scala-text/scala_text/discussions/235" target="_blank">専用discussions</a>へ</li>
-</ul>
-</li>
-</ul>
-<p>よろしくお願いいたします。</p>
-<h2 id="ライセンス"><a name="ライセンス" class="plugin-anchor" href="#ライセンス"><i class="fa fa-link" aria-hidden="true"></i></a>ライセンス</h2>
-<p>本文書は、<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.ja" target="_blank">CC BY-NC-SA 3.0</a></p>
-<p><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png" alt="CC-BY-NC-SA"></p>
-<p>の元で配布されています。ただし、直接の利益を得ることを目的としない研修などに利用することは可能とします。直接の利益というのは、研修自体を実費以上の金額で提供する行為を指します。社内でのScala研修などは一般的に直接の利益を得ることを目的としないので、断りなく使っていただいて構いません。</p>
-<blockquote id="fn_1">
-<sup>1</sup>. 関数型プログラミングを行うための純粋なデータ構造や、ファンクターやモナドといった型クラスとそのインスタンスを提供するライブラリのこと。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
-</blockquote>
-<h2 id="謝辞"><a name="謝辞" class="plugin-anchor" href="#謝辞"><i class="fa fa-link" aria-hidden="true"></i></a>謝辞</h2>
-<p>本資料は、ドワンゴ社が作成した新卒エンジニア向けのScala研修資料が日本のScalaコミュニティに寄贈されたものです。</p>
+                                <html><head></head><body><h1 id="ide-integrated-development-environment"><a name="ide-integrated-development-environment" class="plugin-anchor" href="#ide-integrated-development-environment"><i class="fa fa-link" aria-hidden="true"></i></a>IDE (Integrated Development Environment)</h1>
+<p>Scalaで本格的にコーディングする際は、エディタ（Emacs, Vim, Sublime Text）を使っても構いませんが、
+IDEを使うとより開発が楽になります。Scalaで開発する際のIDEとしてはIntelliJ IDEA + Scala Pluginと
+Scala IDE for Eclipseの2種類がありますが、IntelliJ IDEAの方がIDEとして高機能であり、安定性も高いため、ここではIntelliJ IDEA + Scala Pluginのインストール方法と基本的な操作について説明します。</p>
+<p>補足：なお、本節でIDEをインストール後も説明は<strong>REPLを使って行います</strong>が、IDEベースで学習したい場合は適宜コードをIDEのエディタに貼り付けて実行するなどしてください。</p>
+<p>IntelliJ IDEAは<a href="https://www.jetbrains.com/" target="_blank">JetBrains社</a>が開発しているIDEで、Java用
+IDEとして根強い人気を誇っています。有料ですが多機能のUltimate Editionやオープンソースで無料のCommunity Editionがあります。Community Editionでも、ScalaプラグインをインストールすることでScala開発をすることができるので、本稿ではCommunity Editionをインストールしてもらいます。</p>
+<p>まず、IntelliJ IDEAの<a href="https://www.jetbrains.com/idea/download/" target="_blank">Downloadページ</a>に移動します。Windows, Mac OS X, Linuxの3つのタブがあるので、それぞれのOSに応じたタブを選択して、「Download Community」ボタンをクリックしてください。以降、IDEAのスクリーンショットがでてきますが、都合上、Mac OS X上でのスクリーンショットであることをご承知ください。</p>
+<p><img src="img/IntelliJ_IDEA_Download.png" alt="IntelliJ IDEAのダウンロードページ"></p>
+<p>ボタンをクリックすると、<code>ideaIC-${version}.dmg</code>（<code>${version}</code>はその時点でのIDEAのバージョン）というファイルのダウンロードが始まるので（Windowsの場合、インストーラのexeファイル）、ダウンロードが終わるのを待ちます。ダウンロードが終了したら、ファイルをダブルクリックして、指示にしたがってインストールします。</p>
+<p><img src="img/IntelliJ_IDEA_Install.png" alt="IntelliJ IDEAのインストール"></p>
+<p>インストールが終わったら起動します。スプラッシュスクリーンが現れてしばらく待つと、</p>
+<p><img src="img/IntelliJ_IDEA_Startup.png" alt="IntelliJ IDEAの起動画面"></p>
+<p>のような画面が表示されるはずです。ここまでで、IDEAのインストールは完了です。次に、IDEAの
+Scalaプラグインをインストールする必要があります。起動画面の<code>Configure-&gt;Plugins</code>をクリックしてください。</p>
+<p><img src="img/IntelliJ_IDEA_Startup_Configure.png" alt="IntelliJ IDEAの起動画面のConfigure"></p>
+<p>次のような画面が現れるので、その中の「Browse repositories」をクリックします。</p>
+<p><img src="img/IntelliJ_IDEA_Plugins.png" alt="IntelliJ IDEAのPluginsの画面"></p>
+<p>インストール可能なプラグインの一覧が現れるので、検索窓から<code>scala</code>で絞り込みをかけて、「Install」でインストールします（スクリーンショット参照）</p>
+<p><img src="img/IntelliJ_IDEA_Browse_Repositories.png" alt="IntelliJ IDEAのBrowse Repositoriesの画面"></p>
+<p>Scalaプラグインのダウンロード・インストールには若干時間がかかるのでしばらく待ちます。ダウンロード・インストールが完了したら、次のような画面が現れるので、「Restart IntelliJ IDEA」をクリックします。</p>
+<p><img src="img/IntelliJ_IDEA_Plugins_Changed.png" alt="IntelliJ IDEAの再起動"></p>
+<p>再起動後、起動画面で「Create New Project」をクリックし、次の画面のようになっていればインストールは成功です。</p>
+<p><img src="img/IntelliJ_IDEA_New_Project.png" alt="IntelliJ IDEAのCreate New Project"></p>
+<h2 id="sbtプロジェクトのインポート"><a name="sbtプロジェクトのインポート" class="plugin-anchor" href="#sbtプロジェクトのインポート"><i class="fa fa-link" aria-hidden="true"></i></a>sbtプロジェクトのインポート</h2>
+<p>次に、単純なsbtプロジェクトをIntelliJ IDEAにインポートしてみます。今回は、あらかじめ用意しておいた<code>scala-sandbox</code>プロジェクトを使います。<code>scala-sandbox</code>プロジェクトは
+<a href="https://github.com/scala-text/scala-sandbox" target="_blank">ここ</a>から<code>git clone</code>でcloneします。
+<code>scala-sandbox</code>プロジェクトは次のような構成になっているはずです。</p>
+<pre><code>scala-sandbox
+├── src/main/scala/HelloWorld.scala
+├── project/build.properties
+└── build.sbt
+</code></pre><p>この<code>scala-sandbox</code>ディレクトリをプロジェクトとしてIntelliJ IDEAに取り込みます。</p>
+<p>まず、IntelliJ IDEAの起動画面から、「Import Project」を選択します。</p>
+<p><img src="img/IntelliJ_IDEA_Import_Project.png" alt="Import Project"></p>
+<p>次に、以下のような画面が表示されるので、build.sbtをクリックして、OKします。</p>
+<p><img src="img/IntelliJ_IDEA_Select_File_Or_Directory_To_Import.png" alt="Select File or Directory to Import"></p>
+<p>すると、さらに次のような画面が表示されます。「Project JDK」が空の場合がありますが、その場合は、「New」を選択して自分で、JDKのホームディレクトリにあるJDKを指定します。</p>
+<p><img src="img/IntelliJ_IDEA_Import_Project_From_SBT.png" alt="Import Project From SBT.png"></p>
+<p>最後に、OKします。最初は、sbt自体のソースを取得などするため時間がかかりますが、しばらく待つとプロジェクト画面が開きます。そこから、<em>HelloWorld.scala</em>を選んでダブルクリックして、以下のように表示されれば成功です。</p>
+<p><img src="img/IntelliJ_IDEA_Editor_Hello_World.png" alt="Hello World.png)"></p>
+<p>このように、IntelliJ IDEAでは、sbtのプロジェクトをインポートしてIDE内で編集することができます。</p>
+<h2 id="プログラムを実行する"><a name="プログラムを実行する" class="plugin-anchor" href="#プログラムを実行する"><i class="fa fa-link" aria-hidden="true"></i></a>プログラムを実行する</h2>
+<p>最後に、このHelloWorldプログラムを実行します。<em>HelloWorld.scala</em>をIDEのエディタで開いた状態でメニューから<code>Run -&gt; Run</code>と選択します。</p>
+<p><img src="img/IntelliJ_IDEA_Run_Menu.png" alt="Run Menu"></p>
+<p>次のような画面が現れるので、<strong>Hello World</strong>を選択します。</p>
+<p><img src="img/IntelliJ_IDEA_Edit_Configuration_Hello_World.png" alt="Select Hello World"></p>
+<p>すると、Hello Worldプログラムの最初のコンパイルが始まるので少し待ちます。その後、次のような画面が表示されたら成功です。</p>
+<p><img src="img/IntelliJ_IDEA_Run_Hello_World.png" alt="Run Hello World"></p>
 </body></html>
                                 
                                 </section>
@@ -526,8 +531,12 @@
 
             
                 
+                <a href="sbt-compile-execute.html" class="navigation navigation-prev " aria-label="Previous page: sbtでプログラムをコンパイル・実行する">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="introduction-to-scala.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Scalaとは">
+                
+                <a href="notation.html" class="navigation navigation-next " aria-label="Next page: 記法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -538,7 +547,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Scalaとは","level":"1.2","depth":1,"path":"introduction-to-scala.md","ref":"introduction-to-scala.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"INTRODUCTION.md","mtime":"2020-12-16T07:47:58.569Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-16T07:48:27.337Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"IDE(IntelliJ IDEA)","level":"1.6","depth":1,"next":{"title":"記法","level":"1.7","depth":1,"path":"notation.md","ref":"notation.md","articles":[]},"previous":{"title":"sbtでプログラムをコンパイル・実行する","level":"1.5","depth":1,"path":"sbt-compile-execute.md","ref":"sbt-compile-execute.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"IDE.md","mtime":"2020-12-16T07:47:58.569Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-16T07:48:27.337Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
