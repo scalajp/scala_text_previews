@@ -1,0 +1,948 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>トレイトの応用編：依存性の注入によるリファクタリング · Scala研修テキスト</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.17">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="typeclass.html" />
+    
+    
+    <link rel="prev" href="exercises.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction-to-scala.html">
+            
+                <a href="introduction-to-scala.html">
+            
+                    
+                    Scalaとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="sbt-install.html">
+            
+                <a href="sbt-install.html">
+            
+                    
+                    sbtをインストールする
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    Scalaの基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="sbt-compile-execute.html">
+            
+                <a href="sbt-compile-execute.html">
+            
+                    
+                    sbtでプログラムをコンパイル・実行する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="IDE.html">
+            
+                <a href="IDE.html">
+            
+                    
+                    IDE(IntelliJ IDEA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="notation.html">
+            
+                <a href="notation.html">
+            
+                    
+                    記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="control-syntax.html">
+            
+                <a href="control-syntax.html">
+            
+                    
+                    Scalaの制御構文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    クラス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    オブジェクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="trait.html">
+            
+                <a href="trait.html">
+            
+                    
+                    トレイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="type-parameter.html">
+            
+                <a href="type-parameter.html">
+            
+                    
+                    型パラメータと変位指定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="collection.html">
+            
+                <a href="collection.html">
+            
+                    
+                    コレクションライブラリ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="case-class-and-pattern-matching.html">
+            
+                <a href="case-class-and-pattern-matching.html">
+            
+                    
+                    ケースクラスとパターンマッチング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    エラー処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="implicit.html">
+            
+                <a href="implicit.html">
+            
+                    
+                    Implicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="introduction-to-typeclass.html">
+            
+                <a href="introduction-to-typeclass.html">
+            
+                    
+                    型クラスへの誘い
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="future-and-promise.html">
+            
+                <a href="future-and-promise.html">
+            
+                    
+                    FutureとPromise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    テスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="java-interop.html">
+            
+                <a href="java-interop.html">
+            
+                    
+                    Javaとの相互運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    S99の案内
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.23" data-path="advanced-trait-di.html">
+            
+                <a href="advanced-trait-di.html">
+            
+                    
+                    トレイトの応用編：依存性の注入によるリファクタリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="typeclass.html">
+            
+                <a href="typeclass.html">
+            
+                    
+                    付録：様々な型クラスの紹介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >トレイトの応用編：依存性の注入によるリファクタリング</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="トレイトの応用編：依存性の注入によるリファクタリング"><a name="トレイトの応用編：依存性の注入によるリファクタリング" class="plugin-anchor" href="#トレイトの応用編：依存性の注入によるリファクタリング"><i class="fa fa-link" aria-hidden="true"></i></a>トレイトの応用編：依存性の注入によるリファクタリング</h1>
+<p>ここではトレイトの応用編として、大きなクラスをリファクタリングする過程を通してトレイトを実際どのように使っていくかを学んでいきましょう。さらに大規模システム開発で使われる依存性の注入という技法についても紹介します。</p>
+<h2 id="サンプルプログラム"><a name="サンプルプログラム" class="plugin-anchor" href="#サンプルプログラム"><i class="fa fa-link" aria-hidden="true"></i></a>サンプルプログラム</h2>
+<p>今回使われるサンプルプログラムは以下の場所にあります。実際に動かしたい場合は個々のディレクトリに入り、sbtを起動してください。</p>
+<p><a href="https://github.com/scala-text/scala_text/tree/master/src/example_projects/trait-example" target="_blank">リファクタリング前のプログラム</a></p>
+<p><a href="https://github.com/scala-text/scala_text/tree/master/src/example_projects/trait-refactored-example" target="_blank">リファクタリング後のプログラム</a></p>
+<h2 id="リファクタリング前のプログラムの紹介"><a name="リファクタリング前のプログラムの紹介" class="plugin-anchor" href="#リファクタリング前のプログラムの紹介"><i class="fa fa-link" aria-hidden="true"></i></a>リファクタリング前のプログラムの紹介</h2>
+<p>今回は今までより実践的なプログラムを考えてみましょう。ユーザーの登録と認証を管理する<code>UserService</code>というクラスです。</p>
+<pre><code class="lang-scala">scalaVersion := <span class="hljs-string">&quot;2.13.4&quot;</span>
+
+libraryDependencies ++= <span class="hljs-type">Seq</span>(
+  <span class="hljs-string">&quot;org.scalikejdbc&quot;</span> %% <span class="hljs-string">&quot;scalikejdbc&quot;</span> % <span class="hljs-string">&quot;3.5.0&quot;</span>,
+  <span class="hljs-string">&quot;org.mindrot&quot;</span>     %  <span class="hljs-string">&quot;jbcrypt&quot;</span>     % <span class="hljs-string">&quot;0.4&quot;</span>
+)
+</code></pre>
+<pre><code class="lang-scala"><span class="hljs-keyword">package</span> domain
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span>(<span class="hljs-params">id: <span class="hljs-type">Long</span>, name: <span class="hljs-type">String</span>, hashedPassword: <span class="hljs-type">String</span></span>)</span>
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">User</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(name: <span class="hljs-type">String</span>, hashedPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> =
+    <span class="hljs-type">User</span>(<span class="hljs-number">0</span>L, name, hashedPassword)
+}
+</code></pre>
+<pre><code class="lang-scala"><span class="hljs-keyword">package</span> domain
+
+<span class="hljs-keyword">import</span> org.mindrot.jbcrypt.<span class="hljs-type">BCrypt</span>
+<span class="hljs-keyword">import</span> scalikejdbc._
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserService</span> </span>{
+  <span class="hljs-keyword">val</span> maxNameLength = <span class="hljs-number">32</span>
+
+  <span class="hljs-comment">// ストレージ機能</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert</span></span>(user: <span class="hljs-type">User</span>): <span class="hljs-type">User</span> = <span class="hljs-type">DB</span> localTx { <span class="hljs-keyword">implicit</span> s =&gt;
+    <span class="hljs-keyword">val</span> id = <span class="hljs-string">sql&quot;&quot;</span><span class="hljs-string">&quot;insert into users (name, password) values (${user.name}, ${user.hashedPassword})&quot;</span><span class="hljs-string">&quot;&quot;</span>
+      .updateAndReturnGeneratedKey.apply()
+    user.copy(id = id)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">createUser</span></span>(rs: <span class="hljs-type">WrappedResultSet</span>): <span class="hljs-type">User</span> =
+    <span class="hljs-type">User</span>(rs.long(<span class="hljs-string">&quot;id&quot;</span>), rs.string(<span class="hljs-string">&quot;name&quot;</span>), rs.string(<span class="hljs-string">&quot;password&quot;</span>))
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = <span class="hljs-type">DB</span> readOnly { <span class="hljs-keyword">implicit</span> s =&gt;
+    <span class="hljs-string">sql&quot;&quot;</span><span class="hljs-string">&quot;select * from users where name = $name &quot;</span><span class="hljs-string">&quot;&quot;</span>
+      .map(createUser).single.apply()
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(id: <span class="hljs-type">Long</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = <span class="hljs-type">DB</span> readOnly { <span class="hljs-keyword">implicit</span> s =&gt;
+    <span class="hljs-string">sql&quot;&quot;</span><span class="hljs-string">&quot;select * from users where id = $id &quot;</span><span class="hljs-string">&quot;&quot;</span>
+      .map(createUser).single.apply()
+  }
+
+  <span class="hljs-comment">// パスワード機能</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashPassword</span></span>(rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> =
+    <span class="hljs-type">BCrypt</span>.hashpw(rawPassword, <span class="hljs-type">BCrypt</span>.gensalt())
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">checkPassword</span></span>(rawPassword: <span class="hljs-type">String</span>, hashedPassword: <span class="hljs-type">String</span>): <span class="hljs-type">Boolean</span> =
+    <span class="hljs-type">BCrypt</span>.checkpw(rawPassword, hashedPassword)
+
+  <span class="hljs-comment">// ユーザー登録</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = {
+    <span class="hljs-keyword">if</span> (name.length &gt; maxNameLength) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Exception</span>(<span class="hljs-string">&quot;Too long name!&quot;</span>)
+    }
+    <span class="hljs-keyword">if</span> (find(name).isDefined) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Exception</span>(<span class="hljs-string">&quot;Already registered!&quot;</span>)
+    }
+    insert(<span class="hljs-type">User</span>(name, hashPassword(rawPassword)))
+  }
+
+  <span class="hljs-comment">// ユーザー認証</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = {
+    find(name) <span class="hljs-keyword">match</span> {
+      <span class="hljs-keyword">case</span> <span class="hljs-type">None</span>       =&gt; <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Exception</span>(<span class="hljs-string">&quot;User not found!&quot;</span>)
+      <span class="hljs-keyword">case</span> <span class="hljs-type">Some</span>(user) =&gt;
+        <span class="hljs-keyword">if</span> (!checkPassword(rawPassword, user.hashedPassword)) {
+          <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">Exception</span>(<span class="hljs-string">&quot;Invalid password!&quot;</span>)
+        }
+        user
+    }
+  }
+}
+</code></pre>
+<p><code>UserService</code>は以下のような機能があります。</p>
+<ul>
+<li><code>register</code>メソッドはユーザーの登録をおこなうメソッドで、ユーザーの名前とパスワードを引数として受け取り、名前の最大長のチェックと既に名前が登録されているかどうかを調べて、ストレージに保存する</li>
+<li><code>login</code>メソッドはユーザーの認証をおこなうメソッドで、ユーザーの名前とパスワードを受け取り、ストレージに保存されているユーザーの中から同名のユーザーを見つけ出し、パスワードをチェックする</li>
+<li>この他のストレージ機能とパスワード機能のメソッドは内部的に使われるのみである</li>
+</ul>
+<p>上記のプログラムでは実際に動かすことができるように<a href="https://github.com/scalikejdbc/scalikejdbc" target="_blank">ScalikeJDBC</a>というデータベース用のライブラリとjBCryptというパスワースのハッシュ値を計算するライブラリが使われていますが、実装の詳細を理解する必要はありません。既にメソッドの実装を説明したことがある場合は実装を省略し<a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/Predef.scala#L345" target="_blank"><code>???</code></a>で書くことがあります。</p>
+<h2 id="リファクタリング：公開する機能を制限する"><a name="リファクタリング：公開する機能を制限する" class="plugin-anchor" href="#リファクタリング：公開する機能を制限する"><i class="fa fa-link" aria-hidden="true"></i></a>リファクタリング：公開する機能を制限する</h2>
+<p>さて、モジュール化という観点で<code>UserService</code>を見ると、どういった問題が考えられるでしょうか？</p>
+<p>1つはUserServiceが必要以上に情報を公開しているということです。
+<code>UserService</code>の役割は<code>register</code>メソッドを使ったユーザー登録と<code>login</code>メソッドを使ったユーザーの認証です。しかしストレージ機能である<code>insert</code>メソッドや<code>find</code>メソッドも公開してしまっています。</p>
+<p><code>register</code>メソッドはユーザーの名前の最大長や既にユーザーが登録されているかどうかチェックしていますが、<code>insert</code>メソッドはそういったチェックをせずにデータベースに保存しています。もし<code>insert</code>メソッドを直接使われた場合、想定外に名前が長いユーザーや、名前が重複したユーザーが保存されてしまいます。</p>
+<p><code>find</code>メソッドも同様の問題があります。
+<code>login</code>メソッドではなく直接<code>find</code>メソッドが使われた場合、パスワードのチェックなしにユーザーの情報を取得することができます。</p>
+<p>では、どのような修正が考えられるでしょうか。まず考えられるのは外部から使ってほしくないメソッドを<code>private</code>にすることです。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserService</span> </span>{
+  <span class="hljs-comment">// メソッドの実装は同じなので???で代用しています</span>
+  <span class="hljs-keyword">val</span> maxNameLength = <span class="hljs-number">32</span>
+
+  <span class="hljs-comment">// ストレージ機能</span>
+  <span class="hljs-keyword">private</span>[<span class="hljs-keyword">this</span>] <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert</span></span>(user: <span class="hljs-type">User</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-keyword">private</span>[<span class="hljs-keyword">this</span>] <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">createUser</span></span>(rs: <span class="hljs-type">WrappedResultSet</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-keyword">private</span>[<span class="hljs-keyword">this</span>] <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = ???
+
+  <span class="hljs-keyword">private</span>[<span class="hljs-keyword">this</span>] <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(id: <span class="hljs-type">Long</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = ???
+
+  <span class="hljs-comment">// パスワード機能</span>
+  <span class="hljs-keyword">private</span>[<span class="hljs-keyword">this</span>] <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashPassword</span></span>(rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = ???
+
+  <span class="hljs-keyword">private</span>[<span class="hljs-keyword">this</span>] <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">checkPassword</span></span>(rawPassword: <span class="hljs-type">String</span>, hashedPassword: <span class="hljs-type">String</span>): <span class="hljs-type">Boolean</span> = ???
+
+  <span class="hljs-comment">// ユーザー登録</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-comment">// ユーザー認証</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+}
+</code></pre>
+<p>これで<code>insert</code>メソッドや<code>find</code>メソッドは外部から呼びだすことができなくなったので、先ほどの問題は起きなくなりました。</p>
+<p>しかしトレイトを使って同じように公開したい機能を制限することもできます。まず、公開するメソッドだけを集めた新しいトレイト<code>UserService</code>を作ります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">UserService</span> </span>{
+  <span class="hljs-keyword">val</span> maxNameLength = <span class="hljs-number">32</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span>
+}
+</code></pre>
+<p>そして、このトレイトの実装クラス<code>UserServiceImpl</code>を作ります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserServiceImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">UserService</span> </span>{
+  <span class="hljs-comment">// メソッドの実装は同じなので???で代用しています</span>
+
+  <span class="hljs-comment">// ストレージ機能</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert</span></span>(user: <span class="hljs-type">User</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">createUser</span></span>(rs: <span class="hljs-type">WrappedResultSet</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = ???
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(id: <span class="hljs-type">Long</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = ???
+
+  <span class="hljs-comment">// パスワード機能</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashPassword</span></span>(rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = ???
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">checkPassword</span></span>(rawPassword: <span class="hljs-type">String</span>, hashedPassword: <span class="hljs-type">String</span>): <span class="hljs-type">Boolean</span> = ???
+
+  <span class="hljs-comment">// ユーザー登録</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-comment">// ユーザー認証</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+}
+</code></pre>
+<p><code>UserService</code>の利用者は実装クラスではなく公開トレイトのほうだけを参照するようにすれば、チェックされていないメソッドを使って不整合データができてしまう問題も起きません。</p>
+<p>このようにモジュールのインタフェースを定義し、公開する機能を制限するのもトレイトの使われ方の1つです。
+Javaのインタフェースと同じような使い方ですね。</p>
+<h3 id="リファクタリング：大きなモジュールを分割する"><a name="リファクタリング：大きなモジュールを分割する" class="plugin-anchor" href="#リファクタリング：大きなモジュールを分割する"><i class="fa fa-link" aria-hidden="true"></i></a>リファクタリング：大きなモジュールを分割する</h3>
+<p>次にこのモジュールの問題点として挙げられるのは、モジュールが多くの機能を持ちすぎているということです。
+<code>UserService</code>はユーザー登録とユーザー認証をおこなうサービスですが、付随してパスワードをハッシュ化したり、パスワードをチェックする機能も持っています。</p>
+<p>このパスワード機能は<code>UserService</code>以外でも使いたいケースが出てくるかもしれません。たとえばユーザーが重要な操作をした場合に再度パスワードを入力させ、チェックしたい場合などです。</p>
+<p>このような場合、1つのモジュールを複数のモジュールに分割することが考えられます。あたらしくパスワード機能だけを持つ<code>PasswordService</code>と<code>PasswordServiceImpl</code>を作ってみます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">package</span> domain
+
+<span class="hljs-keyword">import</span> org.mindrot.jbcrypt.<span class="hljs-type">BCrypt</span>
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">PasswordService</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashPassword</span></span>(rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">String</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">checkPassword</span></span>(rawPassword: <span class="hljs-type">String</span>, hashedPassword: <span class="hljs-type">String</span>): <span class="hljs-type">Boolean</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">PasswordServiceImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PasswordService</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hashPassword</span></span>(rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> =
+    <span class="hljs-type">BCrypt</span>.hashpw(rawPassword, <span class="hljs-type">BCrypt</span>.gensalt())
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">checkPassword</span></span>(rawPassword: <span class="hljs-type">String</span>, hashedPassword: <span class="hljs-type">String</span>): <span class="hljs-type">Boolean</span> =
+    <span class="hljs-type">BCrypt</span>.checkpw(rawPassword, hashedPassword)
+}
+</code></pre>
+<p>そして、先ほど作った<code>UserServiceImpl</code>に<code>PasswordServiceImpl</code>を継承して使うようにします。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserServiceImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">UserService</span> <span class="hljs-keyword">with</span> <span class="hljs-title">PasswordServiceImpl</span> </span>{
+  <span class="hljs-comment">// メソッドの実装は同じなので???で代用しています</span>
+
+  <span class="hljs-comment">// ストレージ機能</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert</span></span>(user: <span class="hljs-type">User</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">createUser</span></span>(rs: <span class="hljs-type">WrappedResultSet</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = ???
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(id: <span class="hljs-type">Long</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = ???
+
+  <span class="hljs-comment">// ユーザー登録</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-comment">// ユーザー認証</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+}
+</code></pre>
+<p>これでパスワード機能を分離することができました。分離したパスワード機能は別の用途で使うこともできるでしょう。</p>
+<p>同じようにストレージ機能も<code>UserRepository</code>として分離してみます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">package</span> domain
+
+<span class="hljs-keyword">import</span> scalikejdbc._
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">UserRepository</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert</span></span>(user: <span class="hljs-type">User</span>): <span class="hljs-type">User</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>]
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(id: <span class="hljs-type">Long</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>]
+}
+
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">UserRepositoryImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">UserRepository</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert</span></span>(user: <span class="hljs-type">User</span>): <span class="hljs-type">User</span> = <span class="hljs-type">DB</span> localTx { <span class="hljs-keyword">implicit</span> s =&gt;
+    <span class="hljs-keyword">val</span> id = <span class="hljs-string">sql&quot;&quot;</span><span class="hljs-string">&quot;insert into users (name, password) values (${user.name}, ${user.hashedPassword})&quot;</span><span class="hljs-string">&quot;&quot;</span>
+      .updateAndReturnGeneratedKey.apply()
+    user.copy(id = id)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">createUser</span></span>(rs: <span class="hljs-type">WrappedResultSet</span>): <span class="hljs-type">User</span> =
+    <span class="hljs-type">User</span>(rs.long(<span class="hljs-string">&quot;id&quot;</span>), rs.string(<span class="hljs-string">&quot;name&quot;</span>), rs.string(<span class="hljs-string">&quot;password&quot;</span>))
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(name: <span class="hljs-type">String</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = <span class="hljs-type">DB</span> readOnly { <span class="hljs-keyword">implicit</span> s =&gt;
+    <span class="hljs-string">sql&quot;&quot;</span><span class="hljs-string">&quot;select * from users where name = $name &quot;</span><span class="hljs-string">&quot;&quot;</span>
+      .map(createUser).single.apply()
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>(id: <span class="hljs-type">Long</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">User</span>] = <span class="hljs-type">DB</span> readOnly { <span class="hljs-keyword">implicit</span> s =&gt;
+    <span class="hljs-string">sql&quot;&quot;</span><span class="hljs-string">&quot;select * from users where id = $id &quot;</span><span class="hljs-string">&quot;&quot;</span>
+      .map(createUser).single.apply()
+  }
+}
+</code></pre>
+<p>すると、UserServiceImplは以下のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserServiceImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">UserService</span> <span class="hljs-keyword">with</span> <span class="hljs-title">PasswordServiceImpl</span> <span class="hljs-keyword">with</span> <span class="hljs-title">UserRepositoryImpl</span> </span>{
+  <span class="hljs-comment">// メソッドの実装は同じなので???で代用しています</span>
+
+  <span class="hljs-comment">// ユーザー登録</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">register</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+
+  <span class="hljs-comment">// ユーザー認証</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span></span>(name: <span class="hljs-type">String</span>, rawPassword: <span class="hljs-type">String</span>): <span class="hljs-type">User</span> = ???
+}
+</code></pre>
+<p>これで大きな<code>UserService</code>モジュールを複数の機能に分割することできました。</p>
+<h2 id="依存性の注入によるリファクタリング"><a name="依存性の注入によるリファクタリング" class="plugin-anchor" href="#依存性の注入によるリファクタリング"><i class="fa fa-link" aria-hidden="true"></i></a>依存性の注入によるリファクタリング</h2>
+<p>さて、いよいよこの節の主題である依存性の注入によるリファクタリングの話に入りましょう。</p>
+<p>ここまでトレイトを使って公開する機能を定義し、モジュールを分割し、リファクタリングを進めてきましたが、<code>UserService</code>にはもう1つ大きな問題があります。モジュール間の依存関係が分離できていないことです。</p>
+<p>たとえば<code>UserServiceImpl</code>のユニットテストをすることを考えてみましょう。ユニットテストは外部のシステムを使わないので、ローカル環境でテストしやすく、並行して複数のテストをすることもできます。また、単体の機能のみをテストするため失敗した場合、問題の箇所がわかりやすいという特徴もあります。</p>
+<p><code>UserServiceImpl</code>は<code>UserRepositoryImpl</code>に依存しています。
+<code>UserRepositoryImpl</code>はScalikeJDBCを使った外部システムであるデータベースのアクセスコードがあります。このままの<code>UserServiceImpl</code>でユニットテストを作成した場合、テストを実行するのにデータベースを用意しなければならず、データベースを共用する場合複数のテストを同時に実行するのが難しくなります。さらにテストに失敗した場合<code>UserServiceImpl</code>に原因があるのか、もしくはデータベースの設定やテーブルに原因があるのか、調査しなければなりません。これではユニットテストとは言えません。</p>
+<p>そこで具体的な<code>UserRepositoryImpl</code>への依存を分離することが考えられます。このために使われるのが依存性の注入と呼ばれる手法です。</p>
+<h3 id="依存性の注入とは？"><a name="依存性の注入とは？" class="plugin-anchor" href="#依存性の注入とは？"><i class="fa fa-link" aria-hidden="true"></i></a>依存性の注入とは？</h3>
+<p>まずは一般的な「依存性の注入（Dependency Injection、DI）」の定義を確認しましょう。</p>
+<p>依存性の注入についてWikipediaの<a href="https://en.wikipedia.org/wiki/Dependency_injection" target="_blank">Dependency injectionの項目</a>を見てみますと、</p>
+<ul>
+<li>Dependencyとは実際にサービスなどで使われるオブジェクトである</li>
+<li>InjectionとはDependencyを使うオブジェクトに渡すことである</li>
+</ul>
+<p>とあります。さらにDIには以下の4つの役割が登場するとあります。</p>
+<ul>
+<li>使われる対象の「サービス」</li>
+<li>サービスを使う（依存する）「クライアント」</li>
+<li>クライアントがどうサービスを使うかを定めた「インタフェース」</li>
+<li>サービスを構築し、クライアントに渡す「インジェクタ」</li>
+</ul>
+<p>これらの役割について、今回の例の<code>UserRepository</code>、<code>UserRepositoryImpl</code>、<code>UserServiceImpl</code>で考えてみます。
+Wikipedia中の「サービス」という用語と、これまでの例の中で登場するサービスという言葉は別の意味なので注意してください。</p>
+<p>まずはDIを使っていない状態のクラス図を見てみましょう。</p>
+<p><img src="img/before-di.svg" alt="DIを使っていないクラス図"></p>
+<!---
+```
+@startuml
+
+Interface UserRepository
+Class UserRepositoryImpl
+Class UserServiceImpl
+
+note top of UserRepository : インタフェース
+note bottom of UserRepositoryImpl : サービス
+note top of UserServiceImpl : クライアント
+
+hide members
+
+UserRepositoryImpl -u-|> UserRepository
+UserServiceImpl .r.> UserRepository
+UserServiceImpl --|> UserRepositoryImpl
+
+@enduml
+```
+-->
+<p>このクラス図の役割を表にしてみます。</p>
+<table>
+<thead>
+<tr>
+<th>DIの役割</th>
+<th>コード上の名前</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>インタフェース</td>
+<td>UserRepository</td>
+<td>抽象的なインタフェース</td>
+</tr>
+<tr>
+<td>サービス</td>
+<td>UserRepositoryImpl</td>
+<td>具体的な実装</td>
+</tr>
+<tr>
+<td>クライアント</td>
+<td>UserServiceImpl</td>
+<td>UserRepositoryの利用者</td>
+</tr>
+</tbody>
+</table>
+<p>DIを使わない状態では<code>UserRepository</code>というインタフェースが定義されているのにもかかわらず、<code>UserServiceImpl</code>は<code>UserRepositoryImpl</code>を継承することで実装も参照していました。これではせっかくインタフェースを分離した意味がありません。
+<code>UserServiceImpl</code>が<code>UserRepository</code>インタフェースだけを参照（依存）するようにすれば、具体的な実装である<code>UserRepositoryImpl</code>の変更に影響されることはありません。この問題を解決するのがDIの目的です。</p>
+<p>それではDIのインジェクタを加えて、上記のクラス図を修正しましょう。</p>
+<p><img src="img/using-di.svg" alt="DIを使うことにより修正されたクラス図"></p>
+<!---
+```
+@startuml
+
+Interface UserRepository
+Class UserRepositoryImpl
+Class UserServiceImpl
+Class Injector <! (?, #ffffff) >>
+
+note top of UserRepository : インタフェース
+note bottom of UserRepositoryImpl : サービス
+note top of UserServiceImpl : クライアント
+note bottom of Injector : インジェクタ
+
+hide members
+
+UserRepositoryImpl -u-|> UserRepository
+UserServiceImpl .r.> UserRepository
+Injector .r.> UserRepositoryImpl
+Injector ..> UserServiceImpl
+
+@enduml
+```
+-->
+<p>謎のインジェクタの登場により<code>UserServiceImpl</code>から<code>UserRepositoryImpl</code>への参照がなくなりました。おそらくインジェクタは何らかの手段でサービスである<code>UserRepositoryImpl</code>（Dependency）をクライアントである<code>UserServiceImpl</code>に渡しています（Injection）。このインジェクタの動作を指して「Dependency Injection」と呼ぶわけです。そして、このインジェクタをどうやって実現するか、それがDI技術の核心に当たります。</p>
+<h3 id="依存性の注入の利点"><a name="依存性の注入の利点" class="plugin-anchor" href="#依存性の注入の利点"><i class="fa fa-link" aria-hidden="true"></i></a>依存性の注入の利点</h3>
+<p>では、この依存性の注入を使うとどのような利点があるのでしょうか。</p>
+<p>1つはクライアントがインタフェースだけを参照することにより、具体的な実装への参照が少なくなり <strong>コンポーネント同士が疎結合になる</strong> という点が挙げられます。たとえば<code>UserRepositoryImpl</code>のクラス名やパッケージ名が変更されても<code>UserServiceImpl</code>には何の影響もなくなります。</p>
+<p>次に挙げられる点は具体的な実装を差し替えることにより <strong>クライアントの動作がカスタマイズ可能</strong> になるという点です。たとえば今回の例では<code>UserRepositoryImpl</code>はScalikeJDBCの実装でしたが、MongoDBに保存する<code>MongoUserRepositoryImpl</code>を新しく作って<code>UserServiceImpl</code>に渡せばクライアントをMongoDBに保存するように変更することができます。</p>
+<p>またDIは設計レベルでも意味があります。
+DIを使うと <strong>依存関係逆転の原則を実現できます</strong> 。通常の手続き型プログラミングでは、上位のモジュールから下位の詳細な実装のモジュールを呼ぶということがしばしばあります。しかし、この場合、上位のモジュールが下位のモジュールに依存することになります。つまり、下位の実装の変更が上位のモジュールにまで影響することになってしまうわけです。</p>
+<p>依存関係逆転の原則というのは、上位のモジュールの側に下位のモジュールが実装すべき抽象を定義し、下位のモジュールはその抽象に対して実装を提供すべきという考え方です。たとえば<code>UserService</code>が上位のモジュールだとすると、<code>UserRepositoryImpl</code>は下位のモジュールになります。依存関係逆転をしない場合、<code>UserService</code>から直接<code>UserRepositoryImpl</code>を呼ばざるをえません。このままだと先ほど述べたような問題が生じてしまうので、依存関係逆転の原則に従って、上位のモジュールに抽象的な<code>UserRepository</code>を用意し、<code>UserService</code>は<code>UserRepository</code>を使うようにします。そして、依存性の注入によって、下位のモジュールの<code>UserRepositoryImpl</code>を<code>UserService</code>に渡すことにより、このような問題を解決できるわけです。</p>
+<p>また見落されがちな点ですが、DIでは <strong>クライアントに特別な実装を要求しない</strong> という点も重要です。これはJava界隈でDIが登場した背景に関連するのですが、Spring FrameworkなどのDIを実現するDIコンテナは複雑なEnterprise JavaBeans(EJB)に対するアンチテーゼとして誕生しました。複雑なEJBに対し、何も特別でないただのJavaオブジェクトであるPlain Old Java Object(POJO)という概念が提唱され、わかりやすさや、言語そのものの機能による自由な記述が重視されました。
+DIの登場にはそのような背景があり、クライアントに対して純粋な言語機能以外求められないことが一般的です。</p>
+<p>最後に、先ほども触れましたが <strong>依存オブジェクトのモック化によるユニットテストが可能になる</strong> という点です。たとえばWebアプリケーションについて考えると、Webアプリケーションは様々な外部システムを使います。
+WebアプリケーションはMySQLやRedisなどのストレージを使い、TwitterやFacebookなどの外部サービスにアクセスすることもあるでしょう。また刻一刻と変化する時間や天候などの情報を使うかもしれません。このような外部システムが関係するモジュールはユニットテストすることが困難です。
+DIを使えば外部システムの実装を分離できるので、モックに置き換えて、楽にテストできるようになります。</p>
+<p>以上、DIの利点を見てきました。実装オブジェクト（Dependency）を取得し、サービスに渡す（Injection）という役割をするだけのインジェクタの登場により様々なメリットが生まれることが理解できたと思います。
+DIは特に大規模システムの構築に欠かせない技術であると言っても過言ではないと思います。</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="exercises.html" class="navigation navigation-prev " aria-label="Previous page: S99の案内">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="typeclass.html" class="navigation navigation-next " aria-label="Next page: 付録：様々な型クラスの紹介">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"トレイトの応用編：依存性の注入によるリファクタリング","level":"1.23","depth":1,"next":{"title":"付録：様々な型クラスの紹介","level":"1.24","depth":1,"path":"typeclass.md","ref":"typeclass.md","articles":[]},"previous":{"title":"S99の案内","level":"1.22","depth":1,"path":"exercises.md","ref":"exercises.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"advanced-trait-di.md","mtime":"2021-03-08T08:04:17.955Z","type":"markdown"},"gitbook":{"version":"3.6.17","time":"2021-03-08T08:04:49.281Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
