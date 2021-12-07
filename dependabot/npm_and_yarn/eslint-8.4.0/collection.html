@@ -1,0 +1,1120 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>コレクションライブラリ · Scala研修テキスト</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.23">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="case-class-and-pattern-matching.html" />
+    
+    
+    <link rel="prev" href="function.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction-to-scala.html">
+            
+                <a href="introduction-to-scala.html">
+            
+                    
+                    Scalaとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="sbt-install.html">
+            
+                <a href="sbt-install.html">
+            
+                    
+                    sbtをインストールする
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    Scalaの基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="sbt-compile-execute.html">
+            
+                <a href="sbt-compile-execute.html">
+            
+                    
+                    sbtでプログラムをコンパイル・実行する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="IDE.html">
+            
+                <a href="IDE.html">
+            
+                    
+                    IDE(IntelliJ IDEA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="notation.html">
+            
+                <a href="notation.html">
+            
+                    
+                    記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="control-syntax.html">
+            
+                <a href="control-syntax.html">
+            
+                    
+                    Scalaの制御構文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    クラス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    オブジェクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="trait.html">
+            
+                <a href="trait.html">
+            
+                    
+                    トレイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="type-parameter.html">
+            
+                <a href="type-parameter.html">
+            
+                    
+                    型パラメータと変位指定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="collection.html">
+            
+                <a href="collection.html">
+            
+                    
+                    コレクションライブラリ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="case-class-and-pattern-matching.html">
+            
+                <a href="case-class-and-pattern-matching.html">
+            
+                    
+                    ケースクラスとパターンマッチング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    エラー処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="implicit.html">
+            
+                <a href="implicit.html">
+            
+                    
+                    Implicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="introduction-to-typeclass.html">
+            
+                <a href="introduction-to-typeclass.html">
+            
+                    
+                    型クラスへの誘い
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="future-and-promise.html">
+            
+                <a href="future-and-promise.html">
+            
+                    
+                    FutureとPromise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    テスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="java-interop.html">
+            
+                <a href="java-interop.html">
+            
+                    
+                    Javaとの相互運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    S99の案内
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="advanced-trait-di.html">
+            
+                <a href="advanced-trait-di.html">
+            
+                    
+                    トレイトの応用編：依存性の注入によるリファクタリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="typeclass.html">
+            
+                <a href="typeclass.html">
+            
+                    
+                    付録：様々な型クラスの紹介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >コレクションライブラリ</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="コレクションライブラリ（immutableとmutable）"><a name="コレクションライブラリ（immutableとmutable）" class="plugin-anchor" href="#コレクションライブラリ（immutableとmutable）"><i class="fa fa-link" aria-hidden="true"></i></a>コレクションライブラリ（immutableとmutable）</h1>
+<p>Scalaには配列（<code>Array</code>）やリスト（<code>List</code>）、連想配列（<code>Map</code>）、集合（<code>Set</code>）を扱うための豊富なライブラリがあります。これを使いこなすことで、Scalaでのプログラミングは劇的に楽になります。注意しなければならないのは、Scalaでは一度作成したら変更できない（immutable）なコレクションと変更できる通常のコレクション（mutable）があることです。皆さんはmutableなコレクションに馴染んでいるかと思いますが、Scalaで関数型プログラミングを行うためには、immutableなコレクションを活用する必要があります。</p>
+<p>immutableなコレクションを使うのにはいくつものメリットがあります</p>
+<ul>
+<li>関数型プログラミングで多用する再帰との相性が良い</li>
+<li>高階関数を用いて簡潔なプログラムを書くことができる</li>
+<li>一度作ったコレクションが知らない箇所で変更されていない事を保証できる</li>
+<li>並行に動作するプログラムの中で、安全に受け渡しすることができる</li>
+</ul>
+<p>mutableなコレクションを効果的に使えばプログラムの実行速度を上げることができますが、mutableなコレクションをどのような場面で使えばいいかは難しい問題です。</p>
+<p>この節では、Scalaのコレクションライブラリに含まれる以下のものについての概要を説明します。</p>
+<ul>
+<li><code>Array</code>(mutable)</li>
+<li><code>List</code>(immutable)</li>
+<li><code>Map</code>(immutable)・<code>Map</code>(mutable)</li>
+<li><code>Set</code>(immutable)・ <code>Set</code>(mutable)</li>
+</ul>
+<h2 id="array"><a name="array" class="plugin-anchor" href="#array"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/Array.scala" target="_blank">Array</a></h2>
+<p>まずは大抵のプログラミング言語にある配列です。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> arr = <span class="hljs-type">Array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// arr: Array[Int] = Array(1, 2, 3, 4, 5)</span>
+</code></pre>
+<p>これで1から5までの要素を持った配列が<code>arr</code>に代入されました。Scalaの配列は、他の言語のそれと同じように要素の中身を入れ替えることができます。配列の添字は0から始まります。なお、配列の型を指定しなくて良いのは、<code>Array(1, 2, 3, 4, 5)</code>の部分で、要素型が<code>Int</code>であるに違いないとコンパイラが型推論してくれるからです。型を省略せずに書くと</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> arr = <span class="hljs-type">Array</span>[<span class="hljs-type">Int</span>](<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// arr: Array[Int] = Array(7, 2, 3, 4, 5)</span>
+</code></pre>
+<p>となります。ここで、<code>[Int]</code>の部分は型パラメータと呼びます。<code>Array</code>だけだとどの型かわからないので、<code>[Int]</code>を付けることでどの型の<code>Array</code>かを指定しているわけです。この型パラメータは型推論を補うために、色々な箇所で出てくるので覚えておいてください。しかし、この場面では、<code>Array</code>の要素型は<code>Int</code>だとわかっているので、冗長です。次に要素へのアクセスと代入です。</p>
+<pre><code class="lang-scala">arr(<span class="hljs-number">0</span>) = <span class="hljs-number">7</span>
+
+arr
+<span class="hljs-comment">// res1: Array[Int] = Array(7, 2, 3, 4, 5)</span>
+
+arr(<span class="hljs-number">0</span>)
+<span class="hljs-comment">// res2: Int = 7</span>
+</code></pre>
+<p>他の言語だと<code>arr[0]</code>のようにしてアクセスすることが多いので最初は戸惑うかもしれませんが、慣れてください。配列の<code>0</code>番目の要素がちゃんと<code>7</code>に入れ替わっていますね。</p>
+<p>配列の長さは<code>arr.length</code>で取得することができます。</p>
+<pre><code class="lang-scala">arr.length
+<span class="hljs-comment">// res3: Int = 5</span>
+</code></pre>
+<p><code>Array[Int]</code>はJavaでは<code>int[]</code>と同じ意味です。Scalaでは、配列などのコレクションの要素型を表記するとき
+<code>Collection[ElementType]</code>のように一律に表記し、配列も同じように記述するのです。Javaでは配列型だけ特別扱いするのに比べると統一的だと言えるでしょう。</p>
+<p>ただし、あくまでも表記上はある程度統一的に扱えますが、実装上はJVMの配列であり、 <strong>要素が同じでもequalsの結果がtrueにならない</strong>, <strong>生成する際にClassTagというものが必要</strong> などのいくつかの罠があるので、Arrayはパフォーマンス上必要になる場合以外はあまり積極的に使うものではありません。</p>
+<h3 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h3>
+<p>配列の<code>i</code>番目の要素と<code>j</code>番目の要素を入れ替える<code>swapArray</code>メソッドを定義してみましょう。<code>swapArray</code>メソッドの宣言は</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">swapArray</span></span>[<span class="hljs-type">T</span>] (arr: <span class="hljs-type">Array</span>[<span class="hljs-type">T</span>])(i: <span class="hljs-type">Int</span>, j: <span class="hljs-type">Int</span>): <span class="hljs-type">Unit</span> = ???
+</code></pre>
+<p>となります。<code>i</code>と<code>j</code>が配列の範囲外である場合は特に考慮しなくて良いです。</p>
+<div><button type="button" id="answer_ex1_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex1_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex1" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">swapArray</span></span>[<span class="hljs-type">T</span>] (arr: <span class="hljs-type">Array</span>[<span class="hljs-type">T</span>])(i: <span class="hljs-type">Int</span>, j: <span class="hljs-type">Int</span>): <span class="hljs-type">Unit</span> = {
+  <span class="hljs-keyword">val</span> tmp = arr(i)
+  arr(i) = arr(j)
+  arr(j) = tmp
+}
+</code></pre>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> arr = <span class="hljs-type">Array</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// arr: Array[Int] = Array(5, 4, 3, 2, 1)</span>
+
+swapArray(arr)(<span class="hljs-number">0</span>, <span class="hljs-number">4</span>)
+
+arr
+<span class="hljs-comment">// res5: Array[Int] = Array(5, 4, 3, 2, 1)</span>
+
+swapArray(arr)(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>)
+
+arr
+<span class="hljs-comment">// res7: Array[Int] = Array(5, 4, 3, 2, 1)</span>
+</code></pre>
+</div>
+<h3 id="range"><a name="range" class="plugin-anchor" href="#range"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/Range.scala" target="_blank">Range</a></h3>
+<p><code>Range</code>は範囲を表すオブジェクトです。<code>Range</code>は直接名前を指定して生成するより、<code>to</code>メソッドと<code>until</code>メソッドを用いて呼びだすことが多いです。また、<code>toList</code>メソッドを用いて、その範囲の数値の列を後述する<code>List</code>に変換することができます。では、早速REPLで<code>Range</code>を使ってみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-number">1</span> to <span class="hljs-number">5</span>
+<span class="hljs-comment">// res8: Range.Inclusive = Range(1, 2, 3, 4, 5)</span>
+
+(<span class="hljs-number">1</span> to <span class="hljs-number">5</span>).toList
+<span class="hljs-comment">// res9: List[Int] = List(1, 2, 3, 4, 5)</span>
+
+<span class="hljs-number">1</span> until <span class="hljs-number">5</span>
+<span class="hljs-comment">// res10: Range = Range(1, 2, 3, 4)</span>
+
+(<span class="hljs-number">1</span> until <span class="hljs-number">5</span>).toList
+<span class="hljs-comment">// res11: List[Int] = List(1, 2, 3, 4)</span>
+</code></pre>
+<p><code>to</code>は右の被演算子を含む範囲を、<code>until</code>は右の被演算子を含まない範囲を表していることがわかります。また、<code>Range</code>は<code>toList</code>で後述する<code>List</code>に変換することができることもわかります。</p>
+<h3 id="list"><a name="list" class="plugin-anchor" href="#list"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/List.scala" target="_blank">List</a></h3>
+<p>さて、導入として大抵の言語にある<code>Array</code>を出しましたが、Scalaでは<code>Array</code>を使うことはそれほど多くありません。代わりに<code>List</code>や
+<code>Vector</code>といったデータ構造をよく使います（<code>Vector</code>については後述します）。<code>List</code>の特徴は、一度作成したら中身を変更できない（immutable）ということです。中身を変更できないデータ構造（永続データ構造とも呼びます）はScalaがサポートしている関数型プログラミングにとって重要な要素です。それでは<code>List</code>を使ってみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> lst = <span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// lst: List[Int] = List(1, 2, 3, 4, 5)</span>
+</code></pre>
+<pre><code class="lang-scala">lst(<span class="hljs-number">0</span>) = <span class="hljs-number">7</span>
+</code></pre>
+<p>見ればわかるように、<code>List</code>は一度作成したら値を更新することができません。しかし、<code>List</code>は値を更新することができませんが、ある<code>List</code>を元に新しい<code>List</code>を作ることができます。これが値を更新することの代わりになります。以降、<code>List</code>に対して組み込みで用意されている各種操作をみていくことで、<code>List</code>の値を更新することなく色々な操作ができることがわかるでしょう。</p>
+<h3 id="nil：空のlist"><a name="nil：空のlist" class="plugin-anchor" href="#nil：空のlist"><i class="fa fa-link" aria-hidden="true"></i></a>Nil：空のList</h3>
+<p>まず最初に紹介するのは<code>Nil</code>です。Scalaで空の<code>List</code>を表すには<code>Nil</code>というものを使います。Rubyなどでは<code>nil</code>は言語上かなり特別な意味を持ちますが、Scalaではデフォルトでスコープに入っているということ以外は特別な意味はなく<a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/List.scala#L628" target="_blank">単にobjectです</a>。Nilは単体では意味がありませんが、次に説明する<code>::</code>と合わせて用いることが多いです。</p>
+<h3 id="--listの先頭に要素をくっつける"><a name="--listの先頭に要素をくっつける" class="plugin-anchor" href="#--listの先頭に要素をくっつける"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/List.scala#L97" target="_blank">:: - Listの先頭に要素をくっつける</a></h3>
+<p><code>::</code>（コンスと読みます）は既にある<code>List</code>の先頭に要素をくっつけるメソッドです。これについては、REPLで結果をみた方が早いでしょう。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> a1 = <span class="hljs-number">1</span> :: <span class="hljs-type">Nil</span>
+<span class="hljs-comment">// a1: List[Int] = List(1)</span>
+<span class="hljs-keyword">val</span> a2 = <span class="hljs-number">2</span> :: a1
+<span class="hljs-comment">// a2: List[Int] = List(2, 1)</span>
+<span class="hljs-keyword">val</span> a3 = <span class="hljs-number">3</span> :: a2
+<span class="hljs-comment">// a3: List[Int] = List(3, 2, 1)</span>
+<span class="hljs-keyword">val</span> a4 = <span class="hljs-number">4</span> :: a3
+<span class="hljs-comment">// a4: List[Int] = List(4, 3, 2, 1)</span>
+<span class="hljs-keyword">val</span> a5 = <span class="hljs-number">5</span> :: a3
+<span class="hljs-comment">// a5: List[Int] = List(5, 3, 2, 1)</span>
+</code></pre>
+<p>付け足したい要素を<code>::</code>を挟んで<code>List</code>の前に書くことで<code>List</code>の先頭に要素がくっついていることがわかります。ここで、<code>::</code>はやや特別な呼び出し方をするメソッドであることを説明しなければなりません。まず、Scalaでは1引数のメソッドは中置記法で書くことができます。それで、<code>1 :: Nil</code> のように書くことができるわけです。次に、メソッド名の最後が<code>:</code>で終わる場合、被演算子の前と後ろをひっくり返して右結合で呼び出します。たとえば、</p>
+<pre><code class="lang-scala"><span class="hljs-number">1</span> :: <span class="hljs-number">2</span> :: <span class="hljs-number">3</span> :: <span class="hljs-number">4</span> :: <span class="hljs-type">Nil</span>
+<span class="hljs-comment">// res12: List[Int] = List(1, 2, 3, 4)</span>
+</code></pre>
+<p>は、実際には、</p>
+<pre><code class="lang-scala"><span class="hljs-type">Nil</span>.::(<span class="hljs-number">4</span>).::(<span class="hljs-number">3</span>).::(<span class="hljs-number">2</span>).::(<span class="hljs-number">1</span>)
+<span class="hljs-comment">// res13: List[Int] = List(1, 2, 3, 4)</span>
+</code></pre>
+<p>のように解釈されます。<code>List</code>の要素が演算子の前に来て、一見数値のメソッドのように見えるのに<code>List</code>のメソッドとして呼び出せるのはそのためです。</p>
+<h3 id="：list同士の連結"><a name="：list同士の連結" class="plugin-anchor" href="#：list同士の連結"><i class="fa fa-link" aria-hidden="true"></i></a>++：List同士の連結</h3>
+<p><code>++</code>はList同士を連結するメソッドです。これもREPLで見た方が早いでしょう。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) ++ <span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<span class="hljs-comment">// res14: List[Int] = List(1, 2, 3, 4)</span>
+
+<span class="hljs-type">List</span>(<span class="hljs-number">1</span>) ++ <span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// res15: List[Int] = List(1, 3, 4, 5)</span>
+
+<span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>) ++ <span class="hljs-type">List</span>(<span class="hljs-number">1</span>)
+<span class="hljs-comment">// res16: List[Int] = List(3, 4, 5, 1)</span>
+</code></pre>
+<p><code>++</code>は1引数のメソッドなので、中置記法で書いています。また、末尾が<code>:</code>で終わっていないので、たとえば、</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) ++ <span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<span class="hljs-comment">// res17: List[Int] = List(1, 2, 3, 4)</span>
+</code></pre>
+<p>は</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>).++(<span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>))
+<span class="hljs-comment">// res18: List[Int] = List(1, 2, 3, 4)</span>
+</code></pre>
+<p>と同じ意味です。大きな<code>List</code>同士を連結する場合、計算量が大きくなるのでその点には注意した方が良いです。</p>
+<h3 id="mkstring：文字列のフォーマッティング"><a name="mkstring：文字列のフォーマッティング" class="plugin-anchor" href="#mkstring：文字列のフォーマッティング"><i class="fa fa-link" aria-hidden="true"></i></a>mkString：文字列のフォーマッティング</h3>
+<p>このメソッドはScalaで非常に<em>頻繁に使用されます。</em>皆さんも、Scalaを使っていく上で使う機会が多いであろうメソッドです。このメソッドは引数によって多重定義されており、3バージョンあるのでそれぞれを紹介します。</p>
+<h4 id="mkstring"><a name="mkstring" class="plugin-anchor" href="#mkstring"><i class="fa fa-link" aria-hidden="true"></i></a>mkString</h4>
+<p>引数なしバージョンです。このメソッドは、単に<code>List</code>の各要素を左から順に繋げた文字列を返します。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).mkString
+<span class="hljs-comment">// res19: String = &quot;12345&quot;</span>
+</code></pre>
+<p>注意しなければならないのは、引数なしメソッドの<code>mkString</code>は<code>()</code>を付けて呼びだすことが<strong>できない</strong>
+という点です。たとえば、以下のコードは、若干分かりにくいエラーメッセージがでてコンパイルに失敗します。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).mkString()
+</code></pre>
+<p>Scalaの<code>0</code>引数メソッドは<code>()</code>なしと
+<code>()</code>を使った定義の二通りあって、前者の形式で定義されたメソッドは<code>()</code>を付けずに呼び出さなければいけません。逆に、<code>()</code>を使って定義されたメソッドは、<code>()</code>を付けても付けなくても良いことになっています。このScalaの仕様は混乱しやすいので注意してください。</p>
+<h4 id="mkstringsep-string"><a name="mkstringsep-string" class="plugin-anchor" href="#mkstringsep-string"><i class="fa fa-link" aria-hidden="true"></i></a>mkString(sep: String)</h4>
+<p>引数にセパレータ文字列<code>sep</code>を取り、<code>List</code>の各要素を<code>sep</code>で区切って左から順に繋げた文字列を返します。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).mkString(<span class="hljs-string">&quot;,&quot;</span>)
+<span class="hljs-comment">// res20: String = &quot;1,2,3,4,5&quot;</span>
+</code></pre>
+<h4 id="mkstringstart-string-sep-string-end-string"><a name="mkstringstart-string-sep-string-end-string" class="plugin-anchor" href="#mkstringstart-string-sep-string-end-string"><i class="fa fa-link" aria-hidden="true"></i></a><code>mkString(start: String, sep: String, end: String)</code></h4>
+<p><code>mkString(sep)</code>とほとんど同じですが、<code>start</code>と<code>end</code>に囲まれた文字列を返すところが異なります。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).mkString(<span class="hljs-string">&quot;[&quot;</span>, <span class="hljs-string">&quot;,&quot;</span>, <span class="hljs-string">&quot;]&quot;</span>)
+<span class="hljs-comment">// res21: String = &quot;[1,2,3,4,5]&quot;</span>
+</code></pre>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p><code>mkString</code>を使って、最初の数<code>start</code>と最後の数<code>end</code>を受け取って、</p>
+<pre><code>start,(start+1),(start+2)...,end
+</code></pre><p>となるような文字列を返すメソッド<code>joinByComma</code>を定義してみましょう（ヒント：<code>Range</code> にも<code>mkString</code>メソッドはあります）。</p>
+<p>例</p>
+<pre><code class="lang-scala">joinByComma(<span class="hljs-number">1</span>,<span class="hljs-number">5</span>)  <span class="hljs-comment">// 1,2,3,4,5</span>
+</code></pre>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">joinByComma</span></span>(start: <span class="hljs-type">Int</span>, end: <span class="hljs-type">Int</span>): <span class="hljs-type">String</span> = {
+  ???
+}
+</code></pre>
+<div><button type="button" id="answer_ex2_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex2&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex2_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex2_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex2_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex2&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex2_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex2_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex2" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">joinByComma</span></span>(start: <span class="hljs-type">Int</span>, end: <span class="hljs-type">Int</span>): <span class="hljs-type">String</span> = {
+  (start to end).mkString(<span class="hljs-string">&quot;,&quot;</span>)
+}
+</code></pre>
+<pre><code class="lang-scala">joinByComma(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>)
+<span class="hljs-comment">// res22: String = &quot;1,2,3,4,5,6,7,8,9,10&quot;</span>
+</code></pre>
+<p><code>(start to end)</code> で、 <code>start</code> から <code>end</code> までの列を作って、 <code>mkString(&quot;,&quot;)</code> を使って間に <code>,</code> を挟んでいます。</p>
+</div>
+<h3 id="foldleft：左からの畳み込み"><a name="foldleft：左からの畳み込み" class="plugin-anchor" href="#foldleft：左からの畳み込み"><i class="fa fa-link" aria-hidden="true"></i></a>foldLeft：左からの畳み込み</h3>
+<p><code>foldLeft</code>メソッドは<code>List</code>にとって非常に基本的なメソッドです。他の様々なメソッドを<code>foldLeft</code>を使って実装することができます。<code>foldLeft</code>の宣言を<a href="https://www.scala-lang.org/api/current/scala/collection/immutable/List.html" target="_blank">ScalaのAPIドキュメント</a>から引用すると、</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">foldLeft</span></span>[<span class="hljs-type">B</span>](z: <span class="hljs-type">B</span>)(f: (<span class="hljs-type">B</span>, <span class="hljs-type">A</span>) ⇒ <span class="hljs-type">B</span>): <span class="hljs-type">B</span>
+</code></pre>
+<p>となります。<code>z</code>が<code>foldLeft</code>の結果の初期値で、リストを左からたどりながら<code>f</code>を適用していきます。<code>foldLeft</code>についてはイメージが湧きにくいと思いますので、<code>List(1, 2, 3).foldLeft(0)((x, y) =&gt; x + y)</code>の結果を図示します。</p>
+<pre><code>       +
+      / \
+     +   3
+    / \
+   +   2
+  / \
+ 0   1
+</code></pre><p>この図で、</p>
+<pre><code>   +
+  / \
+ 0   1
+</code></pre><p>は<code>+</code>に0と1を与えて適用するということを意味します。リストの要素を左から順にfを使って「畳み込む」（fold
+は英語で畳み込むという意味を持ちます）状態がイメージできるでしょうか。<code>foldLeft</code>は汎用性の高いメソッドで、たとえば、<code>List</code>の要素の合計を求めたい場合は</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).foldLeft(<span class="hljs-number">0</span>)((x, y) =&gt; x + y)
+<span class="hljs-comment">// res23: Int = 6</span>
+</code></pre>
+<p><code>List</code>の要素を全て掛けあわせた結果を求めたい場合は</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).foldLeft(<span class="hljs-number">1</span>)((x, y) =&gt; x * y)
+<span class="hljs-comment">// res24: Int = 6</span>
+</code></pre>
+<p>とすることで求める結果を得ることができます<sup><a href="#fn_1" id="reffn_1">1</a></sup>。その他にも様々な処理を<code>foldLeft</code>を用いて実装することができます。</p>
+<p>さて、節の最後に、実用上の補足を少ししておきます。少し恣意的ですが1つの例として、「リストのリスト」をリストに変換する（平らにする）処理というのを考えてみます。
+<code>List(List(1), List(2 ,3))</code>を<code>List(1, 2, 3)</code>に変換するのが目標です。安直に書くとこうなるでしょうか：</p>
+<pre><code class="lang-scala">scala&gt; <span class="hljs-type">List</span>(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>), <span class="hljs-type">List</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-type">List</span>(<span class="hljs-number">4</span>)).foldLeft(<span class="hljs-type">Nil</span>)(_ ++ _) 
+&lt;console&gt;:<span class="hljs-number">12</span>: error: <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">mismatch</span></span>;
+ found   : <span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]
+ required: scala.collection.immutable.<span class="hljs-type">Nil</span>.<span class="hljs-keyword">type</span>
+       <span class="hljs-type">List</span>(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>), <span class="hljs-type">List</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-type">List</span>(<span class="hljs-number">4</span>)).foldLeft(<span class="hljs-type">Nil</span>)(_ ++ _)
+                                                          ^
+</code></pre>
+<p>しかしコンパイルが通りません。エラーメッセージの意味としては、今回の<code>Nil</code>は<code>List[Int]</code>型と見なされてほしいわけですが、期待したように型推論できていないようです。
+<code>Nil</code>に明示的に型注釈を付けることで、コンパイルできるようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>), <span class="hljs-type">List</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-type">List</span>(<span class="hljs-number">4</span>)).foldLeft(<span class="hljs-type">Nil</span>: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span>])(_ ++ _)
+<span class="hljs-comment">// res25: List[Int] = List(1, 2, 3, 4)</span>
+</code></pre>
+<p>このように、<code>Nil</code>が混ざった処理はそのままだとうまくコンパイルが通ってくれないことがあります。そういう場合は型注釈を試すとよい、と頭の片隅に入れておいてください。</p>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p><code>foldLeft</code>を用いて、<code>List</code>の要素を反転させる次のシグニチャを持ったメソッド<code>reverse</code>を実装してみましょう：</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reverse</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>]): <span class="hljs-type">List</span>[<span class="hljs-type">T</span>] = ???
+</code></pre>
+<div><button type="button" id="answer_ex3_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex3&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex3_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex3_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex3_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex3&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex3_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex3_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex3" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reverse</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>]): <span class="hljs-type">List</span>[<span class="hljs-type">T</span>] = list.foldLeft(<span class="hljs-type">Nil</span>: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])((a, b) =&gt; b :: a)
+</code></pre>
+<pre><code class="lang-scala">reverse(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))
+<span class="hljs-comment">// res26: List[Int] = List(5, 4, 3, 2, 1)</span>
+</code></pre>
+<p><code>foldLeft</code> の初期値に <code>Nil</code> を与えて、そこから後ろにたどる毎に、「前に」要素を追加していくことで、逆順のリストを作ることができています。</p>
+</div>
+<h3 id="foldright：右からの畳み込み"><a name="foldright：右からの畳み込み" class="plugin-anchor" href="#foldright：右からの畳み込み"><i class="fa fa-link" aria-hidden="true"></i></a>foldRight：右からの畳み込み</h3>
+<p><code>foldLeft</code>が<code>List</code>の左からの畳み込みだったのに対して、<code>foldRight</code>は右からの畳込みです。<code>foldRight</code>の宣言を
+<a href="https://www.scala-lang.org/api/current/scala/collection/immutable/List.html" target="_blank">ScalaのAPIドキュメントから</a>参照すると、</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">foldRight</span></span>[<span class="hljs-type">B</span>](z: <span class="hljs-type">B</span>)(op: (<span class="hljs-type">A</span>, <span class="hljs-type">B</span>) ⇒ <span class="hljs-type">B</span>): <span class="hljs-type">B</span>
+</code></pre>
+<p>となります。<code>foldRight</code>に与える関数である<code>op</code>の引数の順序が<code>foldLeft</code>の場合と逆になっている事に注意してください。
+<code>foldRight</code>を<code>List(1, 2, 3).foldRight(0)((y, x) =&gt; y + x)</code>とした場合の様子を図示すると次のようになります。</p>
+<pre><code>   +
+  / \
+ 1   +   
+    / \
+   2   +   
+      / \
+     3   0
+</code></pre><p>ちょうど<code>foldLeft</code>と対称になっています。<code>foldRight</code>も非常に汎用性の高いメソッドで、多くの処理を<code>foldRight</code>を用いて実装することができます。</p>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p><code>List</code>の全ての要素を足し合わせるメソッド<code>sum</code>を<code>foldRight</code>を用いて実装してみましょう。<code>sum</code>の宣言は次のようになります。なお、<code>List</code>が空のときは0を返してみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum</span></span>(list: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]): <span class="hljs-type">Int</span> = ???
+</code></pre>
+<div><button type="button" id="answer_ex4_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex4&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex4_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex4_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex4_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex4&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex4_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex4_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex4" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum</span></span>(list: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]): <span class="hljs-type">Int</span> = list.foldRight(<span class="hljs-number">0</span>){(x, y) =&gt; x + y}
+</code></pre>
+<pre><code class="lang-scala">sum(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))
+<span class="hljs-comment">// res28: Int = 15</span>
+</code></pre>
+</div>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p><code>List</code>の全ての要素を掛け合わせるメソッド<code>mul</code>を<code>foldRight</code>を用いて実装してみましょう。<code>mul</code>の宣言は次のようになります。なお、<code>List</code>が空のときは1を返してみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mul</span></span>(list: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]): <span class="hljs-type">Int</span> = ???
+</code></pre>
+<div><button type="button" id="answer_ex5_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex5&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex5_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex5_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex5_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex5&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex5_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex5_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex5" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mul</span></span>(list: <span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]): <span class="hljs-type">Int</span> = list.foldRight(<span class="hljs-number">1</span>){(x, y) =&gt; x * y}
+</code></pre>
+<pre><code class="lang-scala">mul(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))
+<span class="hljs-comment">// res29: Int = 120</span>
+</code></pre>
+</div>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p><code>mkString</code>を実装してみましょう。<code>mkString</code>そのものを使ってはいけませんが、<code>foldLeft</code>や<code>foldRight</code>などの<code>List</code>に定義されている他のメソッドは自由に使って構いません。<a href="https://www.scala-lang.org/api/current/scala/collection/immutable/List.html" target="_blank">ListのAPIリファレンス</a>
+を読めば必要なメソッドが載っています。実装する<code>mkString</code>の宣言は</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mkString</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(sep: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = ???
+</code></pre>
+<p>となります。残りの2つのバージョンの<code>mkString</code>は実装しなくても構いません。</p>
+<div><button type="button" id="answer_ex6_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex6&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex6_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex6_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex6_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex6&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex6_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex6_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex6" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mkString</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(sep: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = list <span class="hljs-keyword">match</span> {
+  <span class="hljs-keyword">case</span> <span class="hljs-type">Nil</span> =&gt; <span class="hljs-string">&quot;&quot;</span>
+  <span class="hljs-keyword">case</span> x::xs =&gt; xs.foldLeft(x.toString){(x, y) =&gt; x + sep + y}
+}
+</code></pre>
+</div>
+<h3 id="map：各要素を加工した新しいlistを返す"><a name="map：各要素を加工した新しいlistを返す" class="plugin-anchor" href="#map：各要素を加工した新しいlistを返す"><i class="fa fa-link" aria-hidden="true"></i></a>map：各要素を加工した新しい<code>List</code>を返す</h3>
+<p><code>map</code>メソッドは、1引数の関数を引数に取り、各要素に関数を適用した結果できた要素からなる新たな<code>List</code>を返します。ためしに<code>List(1, 2, 3, 4, 5)</code>の各要素を2倍してみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).map(x =&gt; x * <span class="hljs-number">2</span>)
+<span class="hljs-comment">// res30: List[Int] = List(2, 4, 6, 8, 10)</span>
+</code></pre>
+<p><code>x =&gt; x * 2</code>の部分は既に述べたように、無名関数を定義するための構文です。メソッドの引数に与える短い関数を定義するときは、
+Scalaでは無名関数をよく使います。<code>List</code>の全ての要素に何らかの処理を行い、その結果を加工するという処理は頻出するため、<code>map</code>は
+Scalaのコレクションのメソッドの中でも非常によく使われるものになっています。</p>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p>次のシグニチャを持つ<code>map</code>メソッドを<code>foldLeft</code>と<code>reverse</code>を使って実装してみましょう：</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">T</span>, <span class="hljs-type">U</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">U</span>): <span class="hljs-type">List</span>[<span class="hljs-type">U</span>] = ???
+</code></pre>
+<p><code>map</code> メソッドは次のようにして使います。</p>
+<pre><code class="lang-scala">assert(<span class="hljs-type">List</span>(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>) == map(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; x + <span class="hljs-number">1</span>))
+assert(<span class="hljs-type">List</span>(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>) == map(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; x * <span class="hljs-number">2</span>))
+assert(<span class="hljs-type">Nil</span> == map(<span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]())(x =&gt; x * x))
+assert(<span class="hljs-type">List</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)  == map(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; <span class="hljs-number">0</span>))
+</code></pre>
+<div><button type="button" id="answer_ex7_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex7&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex7_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex7_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex7_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex7&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex7_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex7_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex7" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span></span>[<span class="hljs-type">T</span>, <span class="hljs-type">U</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">U</span>): <span class="hljs-type">List</span>[<span class="hljs-type">U</span>] = {
+  list.foldLeft(<span class="hljs-type">Nil</span>:<span class="hljs-type">List</span>[<span class="hljs-type">U</span>]){(x, y) =&gt; f(y) :: x}.reverse
+}
+</code></pre>
+</div>
+<h3 id="filter：条件に合った要素だけを抽出した新しいlistを返す"><a name="filter：条件に合った要素だけを抽出した新しいlistを返す" class="plugin-anchor" href="#filter：条件に合った要素だけを抽出した新しいlistを返す"><i class="fa fa-link" aria-hidden="true"></i></a>filter：条件に合った要素だけを抽出した新しい<code>List</code>を返す</h3>
+<p><code>filter</code>メソッドは、<code>Boolean</code>型を返す1引数の関数を引数に取り、各要素に関数を適用し、<code>true</code>になった要素のみを抽出した新たな<code>List</code>を返します。<code>List(1, 2, 3, 4, 5)</code>から奇数だけを抽出してみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).filter(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)
+<span class="hljs-comment">// res31: List[Int] = List(1, 3, 5)</span>
+</code></pre>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p>次のシグニチャを持つ<code>filter</code>メソッドを<code>foldLeft</code>と<code>reverse</code>を使って実装してみましょう：</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">filter</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">List</span>[<span class="hljs-type">T</span>] = ???
+</code></pre>
+<pre><code class="lang-scala">assert(<span class="hljs-type">List</span>(<span class="hljs-number">2</span>) == filter(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>))
+assert(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>) == filter(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>))
+assert(<span class="hljs-type">Nil</span> == filter(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; x &gt; <span class="hljs-number">3</span>))
+assert(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>) == filter(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>))(x =&gt; x == <span class="hljs-number">1</span>))
+assert(<span class="hljs-type">Nil</span> == filter(<span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]())(x =&gt; <span class="hljs-literal">false</span>))
+</code></pre>
+<div><button type="button" id="answer_ex8_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex8&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex8_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex8_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex8_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex8&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex8_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex8_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex8" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">filter</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">List</span>[<span class="hljs-type">T</span>] = {
+  list.foldLeft(<span class="hljs-type">Nil</span>:<span class="hljs-type">List</span>[<span class="hljs-type">T</span>]){(x, y) =&gt; <span class="hljs-keyword">if</span>(f(y)) y::x <span class="hljs-keyword">else</span> x}.reverse
+}
+</code></pre>
+</div>
+<h3 id="find：条件に合った最初の要素を返す"><a name="find：条件に合った最初の要素を返す" class="plugin-anchor" href="#find：条件に合った最初の要素を返す"><i class="fa fa-link" aria-hidden="true"></i></a>find：条件に合った最初の要素を返す</h3>
+<p><code>find</code>メソッドは、<code>Boolean</code>型を返す1引数の関数を引数に取り、各要素に前から順番に関数を適用し、最初にtrueになった要素を
+<code>Some</code>でくるんだ値を<code>Option</code>型として返します。1つの要素もマッチしなかった場合<code>None</code>を<code>Option</code>型として返します。
+<code>List(1, 2, 3, 4, 5)</code>から最初の奇数だけを抽出してみましょう</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).find(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)
+<span class="hljs-comment">// res32: Option[Int] = Some(value = 1)</span>
+</code></pre>
+<p>後で説明されることになりますが、<code>Option</code>型はScalaプログラミングの中で重要な要素であり頻出します。</p>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p>次のシグニチャを持つ<code>find</code>メソッドを<code>foldLeft</code>または再帰で実装してみましょう。<code>Option[T]</code> 型の<code>Some[T]</code> は <code>Some(1)</code> のように生成できます。また、要素がないことを表す<code>None</code>は<code>None</code>と表記できます。</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">T</span>] = ???
+</code></pre>
+<pre><code class="lang-scala">assert(<span class="hljs-type">Some</span>(<span class="hljs-number">2</span>) == find(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; x == <span class="hljs-number">2</span>))
+assert(<span class="hljs-type">None</span> == find(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; x &gt; <span class="hljs-number">3</span>))
+assert(<span class="hljs-type">Some</span>(<span class="hljs-number">1</span>) == find(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>))(x =&gt; x == <span class="hljs-number">1</span>))
+assert(<span class="hljs-type">None</span> == find(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>))(x =&gt; <span class="hljs-literal">false</span>))
+assert(<span class="hljs-type">None</span> == find(<span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]())(x =&gt; x == <span class="hljs-number">1</span>))
+</code></pre>
+<div><button type="button" id="answer_ex9_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex9&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex9_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex9_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex9_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex9&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex9_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex9_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex9" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">Option</span>[<span class="hljs-type">T</span>] = list <span class="hljs-keyword">match</span> {
+  <span class="hljs-keyword">case</span> x::xs <span class="hljs-keyword">if</span> f(x) =&gt; <span class="hljs-type">Some</span>(x)
+  <span class="hljs-keyword">case</span> x::xs =&gt; find(xs)(f)
+  <span class="hljs-keyword">case</span> _ =&gt; <span class="hljs-type">None</span>
+}
+</code></pre>
+</div>
+<h3 id="takewhile：先頭から条件を満たしている間を抽出する"><a name="takewhile：先頭から条件を満たしている間を抽出する" class="plugin-anchor" href="#takewhile：先頭から条件を満たしている間を抽出する"><i class="fa fa-link" aria-hidden="true"></i></a>takeWhile：先頭から条件を満たしている間を抽出する</h3>
+<p><code>takeWhile</code>メソッドは、<code>Boolean</code>型を返す1引数の関数を引数に取り、前から順番に関数を適用し、結果が<code>true</code>の間のみからなる<code>List</code>を返します。<code>List(1, 2, 3, 4, 5)</code>の5より前の4要素を抽出してみます。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).takeWhile(x =&gt; x != <span class="hljs-number">5</span>)
+<span class="hljs-comment">// res33: List[Int] = List(1, 2, 3, 4)</span>
+</code></pre>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p>次のシグニチャを持つ<code>takeWhile</code>メソッドをループまたは再帰を使って実装してみましょう：</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">takeWhile</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">List</span>[<span class="hljs-type">T</span>] = ???
+</code></pre>
+<p><code>takeWhile</code> メソッドは次のようにして使います。</p>
+<pre><code class="lang-scala">assert(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) == takeWhile(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))(x =&gt; x &lt;= <span class="hljs-number">3</span>))
+assert(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>) == takeWhile(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))(x =&gt; x == <span class="hljs-number">1</span>))
+assert(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)  == takeWhile(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))(x =&gt; x &lt; <span class="hljs-number">5</span>))
+assert(<span class="hljs-type">Nil</span> == takeWhile(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>))(x =&gt; <span class="hljs-literal">false</span>))
+</code></pre>
+<div><button type="button" id="answer_ex10_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex10&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex10_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex10_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex10_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex10&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex10_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex10_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex10" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">takeWhile</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">List</span>[<span class="hljs-type">T</span>] = {
+  list <span class="hljs-keyword">match</span> {
+    <span class="hljs-keyword">case</span> x::xs <span class="hljs-keyword">if</span> f(x) =&gt;
+      x::takeWhile(xs)(f)
+    <span class="hljs-keyword">case</span> _ =&gt;
+      <span class="hljs-type">Nil</span>
+  }
+}
+</code></pre>
+</div>
+<h3 id="count：listの中で条件を満たしている要素の数を計算する"><a name="count：listの中で条件を満たしている要素の数を計算する" class="plugin-anchor" href="#count：listの中で条件を満たしている要素の数を計算する"><i class="fa fa-link" aria-hidden="true"></i></a>count：<code>List</code>の中で条件を満たしている要素の数を計算する</h3>
+<p><code>count</code>メソッドは、<code>Boolean</code>型を返す1引数の関数を引数に取り、全ての要素に関数を適用して、<code>true</code>が返ってきた要素の数を計算します。例として<code>List(1, 2, 3, 4, 5)</code>の中から偶数の数（2になるはず）を計算してみます。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).count(x =&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
+<span class="hljs-comment">// res34: Int = 2</span>
+</code></pre>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p>次のシグニチャを持つ<code>count</code>メソッドを<code>foldLeft</code>を使って実装してみましょう：</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">count</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">Int</span> = ???
+</code></pre>
+<p><code>count</code> メソッドは次のようにして使います。</p>
+<pre><code class="lang-scala">assert(<span class="hljs-number">3</span> == count(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>))(x =&gt; x == <span class="hljs-number">2</span>))
+assert(<span class="hljs-number">1</span> == count(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>))(x =&gt; x == <span class="hljs-number">1</span>))
+assert(<span class="hljs-number">2</span> == count(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>))(x =&gt; x == <span class="hljs-number">3</span>))
+assert(<span class="hljs-number">0</span> == count(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>))(x =&gt; x == <span class="hljs-number">5</span>))
+</code></pre>
+<div><button type="button" id="answer_ex11_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex11&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex11_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex11_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex11_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex11&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex11_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex11_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex11" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">count</span></span>[<span class="hljs-type">T</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">Boolean</span>): <span class="hljs-type">Int</span>  = {
+  list.foldLeft(<span class="hljs-number">0</span>){(x, y) =&gt; <span class="hljs-keyword">if</span>(f(y)) x + <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> x}
+}
+</code></pre>
+</div>
+<h3 id="flatmap：listをたいらにする"><a name="flatmap：listをたいらにする" class="plugin-anchor" href="#flatmap：listをたいらにする"><i class="fa fa-link" aria-hidden="true"></i></a>flatMap：<code>List</code>をたいらにする</h3>
+<p><code>flatMap</code>は一見少し変わったメソッドですが、後々重要になってくるメソッドなので説明しておきます。flatMapの宣言は<a href="https://www.scala-lang.org/api/current/scala/collection/immutable/List.html" target="_blank">ScalaのAPIドキュメントから</a>参照すると、</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">final</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">B</span>](f: (<span class="hljs-type">A</span>) ⇒ <span class="hljs-type">GenTraversableOnce</span>[<span class="hljs-type">B</span>]): <span class="hljs-type">List</span>[<span class="hljs-type">B</span>]
+</code></pre>
+<p>となります。ここで、<code>GenTraversableOnce[B]</code>という変わった型が出てきていますが、ここではあらゆるコレクション（要素の型はB型である）を入れることができる型程度に考えてください。さて、flatMapの引数fの型は<code>(A) =&gt; GenTraversableOnce[B]</code>です。<code>flatMap</code>はこれを使って、各要素にfを適用して、結果の要素からなるコレクションを分解してListの要素にします。これについては、実際に見た方が早いでしょう。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>), <span class="hljs-type">List</span>(<span class="hljs-number">4</span>, <span class="hljs-number">5</span>)).flatMap{e =&gt; e.map{g =&gt; g + <span class="hljs-number">1</span>}}
+<span class="hljs-comment">// res35: List[Int] = List(2, 3, 4, 5, 6)</span>
+</code></pre>
+<p>ネストした<code>List</code>の各要素に<code>flatMap</code>の中で<code>map</code>を適用して、<code>List</code>の各要素に1を足したものをたいらにしています。これだけだとありがたみがわかりにくいですが、ちょっと形を変えてみると非常に面白い使い方ができます：</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).flatMap{e =&gt; <span class="hljs-type">List</span>(<span class="hljs-number">4</span>, <span class="hljs-number">5</span>).map(g =&gt; e * g)}
+<span class="hljs-comment">// res36: List[Int] = List(4, 5, 8, 10, 12, 15)</span>
+</code></pre>
+<p><code>List(1, 2, 3)</code>と<code>List(4, 5)</code>の2つの<code>List</code>についてループし、各々の要素を掛けあわせた要素からなる<code>List</code>を抽出しています。実は、
+for-comprehension</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">for</span>(x &lt;- col1; y &lt;- col2;) <span class="hljs-keyword">yield</span> z
+</code></pre>
+<p>は</p>
+<pre><code class="lang-scala">col1.flatMap{x =&gt; col2.map{y =&gt; z}}
+</code></pre>
+<p>のシンタックスシュガーだったのです。すなわち、ある自分で定義したデータ型に<code>flatMap</code>と<code>map</code>を（適切に）実装すれば
+for構文の中で使うことができるのです。</p>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p>次のシグニチャを持つ<code>flatMap</code>メソッドを再帰やループで実装してみましょう：</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">T</span>, <span class="hljs-type">U</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">List</span>[<span class="hljs-type">U</span>]): <span class="hljs-type">List</span>[<span class="hljs-type">U</span>] = ???
+</code></pre>
+<p><code>flatMap</code> メソッドは次のようにして使います。</p>
+<pre><code class="lang-scala">assert(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) == flatMap(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(x =&gt; <span class="hljs-type">List</span>(x)))
+assert(
+  <span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>) == flatMap(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>))(x =&gt;
+    map(<span class="hljs-type">List</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>))(y =&gt; x * y)
+  )
+)
+</code></pre>
+<div><button type="button" id="answer_ex12_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex12&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex12_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex12_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex12_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex12&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex12_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex12_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex12" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flatMap</span></span>[<span class="hljs-type">T</span>, <span class="hljs-type">U</span>](list: <span class="hljs-type">List</span>[<span class="hljs-type">T</span>])(f: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">List</span>[<span class="hljs-type">U</span>]): <span class="hljs-type">List</span>[<span class="hljs-type">U</span>] = {
+  list <span class="hljs-keyword">match</span> {
+    <span class="hljs-keyword">case</span> <span class="hljs-type">Nil</span> =&gt; <span class="hljs-type">Nil</span>
+    <span class="hljs-keyword">case</span> x::xs =&gt; f(x) ::: flatMap(xs)(f)
+  }
+}
+</code></pre>
+</div>
+<h4 id="listの性能特性"><a name="listの性能特性" class="plugin-anchor" href="#listの性能特性"><i class="fa fa-link" aria-hidden="true"></i></a>Listの性能特性</h4>
+<p><code>List</code>の性能特性として、<code>List</code>の先頭要素へのアクセスは高速にできる反面、要素へのランダムアクセスや末尾へのデータの追加は
+<code>List</code>の長さに比例した時間がかかってしまうということが挙げられます。<code>List</code>は関数型プログラミング言語で最も基本的なデータ構造で、どの関数型プログラミング言語でもたいていは<code>List</code>がありますが、その性能特性には十分注意して扱う必要があります。特に他の言語のプログラマはうっかり<code>List</code>の末尾に要素を追加するような遅いプログラムを書いてしまうことがあるので注意する必要があります。</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<span class="hljs-comment">// res37: List[Int] = List(1, 2, 3, 4)</span>
+
+<span class="hljs-number">5</span> :: <span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>) <span class="hljs-comment">// Listの先頭のセルに新しいをくっつける</span>
+<span class="hljs-comment">// res38: List[Int] = List(5, 1, 2, 3, 4) // Listの先頭のセルに新しいをくっつける</span>
+
+<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>) :+ <span class="hljs-number">5</span> <span class="hljs-comment">// 注意！末尾への追加は、Listの要素数分かかる</span>
+<span class="hljs-comment">// res39: List[Int] = List(1, 2, 3, 4, 5)</span>
+</code></pre>
+<h3 id="紹介したメソッドについて"><a name="紹介したメソッドについて" class="plugin-anchor" href="#紹介したメソッドについて"><i class="fa fa-link" aria-hidden="true"></i></a>紹介したメソッドについて</h3>
+<p><code>mkString</code>をはじめとした<code>List</code>の色々なメソッドを紹介してきましたが、実はこれらの大半は<code>List</code>特有ではなく、既に紹介した<code>Range</code>や<code>Array</code>、これから紹介する他のコレクションでも同様に使うことができます。何故ならばこれらの操作の大半は特定のコレクションではなく、コレクションのスーパータイプである共通のトレイト中に宣言されているからです。もちろん、<code>List</code>に要素を加える処理と<code>Set</code>に要素を加える処理（<code>Set</code>に既にある要素は加えない）のように、中で行われる処理が異なることがあるので、その点は注意する必要があります。詳しくは<a href="https://www.scala-lang.org/api/current/index.html" target="_blank">ScalaのAPIドキュメント</a>を探索してみましょう。</p>
+<h3 id="vector"><a name="vector" class="plugin-anchor" href="#vector"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/Vector.scala" target="_blank">Vector</a></h3>
+<p><code>Vector</code>は少々変わったデータ構造です。<code>Vector</code>は一度データ構造を構築したら変更できないimmutableなデータ構造です。要素へのランダムアクセスや長さの取得、データの挿入や削除、いずれの操作も十分に高速にできる比較的万能なデータ構造です。immutableなデータ構造を使う場合は、まず<code>Vector</code>を検討すると良いでしょう。</p>
+<pre><code class="lang-scala"><span class="hljs-type">Vector</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>) <span class="hljs-comment">//どの操作も「ほぼ」一定の時間で終わる</span>
+<span class="hljs-comment">// res40: Vector[Int] = Vector(1, 2, 3, 4, 5) //どの操作も「ほぼ」一定の時間で終わる</span>
+
+<span class="hljs-number">6</span> +: <span class="hljs-type">Vector</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// res41: Vector[Int] = Vector(6, 1, 2, 3, 4, 5)</span>
+
+<span class="hljs-type">Vector</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>) :+ <span class="hljs-number">6</span>
+<span class="hljs-comment">// res42: Vector[Int] = Vector(1, 2, 3, 4, 5, 6)</span>
+
+<span class="hljs-type">Vector</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>).updated(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// res43: Vector[Int] = Vector(1, 2, 5, 4, 5)</span>
+</code></pre>
+<h2 id="map"><a name="map" class="plugin-anchor" href="#map"><i class="fa fa-link" aria-hidden="true"></i></a>Map</h2>
+<p><code>Map</code>はキーから値へのマッピングを提供するデータ構造です。他の言語では辞書や連想配列と呼ばれたりします。
+Scalaでは<code>Map</code>として一度作成したら変更できないimmutableな<code>Map</code>と変更可能なmutableな<code>Map</code>の2種類を提供しています。</p>
+<h3 id="scalacollectionimmutablemap"><a name="scalacollectionimmutablemap" class="plugin-anchor" href="#scalacollectionimmutablemap"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/Map.scala" target="_blank"><code>scala.collection.immutable.Map</code></a></h3>
+<p>Scalaで何も設定せずにただ<code>Map</code>と書いた場合、<code>scala.collection.immutable.Map</code>が使われます。その名の通り、一度作成すると変更することはできません。内部の実装としては主に<a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/HashMap.scala" target="_blank"><code>scala.collection.immutable.HashMap</code></a>と
+<a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/TreeMap.scala" target="_blank"><code>scala.collection.immutable.TreeMap</code></a>の2種類がありますが、通常は<code>HashMap</code>が使われます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> m = <span class="hljs-type">Map</span>(<span class="hljs-string">&quot;A&quot;</span> -&gt; <span class="hljs-number">1</span>, <span class="hljs-string">&quot;B&quot;</span> -&gt; <span class="hljs-number">2</span>, <span class="hljs-string">&quot;C&quot;</span> -&gt; <span class="hljs-number">3</span>)
+<span class="hljs-comment">// m: Map[String, Int] = Map(&quot;A&quot; -&gt; 1, &quot;B&quot; -&gt; 2, &quot;C&quot; -&gt; 3)</span>
+
+m.updated(<span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-number">4</span>) <span class="hljs-comment">//一見元のMapを変更したように見えても</span>
+<span class="hljs-comment">// res44: Map[String, Int] = Map(&quot;A&quot; -&gt; 1, &quot;B&quot; -&gt; 4, &quot;C&quot; -&gt; 3) //一見元のMapを変更したように見えても</span>
+
+m <span class="hljs-comment">// 元のMapはそのまま</span>
+<span class="hljs-comment">// res45: Map[String, Int] = Map(&quot;A&quot; -&gt; 1, &quot;B&quot; -&gt; 2, &quot;C&quot; -&gt; 3)</span>
+</code></pre>
+<h3 id="scalacollectionmutablemap"><a name="scalacollectionmutablemap" class="plugin-anchor" href="#scalacollectionmutablemap"><i class="fa fa-link" aria-hidden="true"></i></a><code>scala.collection.mutable.Map</code></h3>
+<p>Scalaの変更可能な<code>Map</code>は<code>scala.collection.mutable.Map</code>にあります。実装としては、<code>scala.collection.mutable.HashMap</code>、
+<code>scala.collection.mutable.LinkedHashMap</code>、リストをベースにした<code>scala.collection.mutable.ListMap</code>がありますが、通常は
+<code>HashMap</code>が使われます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.collection.mutable
+
+<span class="hljs-keyword">val</span> m = mutable.<span class="hljs-type">Map</span>(<span class="hljs-string">&quot;A&quot;</span> -&gt; <span class="hljs-number">1</span>, <span class="hljs-string">&quot;B&quot;</span> -&gt; <span class="hljs-number">2</span>, <span class="hljs-string">&quot;C&quot;</span> -&gt; <span class="hljs-number">3</span>)
+<span class="hljs-comment">// m: mutable.Map[String, Int] = HashMap(&quot;A&quot; -&gt; 1, &quot;B&quot; -&gt; 5, &quot;C&quot; -&gt; 3)</span>
+
+m(<span class="hljs-string">&quot;B&quot;</span>) = <span class="hljs-number">5</span> <span class="hljs-comment">// B -&gt; 5 のマッピングに置き換える // B -&gt; 5 のマッピングに置き換える</span>
+
+m <span class="hljs-comment">// 変更が反映されている</span>
+<span class="hljs-comment">// res47: mutable.Map[String, Int] = HashMap(&quot;A&quot; -&gt; 1, &quot;B&quot; -&gt; 5, &quot;C&quot; -&gt; 3)</span>
+</code></pre>
+<h2 id="set"><a name="set" class="plugin-anchor" href="#set"><i class="fa fa-link" aria-hidden="true"></i></a>Set</h2>
+<p><code>Set</code>は値の集合を提供するデータ構造です。<code>Set</code>の中では同じ値が2つ以上存在しません。たとえば、<code>Int</code>の<code>Set</code>の中には1が2つ以上含まれていてはいけません。REPLで<code>Set</code>を作成するための式を入力すると、</p>
+<pre><code class="lang-scala"><span class="hljs-type">Set</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<span class="hljs-comment">// res48: Set[Int] = Set(1, 2, 3, 4)</span>
+</code></pre>
+<p>重複した1が削除されて、1が1つだけになっていることがわかります。</p>
+<h3 id="scalacollectionimmutableset"><a name="scalacollectionimmutableset" class="plugin-anchor" href="#scalacollectionimmutableset"><i class="fa fa-link" aria-hidden="true"></i></a><code>scala.collection.immutable.Set</code></h3>
+<p>Scalaで何も設定せずにただ<code>Set</code>と書いた場合、<code>scala.collection.immutable.Set</code>が使われます。immutableな<code>Map</code>の場合と同じく、一度作成すると変更することはできません。内部の実装としては、主に <a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/HashSet.scala" target="_blank"><code>scala.collection.immutable.HashSet</code></a> と
+<a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/immutable/TreeSet.scala" target="_blank"><code>scala.collection.immutable.TreeSet</code></a> の2種類がありますが、通常は<code>HashSet</code>が使われます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> s = <span class="hljs-type">Set</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// s: Set[Int] = HashSet(5, 1, 2, 3, 4)</span>
+
+s - <span class="hljs-number">5</span> <span class="hljs-comment">// 5を削除した後も</span>
+<span class="hljs-comment">// res49: Set[Int] = HashSet(1, 2, 3, 4) // 5を削除した後も</span>
+
+s <span class="hljs-comment">// 元のSetはそのまま</span>
+<span class="hljs-comment">// res50: Set[Int] = HashSet(5, 1, 2, 3, 4)</span>
+</code></pre>
+<h3 id="scalacollectionmutableset"><a name="scalacollectionmutableset" class="plugin-anchor" href="#scalacollectionmutableset"><i class="fa fa-link" aria-hidden="true"></i></a><code>scala.collection.mutable.Set</code></h3>
+<p>Scalaの変更可能な<code>Set</code>は<code>scala.collection.mutable.Set</code>にあります。主な実装としては、<a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/mutable/HashSet.scala" target="_blank"><code>scala.collection.mutable.HashSet</code></a> 、
+<a href="https://github.com/scala/scala/blob/v2.13.4/src/library/scala/collection/mutable/TreeSet.scala" target="_blank"><code>scala.collection.mutable.TreeSet</code></a>がありますが、通常は<code>HashSet</code>が使われます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.collection.mutable
+
+<span class="hljs-keyword">val</span> s = mutable.<span class="hljs-type">Set</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-comment">// s: mutable.Set[Int] = HashSet(1, 2, 3, 4)</span>
+
+s -= <span class="hljs-number">5</span> <span class="hljs-comment">// 5 を削除したら</span>
+<span class="hljs-comment">// res51: mutable.Set[Int] = HashSet(1, 2, 3, 4) // 5 を削除したら</span>
+
+s <span class="hljs-comment">// 変更が反映される</span>
+<span class="hljs-comment">// res52: mutable.Set[Int] = HashSet(1, 2, 3, 4)</span>
+</code></pre>
+<h3 id="その他資料"><a name="その他資料" class="plugin-anchor" href="#その他資料"><i class="fa fa-link" aria-hidden="true"></i></a>その他資料</h3>
+<p>さらにコレクションライブラリについて詳しく知りたい場合は、以下の公式のドキュメントなどを読みましょう
+<a href="https://docs.scala-lang.org/ja/overviews/collections/introduction.html" target="_blank">https://docs.scala-lang.org/ja/overviews/collections/introduction.html</a></p>
+<blockquote id="fn_1">
+<sup>1</sup>. ただし、これはあくまでもfoldLeftの例であって、要素の和や積を求めたい場合に限って言えばもっと便利なメソッドが標準ライブラリに存在するので、実際にはこの例のような使い方はしません<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="function.html" class="navigation navigation-prev " aria-label="Previous page: 関数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="case-class-and-pattern-matching.html" class="navigation navigation-next " aria-label="Next page: ケースクラスとパターンマッチング">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"コレクションライブラリ","level":"1.14","depth":1,"next":{"title":"ケースクラスとパターンマッチング","level":"1.15","depth":1,"path":"case-class-and-pattern-matching.md","ref":"case-class-and-pattern-matching.md","articles":[]},"previous":{"title":"関数","level":"1.13","depth":1,"path":"function.md","ref":"function.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"collection.md","mtime":"2021-12-07T05:17:35.163Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-07T05:17:47.769Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
