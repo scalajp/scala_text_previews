@@ -1,0 +1,850 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Implicit · Scala研修テキスト</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.23">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="introduction-to-typeclass.html" />
+    
+    
+    <link rel="prev" href="error-handling.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction-to-scala.html">
+            
+                <a href="introduction-to-scala.html">
+            
+                    
+                    Scalaとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="sbt-install.html">
+            
+                <a href="sbt-install.html">
+            
+                    
+                    sbtをインストールする
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    Scalaの基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="sbt-compile-execute.html">
+            
+                <a href="sbt-compile-execute.html">
+            
+                    
+                    sbtでプログラムをコンパイル・実行する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="IDE.html">
+            
+                <a href="IDE.html">
+            
+                    
+                    IDE(IntelliJ IDEA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="notation.html">
+            
+                <a href="notation.html">
+            
+                    
+                    記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="control-syntax.html">
+            
+                <a href="control-syntax.html">
+            
+                    
+                    Scalaの制御構文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    クラス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    オブジェクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="trait.html">
+            
+                <a href="trait.html">
+            
+                    
+                    トレイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="type-parameter.html">
+            
+                <a href="type-parameter.html">
+            
+                    
+                    型パラメータと変位指定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="collection.html">
+            
+                <a href="collection.html">
+            
+                    
+                    コレクションライブラリ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="case-class-and-pattern-matching.html">
+            
+                <a href="case-class-and-pattern-matching.html">
+            
+                    
+                    ケースクラスとパターンマッチング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    エラー処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="implicit.html">
+            
+                <a href="implicit.html">
+            
+                    
+                    Implicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="introduction-to-typeclass.html">
+            
+                <a href="introduction-to-typeclass.html">
+            
+                    
+                    型クラスへの誘い
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="future-and-promise.html">
+            
+                <a href="future-and-promise.html">
+            
+                    
+                    FutureとPromise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    テスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="java-interop.html">
+            
+                <a href="java-interop.html">
+            
+                    
+                    Javaとの相互運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    S99の案内
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="advanced-trait-di.html">
+            
+                <a href="advanced-trait-di.html">
+            
+                    
+                    トレイトの応用編：依存性の注入によるリファクタリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="typeclass.html">
+            
+                <a href="typeclass.html">
+            
+                    
+                    付録：様々な型クラスの紹介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Implicit</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="implicit-conversion（暗黙の型変換）とimplicit-parameter（暗黙のパラメータ）"><a name="implicit-conversion（暗黙の型変換）とimplicit-parameter（暗黙のパラメータ）" class="plugin-anchor" href="#implicit-conversion（暗黙の型変換）とimplicit-parameter（暗黙のパラメータ）"><i class="fa fa-link" aria-hidden="true"></i></a>implicit conversion（暗黙の型変換）とimplicit parameter（暗黙のパラメータ）</h1>
+<p>Scalaには、他の言語にはあまり見られない、implicit conversionとimplicit parameterという機能があります。この2つの機能を上手く使いこなすことができれば、Scalaでのプログラミングの生産性は劇的に向上するでしょう。なお、本当は、implicit conversionとimplicit parameterは相互に関係がある2つの機能なのですが、今回学習する範囲では意識する必要がないと思われるので、2つの独立した機能として学びます。</p>
+<h2 id="implicit-conversion"><a name="implicit-conversion" class="plugin-anchor" href="#implicit-conversion"><i class="fa fa-link" aria-hidden="true"></i></a>Implicit Conversion</h2>
+<p>implicit conversionは暗黙の型変換機能をユーザが定義できるようにする機能です。</p>
+<p>implicit conversionは</p>
+<pre><code class="lang-scala">  <span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">メソッド名</span></span>(引数名: 引数の型): 返り値の型 = 本体
+</code></pre>
+<p>という形で定義します。<code>implicit</code>というキーワードがついていることと引数が1つしかない<sup><a href="#fn_1" id="reffn_1">1</a></sup>ことを除けば通常のメソッド定義と同様ですね。さて、implicit conversionでは、引数の型と返り値の型に重要な意味があります。それは、これが、引数の型の式が現れたときに返り値の型を暗黙の変換候補として登録することになるからです。</p>
+<p>定義したimplicit conversionは大きく分けて二通りの使われ方をします。1つは、新しく定義したユーザ定義の型などを既存の型に当てはめたい場合です。たとえば、</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">intToBoolean</span></span>(arg: <span class="hljs-type">Int</span>): <span class="hljs-type">Boolean</span> = arg != <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">if</span>(<span class="hljs-number">1</span>) {
+  println(<span class="hljs-string">&quot;1は真なり&quot;</span>)
+}
+<span class="hljs-comment">// 1は真なり</span>
+</code></pre>
+<p>といった形で、本来<code>Boolean</code>しか渡せないはずのif式に<code>Int</code>を渡すことができています。ただし、この使い方はあまり良いものではありません。上の例をみればわかる通り、implicit conversionを定義することで、コンパイラにより、本来はif式の条件式には<code>Boolean</code>型の式しか渡せないようにチェックしているのを通りぬけることができてしまうからです。一部のライブラリではそのライブラリ内のデータ型とScala標準のデータ型を相互に変換するために、そのようなimplicit conversionを定義している例がありますが、本当にそのような変換が必要かよく考える必要があるでしょう。</p>
+<h3 id="enrich-my-library"><a name="enrich-my-library" class="plugin-anchor" href="#enrich-my-library"><i class="fa fa-link" aria-hidden="true"></i></a>enrich my library</h3>
+<p>もう1つの使い方は、enrich my libraryパターンと呼ばれ、既存のクラスにメソッドを追加して拡張する（ようにみせかける）使い方です。
+Scala標準ライブラリの中にも大量の使用例があり、こちらが本来の使い方と言って良いでしょう。たとえば、これまでみたプログラムの中に<code>(1 to 5)</code>という式がありましたが、本来Int型は<code>to</code>というメソッドを持っていません。
+<code>to</code>メソッドはenrich my libraryパターンの使用例の最たるものです。コンパイラは、ある型に対するメソッド呼び出しを見つけたとき、そのメソッドを定義した型がimplicit conversionの返り値の型にないか探索し、型が合ったらimplicit conversion
+の呼び出しを挿入するのです。この使い方の場合、implicit conversionの返り値の型が他で使われるものでなければ安全に
+implicit conversionを利用することができます。</p>
+<p>試しに、<code>String</code>の末尾に<code>&quot;:-)&quot;</code>という文字列を追加して返すimplicit conversionを定義してみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RichString</span>(<span class="hljs-params">val src: <span class="hljs-type">String</span></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">smile</span></span>: <span class="hljs-type">String</span> = src + <span class="hljs-string">&quot;:-)&quot;</span>
+}
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">enrichString</span></span>(arg: <span class="hljs-type">String</span>): <span class="hljs-type">RichString</span> = <span class="hljs-keyword">new</span> <span class="hljs-type">RichString</span>(arg)
+
+<span class="hljs-string">&quot;Hi, &quot;</span>.smile
+<span class="hljs-comment">// res1: String = &quot;Hi, :-)&quot;</span>
+</code></pre>
+<p>ちゃんと文字列の末尾に<code>&quot;:-)&quot;</code>を追加する<code>smile</code>メソッドが定義できています。さて、ここでひょっとしたら気がついた方もいるかもしれませんが、implicit conversionはそのままでは、既存のクラスへのメソッド追加のために使用するには冗長であるということです。Scala 2.10からは、classにimplicit
+というキーワードをつけることで同じようなことができるようになりました。</p>
+<h3 id="implicit-class"><a name="implicit-class" class="plugin-anchor" href="#implicit-class"><i class="fa fa-link" aria-hidden="true"></i></a>Implicit Class</h3>
+<p>上の定義は、Scala 2.10以降では、</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RichString</span>(<span class="hljs-params">val src: <span class="hljs-type">String</span></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">smile</span></span>: <span class="hljs-type">String</span> = src + <span class="hljs-string">&quot;:-)&quot;</span>
+}
+
+<span class="hljs-string">&quot;Hi, &quot;</span>.smile
+<span class="hljs-comment">// res3: String = &quot;Hi, :-)&quot;</span>
+</code></pre>
+<p>という形で書きなおすことができます。
+implicit classはenrich my libraryパターン専用の機能であり、implicit defで既存型への変換した場合などによる混乱がないため、Scala 2.10以降でenrich my libraryパターンを使うときは基本的に後者の形式にすべきです。しかし、サードパーティのライブラリや標準ライブラリでも前者の形式になっていることがあるので、そのようなコードも読めるようにしておきましょう。</p>
+<h3 id="implicit_ex1"><a name="implicit_ex1" class="plugin-anchor" href="#implicit_ex1"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題 </h3>
+<p><code>Int</code>から<code>Boolean</code>へのimplicit conversionのように利用者を混乱させるようなものを考えて、定義してみてください。また、そのimplicit
+conversionにはどのような危険があるかを考えてください。</p>
+<h3 id="implicit_ex2"><a name="implicit_ex2" class="plugin-anchor" href="#implicit_ex2"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題 </h3>
+<p>enrich my libraryパターンで、既存のクラスの利用を便利にするようなimplicit conversionを1つ定義してみてください。それはどのような場面で役に立つでしょうか？</p>
+<div><button type="button" id="answer_ex1_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex1_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex1" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Taps</span> </span>{
+  <span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tap</span>[<span class="hljs-type">T</span>](<span class="hljs-params">self: <span class="hljs-type">T</span></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tap</span></span>[<span class="hljs-type">U</span>](block: <span class="hljs-type">T</span> =&gt; <span class="hljs-type">U</span>): <span class="hljs-type">T</span> = {
+      block(self) <span class="hljs-comment">//値は捨てる</span>
+      self
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-string">&quot;Hello, World&quot;</span>.tap{s =&gt; println(s)}.reverse.tap{s =&gt; println(s)}
+  }
+}
+</code></pre>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> <span class="hljs-type">Taps</span>._
+<span class="hljs-type">Taps</span>.main(<span class="hljs-type">Array</span>())
+<span class="hljs-comment">// Hello, World</span>
+<span class="hljs-comment">// dlroW ,olleH</span>
+</code></pre>
+<p>メソッドチェインの中でデバッグプリントをはさみたいときに役に立ちます。</p>
+</div>
+<h4 id="implicit_ex3"><a name="implicit_ex3" class="plugin-anchor" href="#implicit_ex3"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題 </h4>
+<p><a href="https://www.scala-lang.org/api/current/index.html" target="_blank">Scala標準ライブラリ</a>の中からenrich my libraryが使われている例を（先ほど挙げたものを除いて）1つ以上見つけてください。</p>
+<h2 id="implicit-parameter"><a name="implicit-parameter" class="plugin-anchor" href="#implicit-parameter"><i class="fa fa-link" aria-hidden="true"></i></a>Implicit Parameter</h2>
+<p>implicit parameterは主として2つの目的で使われます。1つの目的は、あちこちのメソッドに共通で引き渡されるオブジェクト（たとえば、ソケットやデータベースのコネクションなど）を明示的に引き渡すのを省略するために使うものです。これは例で説明すると非常に簡単にわかると思います。</p>
+<p>まず、データベースとのコネクションを表す<code>Connection</code>型があるとします。データベースと接続するメソッドは全てこのConnection型を引き渡さなければなりません。</p>
+<pre><code>def useDatabase1(...., conn: Connection)
+def useDatabase2(...., conn: Connection)
+def useDatabase3(...., conn: Connection)
+</code></pre><p>この3つのメソッドは共通して<code>Connection</code>型を引数に取るのに、呼びだす度に明示的に<code>Connection</code>オブジェクトを渡さなければならず面倒で仕方ありません。ここでimplicit parameterの出番です。上のメソッド定義を</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">useDatabase1</span></span>(....)(<span class="hljs-keyword">implicit</span> conn: <span class="hljs-type">Connection</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">useDatabase2</span></span>(....)(<span class="hljs-keyword">implicit</span> conn: <span class="hljs-type">Connection</span>)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">useDatabase3</span></span>(....)(<span class="hljs-keyword">implicit</span> conn: <span class="hljs-type">Connection</span>)
+</code></pre>
+<p>のように書き換えます。implicit修飾子は引数の先頭の要素に付けなければならないという制約があり、implicit parameterを使うにはカリー化されたメソッド定義が必要になります。最後の引数リストが</p>
+<pre><code class="lang-scala">(<span class="hljs-keyword">implicit</span> conn: <span class="hljs-type">Connection</span>)
+</code></pre>
+<p>とあるのがポイントです。Scalaコンパイラは、このようにして定義されたメソッドが呼び出されると、現在のスコープからたどって直近のimplicitとマークされた値を暗黙にメソッドに引き渡します。値をimplicitとしてマークするとは、たとえば次のようにして行います：</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">implicit</span> <span class="hljs-keyword">val</span> connection: <span class="hljs-type">Connection</span> = connectDatabase(....)
+</code></pre>
+<p>このようにすることで、最後の引数リストに暗黙に<code>Connection</code>オブジェクトを渡してくれるのです。このようなimplicit parameterの使い方はPlay 2 FrameworkやScalaの各種O/Rマッパーで頻出します。</p>
+<p>implicit parameterのもう1つの使い方は、少々変わっています。まず、<code>List</code>の全ての要素の値を加算した結果を返す<code>sum</code>メソッドを定義したいとします。このメソッドはどのような定義になるでしょうか。ポイントは、「何の」<code>List</code>か全くわかっていないことで、整数の<code>+</code>メソッドをそのまま使ったりということはそのままではできないということです。このような場合、2つの手順を踏みます。</p>
+<p>まず、2つの同じ型を足す（0の場合はそれに相当する値を返す）方法を知っている型を定義します。ここではその型を<code>Additive</code>とします。
+<code>Additive</code>の定義は次のようになります：</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">A</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">A</span>, b: <span class="hljs-type">A</span>): <span class="hljs-type">A</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">A</span>
+}
+</code></pre>
+<p>ここで、<code>Additive</code>の型パラメータ<code>A</code>は加算される<code>List</code>の要素の型を表しています。また、</p>
+<ul>
+<li><code>zero</code>: 型パラメータAの<strong>0</strong>に相当する値を返す</li>
+<li><code>plus</code>: 型パラメータAを持つ2つの値を<strong>加算して</strong>返す</li>
+</ul>
+<p>です。</p>
+<p>次に、この<code>Additive</code>型を使って、<code>List</code>の全ての要素を合計するメソッドを定義します：</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum</span></span>[<span class="hljs-type">A</span>](lst: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>])(m: <span class="hljs-type">Additive</span>[<span class="hljs-type">A</span>]) = lst.foldLeft(m.zero)((x, y) =&gt; m.plus(x, y))
+</code></pre>
+<p>後は、それぞれの型に応じた加算と0の定義を持ったobjectを定義します。ここでは<code>String</code>と<code>Int</code>について定義をします。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">StringAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">String</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">String</span>, b: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">IntAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">Int</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">Int</span>, b: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+}
+</code></pre>
+<p>まとめると次のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">A</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">A</span>, b: <span class="hljs-type">A</span>): <span class="hljs-type">A</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">A</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">StringAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">String</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">String</span>, b: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;&quot;</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">IntAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">Int</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">Int</span>, b: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum</span></span>[<span class="hljs-type">A</span>](lst: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>])(m: <span class="hljs-type">Additive</span>[<span class="hljs-type">A</span>]) = lst.foldLeft(m.zero)((x, y) =&gt; m.plus(x, y))
+</code></pre>
+<p>これで、<code>Int</code>型の<code>List</code>も<code>String</code>型の<code>List</code>のどちらの要素の合計も計算できる汎用的な<code>sum</code>メソッドができました。実際に呼び出したいときには、</p>
+<pre><code class="lang-scala">sum(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))(<span class="hljs-type">IntAdditive</span>)
+<span class="hljs-comment">// res5: Int = 6</span>
+sum(<span class="hljs-type">List</span>(<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>))(<span class="hljs-type">StringAdditive</span>)
+<span class="hljs-comment">// res6: String = &quot;ABC&quot;</span>
+</code></pre>
+<p>とすれば良いだけです。さて、これで目的は果たすことはできましたが、何の<code>List</code>の要素を合計するかは型チェックする時点ではわかっているのだからいちいち<code>IntAdditive</code>, <code>StringAdditive</code>を明示的に渡さずとも賢く推論してほしいものです。そして、まさにそれをimplicit
+parameterで実現することができます。方法は簡単で、<code>StringAdditive</code>と<code>IntAdditive</code>の定義の前にimplicitと付けることと、<code>sum</code>の最後の引数リストの<code>m</code>にimplicitを付けるだけです。implicit parameterを使った最終形は次のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">A</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">A</span>, b: <span class="hljs-type">A</span>): <span class="hljs-type">A</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">A</span>
+}
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">StringAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">String</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">String</span>, b: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;&quot;</span>
+}
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">IntAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">Int</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">Int</span>, b: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum</span></span>[<span class="hljs-type">A</span>](lst: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>])(<span class="hljs-keyword">implicit</span> m: <span class="hljs-type">Additive</span>[<span class="hljs-type">A</span>]) = lst.foldLeft(m.zero)((x, y) =&gt; m.plus(x, y))
+
+sum(<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))
+<span class="hljs-comment">// res7: Int = 6</span>
+
+sum(<span class="hljs-type">List</span>(<span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>))
+<span class="hljs-comment">// res8: String = &quot;ABC&quot;</span>
+</code></pre>
+<p>任意のListの要素の合計値を求めるsumメソッドを自然な形（<code>sum(List(1, 2, 3))</code>）で呼びだすことができています。実は、implicit parameterのこのような使い方はプログラミング言語Haskellから借りてきたもので、型クラス（を使った計算）と言われます。Haskellの用語だと、<code>Additive</code>を型クラス、<code>StringAdditive</code>と<code>IntAdditive</code>を<code>Additive</code>型クラスのインスタンスと呼びます。</p>
+<p>このimplicit parameterの用法は標準ライブラリにもあって、たとえば、</p>
+<pre><code class="lang-scala"><span class="hljs-type">List</span>[<span class="hljs-type">Int</span>]().sum
+<span class="hljs-comment">// res9: Int = 0</span>
+
+<span class="hljs-type">List</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>).sum
+<span class="hljs-comment">// res10: Int = 10</span>
+
+<span class="hljs-type">List</span>(<span class="hljs-number">1.1</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">1.3</span>, <span class="hljs-number">1.4</span>).sum
+<span class="hljs-comment">// res11: Double = 5.0</span>
+</code></pre>
+<p>のように整数や浮動小数点数の合計値を特に気にとめることなく計算することができています。Scalaにおいて型クラスを定義・使用する方法を覚えると、設計の幅がグンと広がります。</p>
+<h3 id="implicit_ex4"><a name="implicit_ex4" class="plugin-anchor" href="#implicit_ex4"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題 </h3>
+<p><code>m: Additive[T]</code>と値<code>t1: T, t2: T, t3: T</code>は、次の条件を満たす必要があります。</p>
+<pre><code class="lang-scala">m.plus(m.zero, t1) == t1  <span class="hljs-comment">// 単位元</span>
+m.plus(t1, m.zero) == t1  <span class="hljs-comment">// 単位元</span>
+m.plus(t1, m.plus(t2, t3)) == m.plus(m.plus(t1, t2), t3) <span class="hljs-comment">// 結合則</span>
+</code></pre>
+<p>このような条件を満たす型<code>T</code>と単位元<code>zero</code>、演算<code>plus</code>を探し出し、<code>Additive[T]</code>を定義しましょう。この際、条件が満たされていることをいくつかの入力に対して確認してみましょう。また、定義した<code>Additive[T]</code>を<code>implicit</code>にして、<code>T</code>の合計値を先ほどの<code>sum</code>で計算できることを確かめてみましょう。</p>
+<p>ヒント：このような条件を満たすものは無数にありますが、思いつかない人はたとえば<code>x</code>座標と<code>y</code>座標からなる点を表すクラス<code>Point</code>を考えてみると良いでしょう。</p>
+<div><button type="button" id="answer_ex2_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex2&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex2_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex2_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex2_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex2&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex2_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex2_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex2" style="display:none">
+<pre><code class="lang-scala">
+<span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">A</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">A</span>, b: <span class="hljs-type">A</span>): <span class="hljs-type">A</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">A</span>
+}
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">StringAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">String</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">String</span>, b: <span class="hljs-type">String</span>): <span class="hljs-type">String</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">&quot;&quot;</span>
+}
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">IntAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">Int</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">Int</span>, b: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = a + b
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">Int</span> = <span class="hljs-number">0</span>
+}
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>(<span class="hljs-params">x: <span class="hljs-type">Int</span>, y: <span class="hljs-type">Int</span></span>)</span>
+
+<span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">PointAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">Point</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">Point</span>, b: <span class="hljs-type">Point</span>): <span class="hljs-type">Point</span> = <span class="hljs-type">Point</span>(a.x + b.x, a.y + b.y)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">Point</span> = <span class="hljs-type">Point</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sum</span></span>[<span class="hljs-type">A</span>](lst: <span class="hljs-type">List</span>[<span class="hljs-type">A</span>])(<span class="hljs-keyword">implicit</span> m: <span class="hljs-type">Additive</span>[<span class="hljs-type">A</span>]) = lst.foldLeft(m.zero)((x, y) =&gt; m.plus(x, y))
+</code></pre>
+<pre><code class="lang-scala">println(sum(<span class="hljs-type">List</span>(<span class="hljs-type">Point</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>), <span class="hljs-type">Point</span>(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>), <span class="hljs-type">Point</span>(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>)))) <span class="hljs-comment">// Point(6, 6)</span>
+<span class="hljs-comment">// Point(6,6) // Point(6, 6)</span>
+println(sum(<span class="hljs-type">List</span>(<span class="hljs-type">Point</span>(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>), <span class="hljs-type">Point</span>(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>), <span class="hljs-type">Point</span>(<span class="hljs-number">5</span>, <span class="hljs-number">6</span>)))) <span class="hljs-comment">// Point(9, 12)</span>
+<span class="hljs-comment">// Point(9,12)</span>
+</code></pre>
+</div>
+<h3 id="implicit_ex5"><a name="implicit_ex5" class="plugin-anchor" href="#implicit_ex5"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題 </h3>
+<p><code>List[Int]</code> と <code>List[Double]</code> のsumを行うために、標準ライブラリでは何という型クラス（1つ）と型クラスのインスタンス（2つ）を定義しているかを、<a href="https://www.scala-lang.org/api/current/index.html" target="_blank">Scala標準ライブラリ</a>から探して挙げなさい。</p>
+<div><button type="button" id="answer_ex3_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex3&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex3_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex3_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex3_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex3&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex3_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex3_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex3" style="display:none">
+<p>型クラス：</p>
+<ul>
+<li><a href="https://www.scala-lang.org/api/2.13.4/scala/math/Numeric.html" target="_blank">Numeric[T]</a></li>
+</ul>
+<p>型クラスのインスタンス：</p>
+<ul>
+<li><a href="https://www.scala-lang.org/api/2.13.4/scala/math/Numeric$$IntIsIntegral$.html" target="_blank">IntIsIntegral</a></li>
+<li><a href="https://www.scala-lang.org/api/2.13.4/scala/math/Numeric$$DoubleIsFractional$.html" target="_blank">DoubleIsFractional</a></li>
+</ul>
+</div>
+<h3 id="implicitの探索範囲"><a name="implicitの探索範囲" class="plugin-anchor" href="#implicitの探索範囲"><i class="fa fa-link" aria-hidden="true"></i></a>implicitの探索範囲</h3>
+<p>implicit defやimplicit parameterの値が探索される範囲には、</p>
+<ul>
+<li>ローカルで定義されたもの</li>
+<li>importで指定されたもの</li>
+<li>スーパークラスで定義されたもの</li>
+<li>コンパニオンオブジェクトで定義されたもの</li>
+</ul>
+<p>などがあります。この中で注目していただきたいのが、コンパニオンオブジェクトでimplicitの値を定義するパターンです。</p>
+<p>たとえば新しく<code>Rational</code>（有理数）型を定義したとして、コンパニオンオブジェクトに先ほど使った<code>Additive</code>型クラスのインスタンスを定義しておきます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rational</span>(<span class="hljs-params">num: <span class="hljs-type">Int</span>, den: <span class="hljs-type">Int</span></span>)</span>
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Rational</span> </span>{
+  <span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">RationalAdditive</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Additive</span>[<span class="hljs-type">Rational</span>] </span>{
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plus</span></span>(a: <span class="hljs-type">Rational</span>, b: <span class="hljs-type">Rational</span>): <span class="hljs-type">Rational</span> = {
+      <span class="hljs-keyword">if</span> (a == zero) {
+        b
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (b == zero) {
+        a
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-type">Rational</span>(a.num * b.den + b.num * a.den, a.den * b.den)
+      }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">zero</span></span>: <span class="hljs-type">Rational</span> = <span class="hljs-type">Rational</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+  }
+}
+</code></pre>
+<p>すると、importをしていないのに、このAdditive型クラスのインスタンスを使うことができます。</p>
+<pre><code class="lang-scala">scala&gt; sum(<span class="hljs-type">List</span>(<span class="hljs-type">Rational</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>), <span class="hljs-type">Rational</span>(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)))
+res0: <span class="hljs-type">Rational</span> = <span class="hljs-type">Rational</span>(<span class="hljs-number">4</span>,<span class="hljs-number">2</span>)
+</code></pre>
+<p>新しくデータ型を定義し、型クラスインスタンスも一緒に定義したい場合によく出てくるパターンなので覚えておくとよいでしょう。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. 引数が2つ以上あるimplicit defの定義も可能です。「implicit defのパラメーターにimplicitが含まれる」という型クラス的な使い方をする場合は実際にimplicit defに2つ以上のパラメーターが出現することがあります。ただしそういった定義は通常implicit conversionとは呼ばれません<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="error-handling.html" class="navigation navigation-prev " aria-label="Previous page: エラー処理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="introduction-to-typeclass.html" class="navigation navigation-next " aria-label="Next page: 型クラスへの誘い">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Implicit","level":"1.17","depth":1,"next":{"title":"型クラスへの誘い","level":"1.18","depth":1,"path":"introduction-to-typeclass.md","ref":"introduction-to-typeclass.md","articles":[]},"previous":{"title":"エラー処理","level":"1.16","depth":1,"path":"error-handling.md","ref":"error-handling.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"implicit.md","mtime":"2021-12-16T21:47:17.688Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-12-16T21:47:23.499Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
