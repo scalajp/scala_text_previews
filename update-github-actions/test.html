@@ -6,7 +6,7 @@
         <title>テスト · Scala研修テキスト</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.6.23">
+        <meta name="generator" content="HonKit 3.7.1">
         
         
         
@@ -572,16 +572,16 @@ BDDでは、テスト内にそのプログラムに与えられた機能的な�
 
 version := <span class="hljs-string">&quot;1.0&quot;</span>
 
-scalaVersion := <span class="hljs-string">&quot;2.13.6&quot;</span>
+scalaVersion := <span class="hljs-string">&quot;2.13.8&quot;</span>
 
-libraryDependencies += <span class="hljs-string">&quot;org.scalatest&quot;</span> %% <span class="hljs-string">&quot;scalatest&quot;</span> % <span class="hljs-string">&quot;3.2.10&quot;</span> % <span class="hljs-string">&quot;test&quot;</span>
+libraryDependencies += <span class="hljs-string">&quot;org.scalatest&quot;</span> %% <span class="hljs-string">&quot;scalatest&quot;</span> % <span class="hljs-string">&quot;3.2.11&quot;</span> % <span class="hljs-string">&quot;test&quot;</span>
 </code></pre>
 <p>その後、<code>scalatest_study</code>フォルダ内で、<code>sbt compile</code>を実行してみましょう。</p>
 <pre><code>[info] Set current project to scalatest_study (in build file:/Users/dwango/workspace/scalatest_study/scalatest_study/)
 [info] Updating {file:/Users/dwango/workspace/scalatest_study/scalatest_study/}scalatest_study...
 [info] Resolving jline#jline;2.12.1 ...
-[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.2.10/scalatest_2.13-3.2.10.jar ...
-[info]     [SUCCESSFUL ] org.scalatest#scalatest_2.13;3.2.10!scalatest_2.13.jar(bundle) (10199ms)
+[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.2.11/scalatest_2.13-3.2.11.jar ...
+[info]     [SUCCESSFUL ] org.scalatest#scalatest_2.13;3.2.11!scalatest_2.13.jar(bundle) (10199ms)
 [info] Done updating.
 [success] Total time: 11 s, completed 2015/04/09 16:48:42
 </code></pre><p>以上のように表示されれば、これで準備は完了です。</p>
@@ -750,7 +750,7 @@ div関数までテストの実装を進めます。</p>
   }
 
   it should <span class="hljs-string">&quot;1000万以下の値の素数判定を一秒以内で処理できる&quot;</span> in {
-    failAfter(<span class="hljs-number">1000</span> millis) {
+    failAfter(<span class="hljs-number">1000.</span>millis) {
       assert(calc.isPrime(<span class="hljs-number">9999991</span>))
     }
   }
@@ -789,7 +789,7 @@ BDDでテストを書くことによってテストによってどのような�
 </ul>
 <p>ここでは、よく使われているMockitoを利用してみましょう。
 <code>build.sbt</code>に以下を追記することで利用可能になります。</p>
-<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.mockito&quot;</span> % <span class="hljs-string">&quot;mockito-core&quot;</span> % <span class="hljs-string">&quot;4.0.0&quot;</span> % <span class="hljs-string">&quot;test&quot;</span>
+<pre><code class="lang-scala">libraryDependencies += <span class="hljs-string">&quot;org.mockito&quot;</span> % <span class="hljs-string">&quot;mockito-core&quot;</span> % <span class="hljs-string">&quot;4.4.0&quot;</span> % <span class="hljs-string">&quot;test&quot;</span>
 </code></pre>
 <p>せっかくなので、先ほど用意したCalcクラスのモックを用意して、モックにsumの振る舞いを仕込んで見ましょう。</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">import</span> org.scalatest.time.<span class="hljs-type">SpanSugar</span>._
@@ -831,25 +831,50 @@ addSbtPlugin(<span class="hljs-string">&quot;org.scoverage&quot;</span> % <span 
 <p>利用しているカバレッジツールがどのように動作するのか把握した上で、カバレッジレポートからどのコードが実行されなかったのか情報収集しましょう。数値だけに目を向けるのではなく、カバレッジ測定によってどういった情報が得られたのかを考えてください。そうすれば、ツールに振り回されることなくテストの少ない部分を発見できるでしょう。</p>
 <h2 id="コードスタイルチェック"><a name="コードスタイルチェック" class="plugin-anchor" href="#コードスタイルチェック"><i class="fa fa-link" aria-hidden="true"></i></a>コードスタイルチェック</h2>
 <p>なおテストとは直接は関係ありませんが、ここまでで紹介したテストは、実際にはJenkinsなどの継続的インテグレーションツール（CIツール）で実施され、リグレッションを検出するためにつかわれます。その際に、CIの一環として一緒に行われることが多いのがコードスタイルチェックです。</p>
-<p>ここでは、<a href="http://www.scalastyle.org/sbt.html" target="_blank">ScalaStyle</a>を利用します。</p>
-<p>使い方は、<code>project/plugins.sbt</code> に以下のコードを記述します。</p>
-<pre><code class="lang-scala">addSbtPlugin(<span class="hljs-string">&quot;org.scalastyle&quot;</span> %% <span class="hljs-string">&quot;scalastyle-sbt-plugin&quot;</span> % <span class="hljs-string">&quot;1.0.0&quot;</span>)
+<p>コードスタイルチェックにおいて、インデントの数や定義の前後のスペースなどコードのフォーマットをチェックするにはフォーマッタを、静的解析で推奨されるScalaコードの書き方になっているかをチェックするにはリンターを使います。例えば、次のメソッド定義はProcedure Syntaxと呼ばれ、比較的新しいバージョンのScalaでは非推奨になっています。リンターはこのような望ましくないコードを検知して報告します。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Example</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">myProcedure</span> </span>{}
+}
 </code></pre>
-<p>その後、<code>sbt scalastyleGenerateConfig</code>を一度だけ実施後、<code>sbt scalastyle</code>を実行します。</p>
-<p>実行すると、下記のように警告が表示されます。</p>
-<pre><code>[info] Loading project definition from /Users/dwango/workspace/scalatest_study/project
-[info] Set current project to scalatest_study (in build file:/Users/dwango/workspace/scalatest_study/)
-[info] scalastyle using config /Users/dwango/workspace/scalatest_study/scalastyle-config.xml
-[warn] /Users/dwango/workspace/scalatest_study/src/main/scala/Calc.scala:1: Header does not match expected text
-[info] Processed 1 file(s)
-[info] Found 0 errors
-[info] Found 1 warnings
-[info] Found 0 infos
-[info] Finished in 12 ms
-[success] created output: /Users/dwango/workspace/scalatest_study/target
-[success] Total time: 1 s, completed 2015/04/09 22:17:40
-</code></pre><p>これはヘッダに特定のテキストが入っていないというルールに対して警告を出してくれているもので、
-<code>scalastyle-config.xml</code>でルール変更を行うことができます。なおデフォルトの設定では、Apacheライセンスの記述を入れなくては警告を出す設定になっています。これらもテスティングフレームワークやカバレッジ測定と同時に導入、設定してしまいましょう。</p>
+<p>2022年現在では<a href="https://scalameta.org/scalafmt/" target="_blank">scalafmt</a>がデファクトのフォーマッタとして、<a href="https://scalacenter.github.io/scalafix/" target="_blank">scalafix</a>や<a href="https://github.com/wartremover/wartremover" target="_blank">wartremover</a>がリンターとして使われています。scalafmt、scalafixはScala 3に対応しています。wartremoverもScala 3対応が入る予定です。
+scalafmt、scalafixのどちらもコードスタイルチェックに加えて自動修正機能があります。</p>
+<p>scalafmt、scalafixはCLIでもsbt pluginでも使えますがここではsbt pluginを利用する前提で話をすすめます。</p>
+<p><code>project/plugins.sbt</code> に以下のコードを記述します。</p>
+<pre><code class="lang-scala">addSbtPlugin(<span class="hljs-string">&quot;org.scalameta&quot;</span> %% <span class="hljs-string">&quot;scalafmt&quot;</span> % <span class="hljs-string">&quot;&lt;latest&gt;&quot;</span>)
+addSbtPlugin(<span class="hljs-string">&quot;ch.epfl.scala&quot;</span> % <span class="hljs-string">&quot;sbt-scalafix&quot;</span> % <span class="hljs-string">&quot;&lt;latest&gt;&quot;</span>)
+</code></pre>
+<h3 id="scalafmt"><a name="scalafmt" class="plugin-anchor" href="#scalafmt"><i class="fa fa-link" aria-hidden="true"></i></a>scalafmt</h3>
+<p>まずはscalafmtを試してみましょう。sbtシェルを開いて次のコマンドを実行してください。もしソースにフォーマットに問題があるコードが含まれているなら警告が表示されます。</p>
+<pre><code class="lang-sh">scalafmtCheckAll
+</code></pre>
+<p>次のコマンドを実行するとフォーマットを自動的に修正します。</p>
+<pre><code class="lang-sh">scalafmtAll
+</code></pre>
+<p>また、<code>build.sbt</code>などのビルドにつかうScalaファイルのフォーマットは<code>scalafmtSbt</code>で修正できます。</p>
+<p>フォーマットは<code>.scalafmt.conf</code>ファイルで設定できます。詳しくは公式ドキュメントにひととおり目を通してみるといいでしょう。
+<a href="https://scalameta.org/scalafmt/docs/configuration.html" target="_blank">https://scalameta.org/scalafmt/docs/configuration.html</a></p>
+<h3 id="scalafix"><a name="scalafix" class="plugin-anchor" href="#scalafix"><i class="fa fa-link" aria-hidden="true"></i></a>scalafix</h3>
+<p>さて、次はscalafixを試してみましょう。
+sbtシェルで次のコマンドを実行してください。</p>
+<pre><code class="lang-sh">scalafix --check --rules ProcedureSyntax
+</code></pre>
+<p>下記のように警告が表示されます。</p>
+<pre><code>[info] Running scalafix on 1 Scala sources
+[error] --- /path/to/problematic/File.scala
+[error] +++ &lt;expected fix&gt;
+...省略...
+[error] -  def myProcedure {}
+[error] +  def myProcedure: Unit = {}
+[error]  
+...省略...
+[error] 
+ScalafixFailed: TestError
+</code></pre><p>問題のあるコードを自動的に書き換えるには<code>--check</code>オプションを外して<code>scalafix ProcedureSyntax</code>コマンドを実行します。先ほどの<code>myProcedure</code>は次のように修正されます。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Example</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">myProcedure</span></span>: <span class="hljs-type">Unit</span> = {}
+}
+</code></pre>
+<p>Procedure Syntaxの警告と修正はscalafixにデフォルトで用意されていますが、ライブラリとして公開されているscalafixのルールを使うことでリンターのルールを追加できます。公開されているルールは<a href="https://scalacenter.github.io/scalafix/docs/rules/community-rules.html" target="_blank">scalafixのドキュメント</a>に書いてあります。</p>
 <h2 id="テストを書こう"><a name="テストを書こう" class="plugin-anchor" href="#テストを書こう"><i class="fa fa-link" aria-hidden="true"></i></a>テストを書こう</h2>
 <p>開発者として意識してほしいことを挙げておきます。</p>
 <ul>
@@ -914,7 +939,7 @@ addSbtPlugin(<span class="hljs-string">&quot;org.scoverage&quot;</span> % <span 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"テスト","level":"1.20","depth":1,"next":{"title":"Javaとの相互運用","level":"1.21","depth":1,"path":"java-interop.md","ref":"java-interop.md","articles":[]},"previous":{"title":"FutureとPromise","level":"1.19","depth":1,"path":"future-and-promise.md","ref":"future-and-promise.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"test.md","mtime":"2021-11-04T22:39:14.022Z","type":"markdown"},"gitbook":{"version":"3.6.23","time":"2021-11-04T22:39:18.086Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"テスト","level":"1.20","depth":1,"next":{"title":"Javaとの相互運用","level":"1.21","depth":1,"path":"java-interop.md","ref":"java-interop.md","articles":[]},"previous":{"title":"FutureとPromise","level":"1.19","depth":1,"path":"future-and-promise.md","ref":"future-and-promise.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"test.md","mtime":"2022-04-11T22:08:51.248Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-04-11T22:08:55.013Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
