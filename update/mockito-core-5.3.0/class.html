@@ -1,0 +1,796 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>クラス · Scala研修テキスト</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.7">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="object.html" />
+    
+    
+    <link rel="prev" href="control-syntax.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction-to-scala.html">
+            
+                <a href="introduction-to-scala.html">
+            
+                    
+                    Scalaとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="sbt-install.html">
+            
+                <a href="sbt-install.html">
+            
+                    
+                    sbtをインストールする
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    Scalaの基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="sbt-compile-execute.html">
+            
+                <a href="sbt-compile-execute.html">
+            
+                    
+                    sbtでプログラムをコンパイル・実行する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="IDE.html">
+            
+                <a href="IDE.html">
+            
+                    
+                    IDE(IntelliJ IDEA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="notation.html">
+            
+                <a href="notation.html">
+            
+                    
+                    記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="control-syntax.html">
+            
+                <a href="control-syntax.html">
+            
+                    
+                    Scalaの制御構文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    クラス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    オブジェクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="trait.html">
+            
+                <a href="trait.html">
+            
+                    
+                    トレイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="type-parameter.html">
+            
+                <a href="type-parameter.html">
+            
+                    
+                    型パラメータと変位指定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="collection.html">
+            
+                <a href="collection.html">
+            
+                    
+                    コレクションライブラリ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="case-class-and-pattern-matching.html">
+            
+                <a href="case-class-and-pattern-matching.html">
+            
+                    
+                    ケースクラスとパターンマッチング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    エラー処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="implicit.html">
+            
+                <a href="implicit.html">
+            
+                    
+                    Implicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="introduction-to-typeclass.html">
+            
+                <a href="introduction-to-typeclass.html">
+            
+                    
+                    型クラスへの誘い
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="future-and-promise.html">
+            
+                <a href="future-and-promise.html">
+            
+                    
+                    FutureとPromise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    テスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="java-interop.html">
+            
+                <a href="java-interop.html">
+            
+                    
+                    Javaとの相互運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    S99の案内
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="advanced-trait-di.html">
+            
+                <a href="advanced-trait-di.html">
+            
+                    
+                    トレイトの応用編：依存性の注入によるリファクタリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="typeclass.html">
+            
+                <a href="typeclass.html">
+            
+                    
+                    付録：様々な型クラスの紹介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >クラス</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="クラス"><a name="クラス" class="plugin-anchor" href="#クラス"><i class="fa fa-link" aria-hidden="true"></i></a>クラス</h1>
+<p>これからScalaにおけるクラス定義に関して説明します。他のオブジェクト指向言語のクラスをある程度知っていることを前提としていますが、ご了承ください。</p>
+<h2 id="クラス定義"><a name="クラス定義" class="plugin-anchor" href="#クラス定義"><i class="fa fa-link" aria-hidden="true"></i></a>クラス定義</h2>
+<p>Scalaのクラス定義は次のような形を取ります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">&lt;クラス名&gt;</span> &apos;(<span class="hljs-params">&apos; (&lt;引数名1&gt; : &lt;引数型1&gt;, &lt;引数名2&gt;: &lt;引数型2&gt; ...</span>)<span class="hljs-title">?</span> &apos;)&apos; </span>{
+  (&lt;フィールド定義&gt; | &lt;メソッド定義&gt; )*
+}
+</code></pre>
+<p>たとえば、点を表すクラス<code>Point</code>を定義したいとします。<code>Point</code>はx座標を表すフィールド<code>x</code>（<code>Int</code>型）とフィールド<code>y</code>（<code>Int</code>型）からなるとします。このクラス<code>Point</code>をScalaで書くと次のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>(<span class="hljs-params">_x: <span class="hljs-type">Int</span>, _y: <span class="hljs-type">Int</span></span>) </span>{
+  <span class="hljs-keyword">val</span> x = _x
+  <span class="hljs-keyword">val</span> y = _y
+}
+</code></pre>
+<p>コンストラクタの引数と同名のフィールドを定義し、それを公開する場合は、以下のように短く書くこともできます。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>(<span class="hljs-params">val x: <span class="hljs-type">Int</span>, val y: <span class="hljs-type">Int</span></span>)</span>
+</code></pre>
+<ul>
+<li>クラス名の直後にコンストラクタ引数の定義がある</li>
+<li>val/varによって、コンストラクタ引数をフィールドとして公開することができる</li>
+</ul>
+<p>点に注目してください。最初の点ですが、Scalaでは1クラスに付き、基本的には1つのコンストラクタしか使いません。このコンストラクタを、Scalaでは<em>プライマリコンストラクタ</em>として特別に扱っています。文法上は複数のコンストラクタを定義できるようになっていますが、実際に使うことはほとんどありません。複数のオブジェクトの生成方法を提供したい場合、objectの <code>apply</code> メソッドとして定義することが多いです。</p>
+<p>2番目の点ですが、プライマリコンストラクタの引数にval/varをつけるとそのフィールドは公開され、外部からアクセスできるようになります。なお、プライマリコンストラクタの引数のスコープはクラス定義全体におよびます。そのため、以下のようにメソッド定義の中から直接コンストラクタ引数を参照できます。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>(<span class="hljs-params">val x: <span class="hljs-type">Int</span>, val y: <span class="hljs-type">Int</span></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">+</span></span>(p: <span class="hljs-type">Point</span>): <span class="hljs-type">Point</span> = {
+    <span class="hljs-keyword">new</span> <span class="hljs-type">Point</span>(x + p.x, y + p.y)
+  }
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>(): <span class="hljs-type">String</span> = <span class="hljs-string">&quot;(&quot;</span> + x + <span class="hljs-string">&quot;, &quot;</span> + y + <span class="hljs-string">&quot;)&quot;</span>
+}
+</code></pre>
+<h2 id="メソッド定義"><a name="メソッド定義" class="plugin-anchor" href="#メソッド定義"><i class="fa fa-link" aria-hidden="true"></i></a>メソッド定義</h2>
+<p>先ほど既にメソッド定義の例として<code>+</code>メソッドの定義が出てきましたが、一般的には、次のような形をとります。</p>
+<pre><code class="lang-scala">(<span class="hljs-keyword">private</span>([<span class="hljs-keyword">this</span> | &lt;パッケージ名&gt;])? | <span class="hljs-keyword">protected</span>([&lt;パッケージ名&gt;])?)? <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">&lt;メソッド名&gt;</span> &apos;</span>(&apos;
+  (&lt;引数名&gt; : 引数型 (, 引数名 : &lt;引数型&gt;)*)?
+&apos;)&apos;: &lt;返り値型&gt; = &lt;本体&gt;
+</code></pre>
+<p>実際にはブロック式を使った以下の形式を取ることが多いでしょう。</p>
+<pre><code class="lang-scala">(<span class="hljs-keyword">private</span>([<span class="hljs-keyword">this</span> | &lt;パッケージ名&gt;])? | <span class="hljs-keyword">protected</span>([&lt;パッケージ名&gt;])?)? <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">&lt;メソッド名&gt;</span> &apos;</span>(&apos;
+  (&lt;引数名&gt; : 引数型 (, 引数名 : &lt;引数型&gt;)*)?
+&apos;)&apos;: &lt;返り値型&gt; = {
+  (&lt;式&gt; (; | &lt;改行&gt;)?)*
+}
+</code></pre>
+<p>単にメソッド本体がブロック式からなる場合にこうなるというだけであって、メソッド定義を <code>{}</code> で囲む専用の構文があるわけではありません。</p>
+<p>返り値型は省略しても特別な場合以外型推論してくれますが、読みやすさのために、返り値の型は明記する習慣を付けるようにしましょう。 <code>private</code> を付けるとそのクラス内だけから、 <code>protected</code> を付けると派生クラスからのみアクセスできるメソッドになります。  <code>private[this]</code> をつけると、同じオブジェクトからのみアクセス可能になります。また、 <code>private[パッケージ名]</code> を付けると同一パッケージに所属しているものからのみ、 <code>protected[パッケージ名]</code> をつけると、派生クラスに加えて追加で同じパッケージに所属しているもの全てからアクセスできるようになります。 <code>private</code> も <code>protected</code> も付けない場合、そのメソッドはpublicとみなされます。</p>
+<p>先ほど定義した<code>Point</code>クラスをREPLから使ってみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span>(<span class="hljs-params">val x: <span class="hljs-type">Int</span>, val y: <span class="hljs-type">Int</span></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">+</span></span>(p: <span class="hljs-type">Point</span>): <span class="hljs-type">Point</span> = {
+    <span class="hljs-keyword">new</span> <span class="hljs-type">Point</span>(x + p.x, y + p.y)
+  }
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>(): <span class="hljs-type">String</span> = <span class="hljs-string">&quot;(&quot;</span> + x + <span class="hljs-string">&quot;, &quot;</span> + y + <span class="hljs-string">&quot;)&quot;</span>
+}
+
+<span class="hljs-keyword">val</span> p1 = <span class="hljs-keyword">new</span> <span class="hljs-type">Point</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)
+<span class="hljs-comment">// p1: Point = (1, 1)</span>
+
+<span class="hljs-keyword">val</span> p2 = <span class="hljs-keyword">new</span> <span class="hljs-type">Point</span>(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)
+<span class="hljs-comment">// p2: Point = (2, 2)</span>
+
+p1 + p2
+<span class="hljs-comment">// res0: Point = (3, 3)</span>
+</code></pre>
+<h2 id="複数の引数リストを持つメソッド"><a name="複数の引数リストを持つメソッド" class="plugin-anchor" href="#複数の引数リストを持つメソッド"><i class="fa fa-link" aria-hidden="true"></i></a>複数の引数リストを持つメソッド</h2>
+<p>メソッドは以下のように複数の引数リストを持つように定義することができます。</p>
+<pre><code class="lang-scala">(<span class="hljs-keyword">private</span>([<span class="hljs-keyword">this</span> | &lt;パッケージ名&gt;])? | <span class="hljs-keyword">protected</span>([&lt;パッケージ名&gt;])?)? <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">&lt;メソッド名&gt;</span> &apos;</span>(&apos;
+  (&lt;引数名&gt; : 引数型 (, 引数名 : &lt;引数型&gt;)*)?
+&apos;)&apos;( &apos;(&apos;
+  (&lt;引数名&gt; : 引数型 (, 引数名 : &lt;引数型&gt;)*)?
+&apos;)&apos; )* : &lt;返り値型&gt; = &lt;本体式&gt;
+</code></pre>
+<p>複数の引数リストを持つメソッドには、Scalaの糖衣構文と組み合わせて流暢なAPIを作ったり、後述するimplicit parameterのために必要になったり、型推論を補助するために使われたりといった用途があります。複数の引数リストを持つ加算メソッドを定義してみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Adder</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(x: <span class="hljs-type">Int</span>)(y: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = x + y
+}
+
+<span class="hljs-keyword">val</span> adder = <span class="hljs-keyword">new</span> <span class="hljs-type">Adder</span>()
+<span class="hljs-comment">// adder: Adder = repl.MdocSession$MdocApp$Adder$1@5daddfa7</span>
+
+adder.add(<span class="hljs-number">2</span>)(<span class="hljs-number">3</span>)
+<span class="hljs-comment">// res1: Int = 5</span>
+
+<span class="hljs-keyword">val</span> fun = adder.add(<span class="hljs-number">2</span>) _
+<span class="hljs-comment">// fun: Int =&gt; Int = &lt;function1&gt;</span>
+fun(<span class="hljs-number">3</span>)
+<span class="hljs-comment">// res2: Int = 5</span>
+</code></pre>
+<p>複数の引数リストを持つメソッドは <code>obj.method(x, y)</code>の形式でなく <code>obj.method(x)(y)</code> の形式で呼びだすことになります。また、一番下の例のように最初の引数だけを適用して新しい関数を作る（部分適用）こともできます。</p>
+<p>次のように、複数の引数リストを使わずに単に複数の引数を持つメソッドも作ることができます。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Adder</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(x: <span class="hljs-type">Int</span>, y: <span class="hljs-type">Int</span>): <span class="hljs-type">Int</span> = x + y
+}
+
+<span class="hljs-keyword">val</span> adder = <span class="hljs-keyword">new</span> <span class="hljs-type">Adder</span>()
+<span class="hljs-comment">// adder: Adder = repl.MdocSession$MdocApp$Adder$2@19678745</span>
+
+adder.add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+<span class="hljs-comment">// res3: Int = 5</span>
+
+<span class="hljs-keyword">val</span> fun: <span class="hljs-type">Int</span> =&gt; <span class="hljs-type">Int</span> = adder.add(<span class="hljs-number">2</span>, _)
+<span class="hljs-comment">// fun: Int =&gt; Int = &lt;function1&gt;</span>
+fun(<span class="hljs-number">3</span>)
+<span class="hljs-comment">// res4: Int = 5</span>
+</code></pre>
+<h2 id="フィールド定義"><a name="フィールド定義" class="plugin-anchor" href="#フィールド定義"><i class="fa fa-link" aria-hidden="true"></i></a>フィールド定義</h2>
+<p>フィールド定義は</p>
+<pre><code class="lang-scala">(<span class="hljs-keyword">private</span>([<span class="hljs-keyword">this</span> | &lt;パッケージ名&gt;])? | <span class="hljs-keyword">protected</span>([&lt;パッケージ名&gt;])?)? (<span class="hljs-keyword">val</span> | <span class="hljs-keyword">var</span>) &lt;フィールド名&gt;: &lt;フィールド型&gt; = &lt;初期化式&gt;
+</code></pre>
+<p>という形を取ります。<code>val</code>の場合は変更不能、<code>var</code>の場合は変更可能なフィールドになります。また、<code>private</code>を付けるとそのクラス内だけから、<code>protected</code>を付けるとそのクラスの派生クラスからのみアクセスできるフィールドになります。 <code>private[this]</code> を付加すると、同じオブジェクトからのみアクセス可能になります。さらに、<code>private[&lt;パッケージ名&gt;]</code>を付けると同一パッケージからのみ、 <code>protected[パッケージ名]</code> をつけると、派生クラスに加えて同じパッケージに所属しているもの全てからアクセスできるようになります。 <code>private</code>も<code>protected</code>も付けない場合、そのフィールドはpublicとみなされます。</p>
+<h2 id="抽象メンバー"><a name="抽象メンバー" class="plugin-anchor" href="#抽象メンバー"><i class="fa fa-link" aria-hidden="true"></i></a>抽象メンバー</h2>
+<p>その時点では実装を書くことができず、後述する継承の際に、メソッドやフィールドの実装を与えたいということがあります。このような場合に対応するため、Scalaでは抽象メンバーを定義することができます。抽象メンバーは、メソッドの場合とフィールドの場合があり、メソッドの場合は次のようになります。</p>
+<pre><code class="lang-scala">(<span class="hljs-keyword">private</span>([<span class="hljs-keyword">this</span> | &lt;パッケージ名&gt;])? | <span class="hljs-keyword">protected</span>([&lt;パッケージ名&gt;])?)? <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">&lt;メソッド名&gt;</span> &apos;</span>(&apos;
+  (&lt;引数名&gt; : 引数型 (, 引数名 : &lt;引数型&gt;)*)?
+&apos;)&apos;: &lt;返り値型&gt;
+</code></pre>
+<p>フィールドの定義は次のようになります。</p>
+<pre><code class="lang-scala">(<span class="hljs-keyword">private</span>([<span class="hljs-keyword">this</span> | &lt;パッケージ名&gt;])? | <span class="hljs-keyword">protected</span>([&lt;パッケージ名&gt;])?)? (<span class="hljs-keyword">val</span> | <span class="hljs-keyword">var</span>) &lt;フィールド名&gt;: &lt;フィールド型&gt;
+</code></pre>
+<p>メソッドやフィールドの中身がない以外は、通常のメソッドやフィールド定義と同じです。また、抽象メソッドを一個以上持つクラスは、抽象クラスとして宣言する必要があります。たとえば、<code>x</code>座標と<code>y</code>座標を持つ、抽象クラス<code>XY</code>は次のようにして定義します。クラスの前に<code>abstract</code> 修飾子をつける必要があるのがポイントです。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">XY</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">x</span></span>: <span class="hljs-type">Int</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">y</span></span>: <span class="hljs-type">Int</span>
+}
+</code></pre>
+<h2 id="継承"><a name="継承" class="plugin-anchor" href="#継承"><i class="fa fa-link" aria-hidden="true"></i></a>継承</h2>
+<p>Scalaのクラスは、他の多くのオブジェクト指向言語と同様に、継承することができます。継承には2つの目的があります。
+1つは継承によりスーパークラスの実装をサブクラスでも使うことで実装を再利用することです。もう1つは複数のサブクラスが共通のスーパークラスのインタフェースを継承することで処理を共通化することです<sup><a href="#fn_1" id="reffn_1">1</a></sup>。実装の継承には複数の継承によりメソッドやフィールドの名前が衝突する場合の振舞いなどに問題があることが知られており、例えば、Javaでは実装継承が1つだけに限定されています。
+Scalaではトレイトという仕組みで複数の実装の継承を実現していますが、トレイトについては別の節で説明します。</p>
+<p>ここでは通常のScalaのクラスの継承について説明します。Scalaでのクラスの継承は次のような構文になります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">&lt;クラス名&gt;</span> <span class="hljs-title">&lt;クラス引数&gt;</span> (<span class="hljs-params">extends &lt;スーパークラス&gt;</span>)<span class="hljs-title">?</span> (<span class="hljs-params">with &lt;トレイト名&gt;</span>)<span class="hljs-title">*</span> </span>{
+  (&lt;フィールド定義&gt; | &lt;メソッド定義&gt;)*
+}
+</code></pre>
+<p>※「トレイト名」はここでは使われませんが、後で出てくるトレイトの節で説明を行います。</p>
+<p>Scalaでは、既に実装があるメソッドをオーバーライドするときは<code>override</code>キーワードを使わなければなりません。たとえば、次のように書くことは可能ですが</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">APrinter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print</span></span>(): <span class="hljs-type">Unit</span> = {
+    println(<span class="hljs-string">&quot;A&quot;</span>)
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BPrinter</span>(<span class="hljs-params"></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">APrinter</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print</span></span>(): <span class="hljs-type">Unit</span> = {
+    println(<span class="hljs-string">&quot;B&quot;</span>)
+  }
+}
+
+<span class="hljs-keyword">new</span> <span class="hljs-type">APrinter</span>().print()
+<span class="hljs-comment">// A</span>
+
+<span class="hljs-keyword">new</span> <span class="hljs-type">BPrinter</span>().print()
+<span class="hljs-comment">// B</span>
+</code></pre>
+<p>ここで<code>BPrinter#print()</code>の<code>override</code>キーワードをはずすと、次のようにメッセージを出力して、<strong>コンパイルエラー</strong>になります。 </p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BPrinter</span>(<span class="hljs-params"></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">APrinter</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print</span></span>(): <span class="hljs-type">Unit</span> = {
+    println(<span class="hljs-string">&quot;B&quot;</span>)
+  }
+}
+</code></pre>
+<pre><code>[error] .../Printer.scala:8:7: `override` modifier required to override concrete member:
+[error] def print(): Unit (defined in class APrinter)
+[error]   def print(): Unit = {
+[error]       ^
+[error] one error found
+</code></pre><p>このような仕組みのない言語ではしばしば、気付かずに既存のメソッドをオーバーライドするつもりで新しいメソッドを定義してしまうというミスがありますが、
+Scalaでは<code>override</code>キーワードを使って言語レベルでこの問題に対処しているのです。</p>
+<h3 id="class_ex1"><a name="class_ex1" class="plugin-anchor" href="#class_ex1"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題 </h3>
+<p>全てが <code>Int</code> 型の <code>x</code> 、 <code>y</code> 、 <code>z</code> という名前を持った、3次元座標を表す <code>Point3D</code> クラスを定義してください。 <code>Point3D</code> クラスは次のようにして使うことができなければいけません。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> p = <span class="hljs-keyword">new</span> <span class="hljs-type">Point3D</span>(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>)
+println(p.x) <span class="hljs-comment">// 10</span>
+println(p.y) <span class="hljs-comment">// 20</span>
+println(p.z) <span class="hljs-comment">// 30</span>
+</code></pre>
+<div><button type="button" id="answer_ex1_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex1_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex1" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point3D</span>(<span class="hljs-params">val x: <span class="hljs-type">Int</span>, val y: <span class="hljs-type">Int</span>, val z: <span class="hljs-type">Int</span></span>)</span>
+</code></pre>
+<h4 id="解説"><a name="解説" class="plugin-anchor" href="#解説"><i class="fa fa-link" aria-hidden="true"></i></a>解説</h4>
+<p>プライマリコンストラクタの引数として座標の値を渡し、それをそのまま取り出しているので、プライマリコンストラクタの引数に <code>val</code> を付けるのが最も簡単です。別解として、以下のように別途 <code>val</code> でフィールドを定義することも可能ですが、今回あえてそうする意味は少ないでしょう。 </p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point3D</span>(<span class="hljs-params">x_ : <span class="hljs-type">Int</span>, y_ : <span class="hljs-type">Int</span>, z_ : <span class="hljs-type">Int</span></span>) </span>{
+  <span class="hljs-keyword">val</span> x: <span class="hljs-type">Int</span> = x_
+  <span class="hljs-keyword">val</span> y: <span class="hljs-type">Int</span> = y_
+  <span class="hljs-keyword">val</span> z: <span class="hljs-type">Int</span> = z_
+}
+</code></pre>
+</div>
+<h3 id="class_ex2"><a name="class_ex2" class="plugin-anchor" href="#class_ex2"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題 </h3>
+<p>次の抽象クラス <code>Shape</code> を継承して、 <code>Rectangle</code> クラス（長方形クラス）と<code>Circle</code> クラス（円クラス）を定義してください。また、<code>area</code> メソッドをオーバーライドして、ただしく面積が計算できるように定義してください。なお、長方形の面積は幅を<code>w</code>、高さを<code>h</code>とすると、<code>w * h</code>で求めることができます。円の面積は、半径を<code>r</code>とすると、<code>r * r * math.Pi</code> で求めることができます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span></span>: <span class="hljs-type">Double</span>
+}
+<span class="hljs-comment">/*
+ * RectangleとCircleの定義
+ */</span>
+<span class="hljs-keyword">var</span> shape: <span class="hljs-type">Shape</span> = <span class="hljs-keyword">new</span> <span class="hljs-type">Rectangle</span>(<span class="hljs-number">10.0</span>, <span class="hljs-number">20.0</span>)
+println(shape.area)
+shape = <span class="hljs-keyword">new</span> <span class="hljs-type">Circle</span>(<span class="hljs-number">2.0</span>)
+println(shape.area)
+</code></pre>
+<div><button type="button" id="answer_ex2_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex2&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex2_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex2_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex2_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex2&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex2_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex2_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex2" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span></span>: <span class="hljs-type">Double</span>
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">val width: <span class="hljs-type">Double</span>, val height: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span></span>: <span class="hljs-type">Double</span> = width * height
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>(<span class="hljs-params">val radius: <span class="hljs-type">Double</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span></span>: <span class="hljs-type">Double</span> = radius * radius * math.<span class="hljs-type">Pi</span>
+}
+</code></pre>
+<h4 id="解説"><a name="解説" class="plugin-anchor" href="#解説"><i class="fa fa-link" aria-hidden="true"></i></a>解説</h4>
+<p><code>Rectangle</code>と<code>Circle</code>クラスが<code>Shape</code>クラスを継承して、それぞれで<code>area: Double</code>メソッドをオーバーライドしています。この場合、<code>Shape</code>の<code>area</code>は抽象メソッドなので<code>override</code>は必須ではありませんが、つけた方が良いでしょう。</p>
+</div>
+<blockquote id="fn_1">
+<sup>1</sup>. このように継承などにより型に親子関係を作り、複数の型に共通のインタフェースを持たせることをサブタイピング・ポリモーフィズムと呼びます。Scalaでは他にも構造的部分型というサブタイピング・ポリモーフィズムの機能がありますが、実際に使われることが少ないため、このテキストでは説明を省略しています。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="control-syntax.html" class="navigation navigation-prev " aria-label="Previous page: Scalaの制御構文">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="object.html" class="navigation navigation-next " aria-label="Next page: オブジェクト">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"クラス","level":"1.9","depth":1,"next":{"title":"オブジェクト","level":"1.10","depth":1,"path":"object.md","ref":"object.md","articles":[]},"previous":{"title":"Scalaの制御構文","level":"1.8","depth":1,"path":"control-syntax.md","ref":"control-syntax.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"class.md","mtime":"2023-04-11T22:09:42.075Z","type":"markdown"},"gitbook":{"version":"4.0.7","time":"2023-04-11T22:09:59.411Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
