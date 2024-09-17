@@ -1,0 +1,890 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>FutureとPromise · Scala研修テキスト</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="test.html" />
+    
+    
+    <link rel="prev" href="introduction-to-typeclass.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction-to-scala.html">
+            
+                <a href="introduction-to-scala.html">
+            
+                    
+                    Scalaとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="sbt-install.html">
+            
+                <a href="sbt-install.html">
+            
+                    
+                    sbtをインストールする
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    Scalaの基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="sbt-compile-execute.html">
+            
+                <a href="sbt-compile-execute.html">
+            
+                    
+                    sbtでプログラムをコンパイル・実行する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="IDE.html">
+            
+                <a href="IDE.html">
+            
+                    
+                    IDE(IntelliJ IDEA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="notation.html">
+            
+                <a href="notation.html">
+            
+                    
+                    記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="control-syntax.html">
+            
+                <a href="control-syntax.html">
+            
+                    
+                    Scalaの制御構文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    クラス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    オブジェクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="trait.html">
+            
+                <a href="trait.html">
+            
+                    
+                    トレイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="type-parameter.html">
+            
+                <a href="type-parameter.html">
+            
+                    
+                    型パラメータと変位指定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="collection.html">
+            
+                <a href="collection.html">
+            
+                    
+                    コレクションライブラリ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="case-class-and-pattern-matching.html">
+            
+                <a href="case-class-and-pattern-matching.html">
+            
+                    
+                    ケースクラスとパターンマッチング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    エラー処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="implicit.html">
+            
+                <a href="implicit.html">
+            
+                    
+                    Implicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="introduction-to-typeclass.html">
+            
+                <a href="introduction-to-typeclass.html">
+            
+                    
+                    型クラスへの誘い
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.19" data-path="future-and-promise.html">
+            
+                <a href="future-and-promise.html">
+            
+                    
+                    FutureとPromise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    テスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="java-interop.html">
+            
+                <a href="java-interop.html">
+            
+                    
+                    Javaとの相互運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    S99の案内
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="advanced-trait-di.html">
+            
+                <a href="advanced-trait-di.html">
+            
+                    
+                    トレイトの応用編：依存性の注入によるリファクタリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="typeclass.html">
+            
+                <a href="typeclass.html">
+            
+                    
+                    付録：様々な型クラスの紹介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >FutureとPromise</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="futurepromiseについて"><a name="futurepromiseについて" class="plugin-anchor" href="#futurepromiseについて"><i class="fa fa-link" aria-hidden="true"></i></a>Future/Promiseについて</h1>
+<p>FutureとPromiseは非同期プログラミングにおいて、終了しているかどうかわからない処理結果を抽象化した型です。Futureは未来の結果を表す型です。Promiseは一度だけ、成功あるいは失敗を表す、処理または値を設定することでFutureに変換できる型です。</p>
+<p>JVM系の言語では、マルチスレッドで並行処理を使った非同期処理を行うことが多々あります。無論ブラウザ上のJavaScriptのようなシングルスレッドで行うような非同期処理もありますが、マルチスレッドで行う非同期処理は定義した処理群が随時行われるのではなく、マルチコアのマシンならば大抵の場合、複数のCPUで別々に実行されることとなります。</p>
+<p>具体的に非同期処理が行われている例としては、UIにおける読み込み中のインジゲーターなどがあげられます。読み込み中のインジゲーターがアニメーションしている間も、ダイアログを閉じたり、別な操作をすることができるのは、読み込み処理が非同期でおこなわれているからです。</p>
+<p>なお、このような特定のマシンの限られたリソースの中で、マルチスレッドやマルチプロセスによって順不同もしくは同時に処理を行うことを、並行（Concurrent）処理といいます。マルチスレッドの場合はプロセスとメモリ空間とファイルハンドラを複数のスレッドで共有し、マルチプロセスの場合はメモリ管理は別ですがCPUリソースを複数のプロセスで共有しています。（注、スレッドおよびプロセスのような概念については知っているものとみなして説明していますのでご了承ください）</p>
+<p>リソースが共有されているかどうかにかかわらず、完全に同時に処理を行っていくことを、並列（Parallel）処理といいます。大抵の場合、複数のマシンで分散実行させるような分散系を利用したスケールするような処理を並列処理系と呼びます。</p>
+<p>このたびはこのような並行処理を使った非同期処理を行った場合に、とても便利なFutureとPromiseというそれぞれのクラスの機能と使い方について説明を行います。</p>
+<h2 id="futureとは"><a name="futureとは" class="plugin-anchor" href="#futureとは"><i class="fa fa-link" aria-hidden="true"></i></a>Futureとは</h2>
+<p><a href="https://www.scala-lang.org/api/current/scala/concurrent/Future.html" target="_blank">Future</a>とは、非同期に処理される結果が入ったOption型のようなものです。
+mapやflatMapやfilter、for式の適用といったようなOptionやListでも利用できる性質を持っています。</p>
+<p>ライブラリやフレームワークの処理が非同期主体となっている場合、このFutureは基本的で重要な役割を果たすクラスとなります。</p>
+<p>なおJavaにも<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/concurrent/Future.html" target="_blank">Future</a>というクラスがありますが、こちらには関数を与えたり<sup><a href="#fn_1" id="reffn_1">1</a></sup>、Optionの持つ特性はありません。また、ECMAScript 6にある<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise</a>
+という機能がありますが、そちらの方がScalaのFutureの機能に似ています。このECMAScript 6のPromiseとScalaのPromiseは、全く異なる機能であるため注意が必要です。</p>
+<p>実際のコード例を見てみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">Future</span>
+<span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">ExecutionContext</span>.<span class="hljs-type">Implicits</span>.global
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">FutureSample</span> </span>{
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> s = <span class="hljs-string">&quot;Hello&quot;</span>
+    <span class="hljs-keyword">val</span> f: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = <span class="hljs-type">Future</span> {
+      <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">1000</span>)
+      s + <span class="hljs-string">&quot; future!&quot;</span>
+    }
+
+    f.foreach { s =&gt;
+      println(s)
+    }
+
+    println(f.isCompleted) <span class="hljs-comment">// false</span>
+
+    <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">5000</span>) <span class="hljs-comment">// Hello future!</span>
+
+    println(f.isCompleted) <span class="hljs-comment">// true</span>
+
+    <span class="hljs-keyword">val</span> f2: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = <span class="hljs-type">Future</span> {
+      <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">1000</span>)
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">RuntimeException</span>(<span class="hljs-string">&quot;わざと失敗&quot;</span>)
+    }
+
+    f2.failed.foreach { e =&gt;
+      println(e.getMessage)
+    }
+
+    println(f2.isCompleted) <span class="hljs-comment">// false</span>
+
+    <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">5000</span>) <span class="hljs-comment">// わざと失敗</span>
+
+    println(f2.isCompleted) <span class="hljs-comment">// true</span>
+  }
+}
+</code></pre>
+<p>出力結果は、</p>
+<pre><code>false
+Hello future!
+true
+false
+わざと失敗
+true
+</code></pre><p>のようになります。</p>
+<p>以上はFuture自体の機能を理解するためのサンプルコードです。非同期プログラミングは、sbt consoleで実装するのが難しいのでファイルに書かせてもらいました。
+Futureシングルトンは関数を与えるとその関数を非同期に与える<code>Future[+T]</code>を返します。上記の実装例ではまず、1000ミリ秒待機して、<code>&quot;Hello&quot;</code>と<code>&quot; future!&quot;</code>を文字列結合するという処理を非同期に処理します。そして成功時の処理を定義した後futureが処理が終わっているかを確認し、
+futureの結果取得を5000ミリ秒間待つという処理を行った後、その結果がどうなっているのかをコンソールに出力するという処理をします。</p>
+<p>なお以上のように5000ミリ秒待つという他に、そのFuture自体の処理を待つという書き方もすることができます。
+<code>Thread.sleep(5000)</code>を<code>Await.ready(f, 5000.millisecond)</code>とすることで、
+Futureが終わるまで最大5000ミリ秒を待つという書き方となります。ただし、この書き方をする前に、</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">Await</span>
+<span class="hljs-keyword">import</span> scala.concurrent.duration._
+</code></pre>
+<p>以上をimport文に追加する必要があります。さらにこれらがどのように動いているのかを、スレッドの観点から見てみましょう。以下のようにコードを書いてみます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.concurrent.{<span class="hljs-type">Await</span>, <span class="hljs-type">Future</span>}
+<span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">ExecutionContext</span>.<span class="hljs-type">Implicits</span>.global
+<span class="hljs-keyword">import</span> scala.concurrent.duration._
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">FutureSample</span> </span>{
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> s = <span class="hljs-string">&quot;Hello&quot;</span>
+    <span class="hljs-keyword">val</span> f: <span class="hljs-type">Future</span>[<span class="hljs-type">String</span>] = <span class="hljs-type">Future</span> {
+      <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">1000</span>)
+      println(<span class="hljs-string">s&quot;[ThreadName] In Future: <span class="hljs-subst">${Thread.currentThread.getName}</span>&quot;</span>)
+      s + <span class="hljs-string">&quot; future!&quot;</span>
+    }
+
+    f.foreach { s =&gt;
+      println(<span class="hljs-string">s&quot;[ThreadName] In Success: <span class="hljs-subst">${Thread.currentThread.getName}</span>&quot;</span>)
+      println(s)
+    }
+
+    println(f.isCompleted) <span class="hljs-comment">// false</span>
+
+    <span class="hljs-type">Await</span>.ready(f, <span class="hljs-number">5000.</span>millisecond) <span class="hljs-comment">// Hello future!</span>
+
+    println(<span class="hljs-string">s&quot;[ThreadName] In App: <span class="hljs-subst">${Thread.currentThread.getName}</span>&quot;</span>)
+    println(f.isCompleted) <span class="hljs-comment">// true</span>
+  }
+}
+</code></pre>
+<p>この実行結果については、</p>
+<pre><code>false
+[ThreadName] In Future: ForkJoinPool-1-worker-5
+[ThreadName] In App: main
+true
+[ThreadName] In Success: ForkJoinPool-1-worker-5
+Hello future!
+</code></pre><p>となります。以上のコードではそれぞれのスレッド名を各箇所について出力してみました。非常に興味深い結果ですね。<code>Future</code>と<code>foreach</code>に渡した関数に関しては、
+<code>ForkJoinPool-1-worker-5</code>というmainスレッドとは異なるスレッドで実行されています。</p>
+<p>つまりFutureを用いることで知らず知らずのうちのマルチスレッドのプログラミングが実行されていたということになります。また、<code>Await.ready(f, 5000.millisecond)</code>で処理を書いたことで、<code>isCompleted</code>の確認処理のほうが、
+<code>&quot;Hello future!&quot;</code>の文字列結合よりも先に出力されていることがわかります。これは文字列結合の方が値参照よりもコストが高いためこのようになります。</p>
+<p>ForkJoinPoolに関しては、Javaの並行プログラミングをサポートする<code>ExecutorService</code>というインタフェースを被ったクラスとなります。内部的にスレッドプールを持っており、スレッドを使いまわすことによって、スレッドを作成するコストを低減し高速化を図っています。</p>
+<p>Futureについての動きがわかった所で、FutureがOptionのように扱えることも説明します。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">ExecutionContext</span>.<span class="hljs-type">Implicits</span>.global
+<span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">Future</span>
+<span class="hljs-keyword">import</span> scala.util.{<span class="hljs-type">Failure</span>, <span class="hljs-type">Random</span>, <span class="hljs-type">Success</span>}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">FutureOptionUsageSample</span> </span>{
+  <span class="hljs-keyword">val</span> random = <span class="hljs-keyword">new</span> <span class="hljs-type">Random</span>()
+  <span class="hljs-keyword">val</span> waitMaxMilliSec = <span class="hljs-number">3000</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> futureMilliSec: <span class="hljs-type">Future</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Future</span> {
+      <span class="hljs-keyword">val</span> waitMilliSec = random.nextInt(waitMaxMilliSec)
+      <span class="hljs-keyword">if</span>(waitMilliSec &lt; <span class="hljs-number">1000</span>) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">RuntimeException</span>(<span class="hljs-string">s&quot;waitMilliSec is <span class="hljs-subst">${waitMilliSec}</span>&quot;</span> )
+      <span class="hljs-type">Thread</span>.sleep(waitMilliSec)
+      waitMilliSec
+    }
+
+    <span class="hljs-keyword">val</span> futureSec: <span class="hljs-type">Future</span>[<span class="hljs-type">Double</span>] = futureMilliSec.map(i =&gt; i.toDouble / <span class="hljs-number">1000</span>)
+
+    futureSec onComplete {
+      <span class="hljs-keyword">case</span> <span class="hljs-type">Success</span>(waitSec) =&gt; println(<span class="hljs-string">s&quot;Success! <span class="hljs-subst">${waitSec}</span> sec&quot;</span>)
+      <span class="hljs-keyword">case</span> <span class="hljs-type">Failure</span>(t) =&gt; println(<span class="hljs-string">s&quot;Failure: <span class="hljs-subst">${t.getMessage}</span>&quot;</span>)
+    }
+
+    <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">3000</span>)
+  }
+}
+</code></pre>
+<p>出力例としては、<code>Success! 1.538 sec</code>や<code>Failure: waitMilliSec is 971</code>というものになります。この処理では、3000ミリ秒を上限としたランダムな時間を待ってその待ったミリ秒を返すFutureを定義しています。ただし、1000ミリ秒未満しか待たない場合には失敗とみなし例外を投げます。この最初にえられるFutureを<code>futureMilliSec</code>としていますが、その後、<code>map</code>メソッドを利用して<code>Int</code>のミリ秒を<code>Doubule</code>の秒に変換しています。なお先ほどと違ってこの度は、<code>foreach</code>ではなく<code>onComplete</code>を利用して成功と失敗の両方の処理を記述しました。</p>
+<p>以上の実装のようにFutureは結果をOptionのように扱うことができるわけです。無論mapも使えますがOptionがネストしている場合にflatMapを利用できるのと同様に、
+flatMapもFutureに対して利用することもできます。つまりmapの中での実行関数がさらにFutureを返すような場合も問題なくFutureを利用していけるのです。
+<code>val futureSec: Future[Double] = futureMilliSec.map(i =&gt; i.toDouble / 1000)</code>を上記のミリ秒を秒に変換する部分を100ミリ秒はかかる非同期のFutureにしてみた例は以下のとおりです。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> futureSec: <span class="hljs-type">Future</span>[<span class="hljs-type">Double</span>] = futureMilliSec.flatMap(i =&gt; <span class="hljs-type">Future</span> {
+  <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">100</span>)
+  i.toDouble / <span class="hljs-number">1000</span>
+})
+</code></pre>
+<p>mapで適用する関数でOptionがとれてきてしまうのをflattenできるという書き方と同じように、
+Futureに適用する関数の中でさらにFutureが取得できるような場合では、flatMapが適用できます。この書き方のお陰で非常に複雑な非同期処理を、比較的シンプルなコードで表現してやることができるようになります。</p>
+<h3 id="futureを使って非同期に取れてくる複数の結果を利用して結果を作る"><a name="futureを使って非同期に取れてくる複数の結果を利用して結果を作る" class="plugin-anchor" href="#futureを使って非同期に取れてくる複数の結果を利用して結果を作る"><i class="fa fa-link" aria-hidden="true"></i></a>Futureを使って非同期に取れてくる複数の結果を利用して結果を作る</h3>
+<p>さて、flatMapが利用できるということは、for式も利用できます。これらはよく複数のFutureを組み合わせて新しいFutureを作成するのに用いられます。実際に実装例を見てみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">ExecutionContext</span>.<span class="hljs-type">Implicits</span>.global
+<span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">Future</span>
+<span class="hljs-keyword">import</span> scala.util.{<span class="hljs-type">Failure</span>, <span class="hljs-type">Success</span>, <span class="hljs-type">Random</span>}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">CompositeFutureSample</span> </span>{
+  <span class="hljs-keyword">val</span> random = <span class="hljs-keyword">new</span> <span class="hljs-type">Random</span>()
+  <span class="hljs-keyword">val</span> waitMaxMilliSec = <span class="hljs-number">3000</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">waitRandom</span></span>(futureName: <span class="hljs-type">String</span>): <span class="hljs-type">Int</span> = {
+      <span class="hljs-keyword">val</span> waitMilliSec = random.nextInt(waitMaxMilliSec)
+      <span class="hljs-keyword">if</span>(waitMilliSec &lt; <span class="hljs-number">500</span>) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">RuntimeException</span>(<span class="hljs-string">s&quot;<span class="hljs-subst">${futureName}</span> waitMilliSec is <span class="hljs-subst">${waitMilliSec}</span>&quot;</span> )
+      <span class="hljs-type">Thread</span>.sleep(waitMilliSec)
+      waitMilliSec
+    }
+
+    <span class="hljs-keyword">val</span> futureFirst: <span class="hljs-type">Future</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Future</span> { waitRandom(<span class="hljs-string">&quot;first&quot;</span>) }
+    <span class="hljs-keyword">val</span> futureSecond: <span class="hljs-type">Future</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Future</span> { waitRandom(<span class="hljs-string">&quot;second&quot;</span>) }
+
+    <span class="hljs-keyword">val</span> compositeFuture: <span class="hljs-type">Future</span>[(<span class="hljs-type">Int</span>, <span class="hljs-type">Int</span>)] = <span class="hljs-keyword">for</span> {
+      first &lt;- futureFirst
+      second &lt;- futureSecond
+    } <span class="hljs-keyword">yield</span> (first, second)
+
+    compositeFuture onComplete  {
+      <span class="hljs-keyword">case</span> <span class="hljs-type">Success</span>((first, second)) =&gt; println(<span class="hljs-string">s&quot;Success! first:<span class="hljs-subst">${first}</span> second:<span class="hljs-subst">${second}</span>&quot;</span>)
+      <span class="hljs-keyword">case</span> <span class="hljs-type">Failure</span>(t) =&gt; println(<span class="hljs-string">s&quot;Failure: <span class="hljs-subst">${t.getMessage}</span>&quot;</span>)
+    }
+
+    <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">5000</span>)
+  }
+}
+</code></pre>
+<p>先ほど紹介した例に似ていますが、ランダムで生成した最大3秒間待つ関数を用意し、500ミリ秒未満しか待たなかった場合は失敗とみなします。その関数を実行する関数をFutureとして2つ用意し、それらをfor式で畳み込んで新しいFutureを作っています。そして最終的に新しいFutureに対して成功した場合と失敗した場合を出力します。</p>
+<p>出力結果としては、<code>Success! first:1782 second:1227</code>や<code>Failure: first waitMilliSec is 412</code>や
+<code>Failure: second waitMilliSec is 133</code>といったものとなります。</p>
+<p>なおFutureにはfilterの他、様々な並列実行に対するメソッドが存在しますので、
+<a href="https://www.scala-lang.org/api/current/scala/concurrent/Future.html" target="_blank">APIドキュメント</a>を見てみてください。また複数のFuture生成や<a href="https://qiita.com/mtoyoshi/items/297f6acdfe610440c719" target="_blank">並列実行に関してのまとめられた日本語の記事</a>もありますので、複雑な操作を試してみたい際にはぜひ参考にしてみてください。</p>
+<h2 id="promiseとは"><a name="promiseとは" class="plugin-anchor" href="#promiseとは"><i class="fa fa-link" aria-hidden="true"></i></a>Promiseとは</h2>
+<p><a href="https://www.scala-lang.org/api/current/scala/concurrent/Promise.html" target="_blank">Promise</a>とは、</p>
+<p>成功あるいは失敗を表す値を設定することによってFutureに変換することのできるクラスです。 実際にサンプルコードを示します。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">ExecutionContext</span>.<span class="hljs-type">Implicits</span>.global
+<span class="hljs-keyword">import</span> scala.concurrent.{<span class="hljs-type">Await</span>, <span class="hljs-type">Promise</span>, <span class="hljs-type">Future</span>}
+<span class="hljs-keyword">import</span> scala.concurrent.duration._
+<span class="hljs-keyword">import</span> scala.util.{<span class="hljs-type">Success</span>, <span class="hljs-type">Failure</span>}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">PromiseSample</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> promiseGetInt: <span class="hljs-type">Promise</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Promise</span>[<span class="hljs-type">Int</span>]()
+    <span class="hljs-keyword">val</span> futureByPromise: <span class="hljs-type">Future</span>[<span class="hljs-type">Int</span>] = promiseGetInt.future <span class="hljs-comment">// PromiseからFutureを作ることが出来る</span>
+
+    <span class="hljs-comment">// Promiseが解決されたときに実行される処理をFutureを使って書くことが出来る</span>
+    <span class="hljs-keyword">val</span> mappedFuture = futureByPromise.map { i =&gt;
+      println(<span class="hljs-string">s&quot;Success! i: <span class="hljs-subst">${i}</span>&quot;</span>)
+    }
+
+    <span class="hljs-comment">// 別スレッドで何か重い処理をして、終わったらPromiseに値を渡す</span>
+    <span class="hljs-type">Future</span> {
+      <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">300</span>)
+      promiseGetInt.success(<span class="hljs-number">1</span>)
+    }
+
+    <span class="hljs-type">Await</span>.ready(mappedFuture, <span class="hljs-number">5000.</span>millisecond)
+  }
+}
+</code></pre>
+<p>この処理は必ず<code>Success! i: 1</code>という値を表示します。このようにPromiseに値を渡すことで（Promiseから生成した）Futureを完了させることができます。</p>
+<p>上の例はPromise自体の動作説明のためにFuture内でPromiseを使っています。通常はFutureの返り値を利用すればよいため、今の使い方ではあまりメリットがありません。そこで今度はPromiseのよくある使い方の例として、callbackを指定するタイプの非同期処理をラップしてFutureを返すパターンを紹介します。</p>
+<p>下記の例では、CallBackSomethingをラップしたFutureSomethingを定義しています。 <code>doSomething</code> の中でPromiseが使われていることに注目してください。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">ExecutionContext</span>.<span class="hljs-type">Implicits</span>.global
+<span class="hljs-keyword">import</span> scala.concurrent.{<span class="hljs-type">Await</span>, <span class="hljs-type">Future</span>, <span class="hljs-type">Promise</span>}
+<span class="hljs-keyword">import</span> scala.concurrent.duration._
+<span class="hljs-keyword">import</span> scala.util.{<span class="hljs-type">Failure</span>, <span class="hljs-type">Random</span>, <span class="hljs-type">Success</span>}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CallbackSomething</span> </span>{
+  <span class="hljs-keyword">val</span> random = <span class="hljs-keyword">new</span> <span class="hljs-type">Random</span>()
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">doSomething</span></span>(onSuccess: <span class="hljs-type">Int</span> =&gt; <span class="hljs-type">Unit</span>, onFailure: <span class="hljs-type">Throwable</span> =&gt; <span class="hljs-type">Unit</span>): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> i = random.nextInt(<span class="hljs-number">10</span>)
+    <span class="hljs-keyword">if</span>(i &lt; <span class="hljs-number">5</span>) onSuccess(i) <span class="hljs-keyword">else</span> onFailure(<span class="hljs-keyword">new</span> <span class="hljs-type">RuntimeException</span>(i.toString))
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FutureSomething</span> </span>{
+  <span class="hljs-keyword">val</span> callbackSomething = <span class="hljs-keyword">new</span> <span class="hljs-type">CallbackSomething</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">doSomething</span></span>(): <span class="hljs-type">Future</span>[<span class="hljs-type">Int</span>] = {
+    <span class="hljs-keyword">val</span> promise = <span class="hljs-type">Promise</span>[<span class="hljs-type">Int</span>]()
+    callbackSomething.doSomething(i =&gt; promise.success(i), t =&gt; promise.failure(t))
+    promise.future
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">CallbackFuture</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> futureSomething = <span class="hljs-keyword">new</span> <span class="hljs-type">FutureSomething</span>
+
+    <span class="hljs-keyword">val</span> iFuture = futureSomething.doSomething()
+    <span class="hljs-keyword">val</span> jFuture = futureSomething.doSomething()
+
+    <span class="hljs-keyword">val</span> iplusj = <span class="hljs-keyword">for</span> {
+      i &lt;- iFuture
+      j &lt;- jFuture
+    } <span class="hljs-keyword">yield</span> i + j
+
+    <span class="hljs-keyword">val</span> result = <span class="hljs-type">Await</span>.result(iplusj, <span class="hljs-type">Duration</span>.<span class="hljs-type">Inf</span>)
+    println(result)
+  }
+}
+</code></pre>
+<p>「Promiseには成功/失敗した時の値を設定できる」「PromiseからFutureを作ることが出来る」という2つの性質を利用して、
+callbackをFutureにすることができました。</p>
+<p>callbackを使った非同期処理は今回のような例に限らず、Httpクライアントで非同期リクエストを行う場合などで必要になることがあります。柔軟なエラー処理が必要な場合、callbackよりFutureの方が有利な場面があるため、Promiseを使って変換可能であることを覚えておくとよいでしょう。</p>
+<h3 id="演習：-カウントダウンラッチ"><a name="演習：-カウントダウンラッチ" class="plugin-anchor" href="#演習：-カウントダウンラッチ"><i class="fa fa-link" aria-hidden="true"></i></a>演習： カウントダウンラッチ</h3>
+<p>それでは、演習をやってみましょう。
+FutureやPromiseの便利な特性を利用して、0〜1000ミリ秒間のランダムな時間を待つ8個のFutureを定義し、そのうちの3つが終わり次第すぐにその3つの待ち時間を全て出力するという実装をしてみましょう。なお、この動きは、Javaの並行処理のためのユーティリティである、
+<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/concurrent/CountDownLatch.html" target="_blank">CountDownLatch</a>というクラスの動きの一部を模したものとなります。</p>
+<div><button type="button" id="answer_ex1_show_answer_button" style="display:block" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;block&apos;; ">解答例を表示する</button><button type="button" id="answer_ex1_hide_answer_button" style="display:none" onclick="document.getElementById(&apos;answer_ex1&apos;).style.display=&apos;none&apos;; document.getElementById(&apos;answer_ex1_show_answer_button&apos;).style.display=&apos;block&apos;; document.getElementById(&apos;answer_ex1_hide_answer_button&apos;).style.display=&apos;none&apos;; ">解答例を隠す</button></div><div id="answer_ex1" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> java.util.concurrent.atomic.<span class="hljs-type">AtomicInteger</span>
+<span class="hljs-keyword">import</span> scala.concurrent.<span class="hljs-type">ExecutionContext</span>.<span class="hljs-type">Implicits</span>.global
+<span class="hljs-keyword">import</span> scala.concurrent.{<span class="hljs-type">Promise</span>, <span class="hljs-type">Future</span>}
+<span class="hljs-keyword">import</span> scala.util.<span class="hljs-type">Random</span>
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">CountDownLatchSample</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]): <span class="hljs-type">Unit</span> = {
+    <span class="hljs-keyword">val</span> indexHolder = <span class="hljs-keyword">new</span> <span class="hljs-type">AtomicInteger</span>(<span class="hljs-number">0</span>)
+    <span class="hljs-keyword">val</span> random = <span class="hljs-keyword">new</span> <span class="hljs-type">Random</span>()
+    <span class="hljs-keyword">val</span> promises: <span class="hljs-type">Seq</span>[<span class="hljs-type">Promise</span>[<span class="hljs-type">Int</span>]] = <span class="hljs-keyword">for</span> {i &lt;- <span class="hljs-number">1</span> to <span class="hljs-number">3</span>} <span class="hljs-keyword">yield</span> <span class="hljs-type">Promise</span>[<span class="hljs-type">Int</span>]()
+    <span class="hljs-keyword">val</span> futures: <span class="hljs-type">Seq</span>[<span class="hljs-type">Future</span>[<span class="hljs-type">Int</span>]] = <span class="hljs-keyword">for</span> {i &lt;- <span class="hljs-number">1</span> to <span class="hljs-number">8</span>} <span class="hljs-keyword">yield</span> <span class="hljs-type">Future</span>[<span class="hljs-type">Int</span>] {
+      <span class="hljs-keyword">val</span> waitMilliSec = random.nextInt(<span class="hljs-number">1001</span>)
+      <span class="hljs-type">Thread</span>.sleep(waitMilliSec)
+      waitMilliSec
+    }
+    futures.foreach { f =&gt; f.foreach { waitMilliSec =&gt;
+      <span class="hljs-keyword">val</span> index = indexHolder.getAndIncrement
+      <span class="hljs-keyword">if</span>(index &lt; promises.length) {
+        promises(index).success(waitMilliSec)
+      }
+    }}
+    promises.foreach { p =&gt; p.future.foreach { waitMilliSec =&gt; println(waitMilliSec)}}
+    <span class="hljs-type">Thread</span>.sleep(<span class="hljs-number">5000</span>)
+  }
+}
+</code></pre>
+</div>
+<p>上記のコードを簡単に説明すると、指定された処理を行うFutureの配列を用意し、それらがそれぞれ成功した時に
+AtomicIntegerで確保されているindexをアトミックにインクリメントさせながら、
+Promiseの配列のそれぞれに成功結果を定義しています。そして、最後にPromiseの配列から作り出した全てのFutureに対して、コンソールに出力をさせる処理を定義します。基本的なFutureとPromiseを使った処理で表現されていますが、ひとつ気をつけなくてはいけないのはAtomicIntegerの部分です。これはFutureに渡した関数の中では、同じスレッドが利用されているとは限らないために必要となる部分です。別なスレッドから変更される値に関しては、値を原子的に更新するようにコードを書かなければなりません。プリミティブな値に関して原子的な操作を提供するのが
+<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html" target="_blank">AtomicInteger</a>というJavaのクラスとなります。<sup><a href="#fn_2" id="reffn_2">2</a></sup>
+以上が解答例でした。</p>
+<p>ちなみに、このような複雑なイベント処理は既にJavaの<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/concurrent/package-summary.html" target="_blank">concurrentパッケージ</a>にいくつか実装があるので実際の利用ではそれらを用いることもできます。</p>
+<blockquote id="fn_1">
+<sup>1</sup>. ただし、Java 8から追加されたjava.util.concurrent.Futureのサブクラスである<a href="https://docs.oracle.com/javase/jp/8/docs/api/java/util/concurrent/CompletableFuture.html" target="_blank">CompletableFuture</a>には、関数を引数にとるメソッドがあります。<a href="#reffn_1" title="Jump back to footnote [1] in the text."> ↩</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. 値の原子的な更新や同期の必要性などの並行処理に関する様々な話題の詳細な解説は本書の範囲をこえてしまうため割愛します。「Java Concurrency in Practice」ないしその和訳「Java並行処理プログラミング ー その「基盤」と「最新API」を究める」や「Effective Java」といった本でこれらの話題について学ぶことが出来ます。<a href="#reffn_2" title="Jump back to footnote [2] in the text."> ↩</a>
+</blockquote>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="introduction-to-typeclass.html" class="navigation navigation-prev " aria-label="Previous page: 型クラスへの誘い">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="test.html" class="navigation navigation-next " aria-label="Next page: テスト">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"FutureとPromise","level":"1.19","depth":1,"next":{"title":"テスト","level":"1.20","depth":1,"path":"test.md","ref":"test.md","articles":[]},"previous":{"title":"型クラスへの誘い","level":"1.18","depth":1,"path":"introduction-to-typeclass.md","ref":"introduction-to-typeclass.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"future-and-promise.md","mtime":"2024-09-17T00:28:15.080Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-09-17T00:28:20.773Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
