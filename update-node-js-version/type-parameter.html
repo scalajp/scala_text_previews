@@ -1,0 +1,809 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>型パラメータと変位指定 · Scala研修テキスト</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-forkmegithub/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="function.html" />
+    
+    
+    <link rel="prev" href="trait.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="introduction-to-scala.html">
+            
+                <a href="introduction-to-scala.html">
+            
+                    
+                    Scalaとは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="sbt-install.html">
+            
+                <a href="sbt-install.html">
+            
+                    
+                    sbtをインストールする
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    Scalaの基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="sbt-compile-execute.html">
+            
+                <a href="sbt-compile-execute.html">
+            
+                    
+                    sbtでプログラムをコンパイル・実行する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="IDE.html">
+            
+                <a href="IDE.html">
+            
+                    
+                    IDE(IntelliJ IDEA)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="notation.html">
+            
+                <a href="notation.html">
+            
+                    
+                    記法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="control-syntax.html">
+            
+                <a href="control-syntax.html">
+            
+                    
+                    Scalaの制御構文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    クラス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    オブジェクト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="trait.html">
+            
+                <a href="trait.html">
+            
+                    
+                    トレイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="type-parameter.html">
+            
+                <a href="type-parameter.html">
+            
+                    
+                    型パラメータと変位指定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="collection.html">
+            
+                <a href="collection.html">
+            
+                    
+                    コレクションライブラリ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="case-class-and-pattern-matching.html">
+            
+                <a href="case-class-and-pattern-matching.html">
+            
+                    
+                    ケースクラスとパターンマッチング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    エラー処理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="implicit.html">
+            
+                <a href="implicit.html">
+            
+                    
+                    Implicit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="introduction-to-typeclass.html">
+            
+                <a href="introduction-to-typeclass.html">
+            
+                    
+                    型クラスへの誘い
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="future-and-promise.html">
+            
+                <a href="future-and-promise.html">
+            
+                    
+                    FutureとPromise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="test.html">
+            
+                <a href="test.html">
+            
+                    
+                    テスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="java-interop.html">
+            
+                <a href="java-interop.html">
+            
+                    
+                    Javaとの相互運用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="exercises.html">
+            
+                <a href="exercises.html">
+            
+                    
+                    S99の案内
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="advanced-trait-di.html">
+            
+                <a href="advanced-trait-di.html">
+            
+                    
+                    トレイトの応用編：依存性の注入によるリファクタリング
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="typeclass.html">
+            
+                <a href="typeclass.html">
+            
+                    
+                    付録：様々な型クラスの紹介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >型パラメータと変位指定</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="型パラメータ（type-parameter）"><a name="型パラメータ（type-parameter）" class="plugin-anchor" href="#型パラメータ（type-parameter）"><i class="fa fa-link" aria-hidden="true"></i></a>型パラメータ（type parameter）</h1>
+<p>クラスの節では触れませんでしたが、クラスは0個以上の型をパラメータとして取ることができます。これは、クラスを作る時点では何の型か特定できない場合（たとえば、コレクションクラスの要素の型）を表したい時に役に立ちます。型パラメータを入れたクラス定義の文法は次のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">&lt;クラス名&gt;</span>[&lt;型パラメータ1&gt;, &lt;型パラメータ2&gt;, ...](<span class="hljs-params">&lt;クラス引数&gt;</span>) </span>{
+  (&lt;フィールド定義&gt;|&lt;メソッド定義&gt;)*
+}
+</code></pre>
+<p>型パラメータの並びにはそれぞれ好きな名前を付け、クラス定義の中で使うことができます。Scala言語では最初から順に、 <code>A</code>、<code>B</code>、…と命名する慣習がありますので、それに合わせるのが無難です。</p>
+<p>簡単な例として、1個の要素を保持して、要素を入れる（<code>put</code>する）か取りだす（<code>get</code>する）操作ができるクラス<code>Cell</code>を定義してみます。<code>Cell</code>の定義は次のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cell</span>[<span class="hljs-type">A</span>](<span class="hljs-params">var value: <span class="hljs-type">A</span></span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span></span>(newValue: <span class="hljs-type">A</span>): <span class="hljs-type">Unit</span> = {
+    value = newValue
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span></span>(): <span class="hljs-type">A</span> = value
+}
+</code></pre>
+<p>これをREPLで使ってみましょう。</p>
+<pre><code class="lang-scala">scala&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cell</span>[<span class="hljs-type">A</span>](<span class="hljs-params">var value: <span class="hljs-type">A</span></span>) </span>{
+     |   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span></span>(newValue: <span class="hljs-type">A</span>): <span class="hljs-type">Unit</span> = {
+     |     value = newValue
+     |   }
+     |   
+     |   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span></span>(): <span class="hljs-type">A</span> = value
+     | }
+defined <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cell</span></span>
+
+scala&gt; <span class="hljs-keyword">val</span> cell = <span class="hljs-keyword">new</span> <span class="hljs-type">Cell</span>[<span class="hljs-type">Int</span>](<span class="hljs-number">1</span>)
+cell: <span class="hljs-type">Cell</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Cell</span>@<span class="hljs-number">192</span>aaffb
+
+scala&gt; cell.put(<span class="hljs-number">2</span>)
+
+scala&gt; cell.get()
+res1: <span class="hljs-type">Int</span> = <span class="hljs-number">2</span>
+
+scala&gt; cell.put(<span class="hljs-string">"something"</span>)
+&lt;console&gt;:<span class="hljs-number">10</span>: error: <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">mismatch</span></span>;
+ found   : <span class="hljs-type">String</span>(<span class="hljs-string">"something"</span>)
+ required: <span class="hljs-type">Int</span>
+              cell.put(<span class="hljs-string">"something"</span>)
+                       ^
+</code></pre>
+<p>上記コードの</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> cell = <span class="hljs-keyword">new</span> <span class="hljs-type">Cell</span>[<span class="hljs-type">Int</span>](<span class="hljs-number">1</span>)
+<span class="hljs-comment">// cell: Cell[Int] = repl.MdocSession$MdocApp$Cell$1@58921f95</span>
+</code></pre>
+<p>の部分で、型パラメータとして<code>Int</code>型を与えて、その初期値として1を与えています。型パラメータに<code>Int</code>を与えて<code>Cell</code>をインスタンス化したため、REPLでは<code>String</code>を<code>put</code>しようとして、コンパイラにエラーとしてはじかれています。<code>Cell</code>は様々な型を与えてインスタンス化したいクラスであるため、クラス定義時には特定の型を与えることができません。そういった場合に、型パラメータは役に立ちます。</p>
+<p>次に、もう少し実用的な例をみてみましょう。メソッドから複数の値を返したい、という要求はプログラミングを行う上でよく発生します。複数の値を返す言語サポート（SchemeやGo等の言語が持っています）も型パラメータも無い言語では、</p>
+<ul>
+<li>片方を返り値として、もう片方を引数を経由して返す</li>
+<li>複数の返り値専用のクラスを必要になる度に作る</li>
+</ul>
+<p>という選択肢しかありませんでした。しかし、前者は引数を返り値に使うという点で邪道ですし、後者の方法は多数の引数を返したい、あるいは解く問題上で意味のある名前の付けられるクラスであれば良いですが、ただ2つの値を返したいといった場合には小回りが効かず不便です。こういう場合、型パラメータを2つ取る<code>Pair</code>クラスを作ってしまいます。<code>Pair</code>クラスの定義は次のようになります。<code>toString</code>メソッドの定義は後で表示のために使うだけなので気にしないでください。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pair</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](<span class="hljs-params">val a: <span class="hljs-type">A</span>, val b: <span class="hljs-type">B</span></span>) </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>(): <span class="hljs-type">String</span> = <span class="hljs-string">"("</span> + a + <span class="hljs-string">","</span> + b + <span class="hljs-string">")"</span>
+}
+</code></pre>
+<p>このクラス<code>Pair</code>の利用法としては、たとえば割り算の商と余りの両方を返すメソッド<code>divide</code>が挙げられます。<code>divide</code>の定義は次のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span></span>(m: <span class="hljs-type">Int</span>, n: <span class="hljs-type">Int</span>): <span class="hljs-type">Pair</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">Int</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Pair</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">Int</span>](m / n, m % n)
+</code></pre>
+<p>これらをREPLにまとめて流し込むと次のようになります。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pair</span>[<span class="hljs-type">A</span>, <span class="hljs-type">B</span>](<span class="hljs-params">val a: <span class="hljs-type">A</span>, val b: <span class="hljs-type">B</span></span>) </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>(): <span class="hljs-type">String</span> = <span class="hljs-string">"("</span> + a + <span class="hljs-string">","</span> + b + <span class="hljs-string">")"</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span></span>(m: <span class="hljs-type">Int</span>, n: <span class="hljs-type">Int</span>): <span class="hljs-type">Pair</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">Int</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Pair</span>[<span class="hljs-type">Int</span>, <span class="hljs-type">Int</span>](m / n, m % n)
+
+divide(<span class="hljs-number">7</span>, <span class="hljs-number">3</span>)
+<span class="hljs-comment">// res0: Pair[Int, Int] = (2,1)</span>
+</code></pre>
+<p>7割る3の商と余りが<code>res0</code>に入っていることがわかります。なお、ここでは<code>new Pair[Int, Int](m / n, m % n)</code>としましたが、引数の型から型パラメータの型を推測できる場合、省略できます。この場合、<code>Pair</code>のコンストラクタに与える引数は<code>Int</code>と<code>Int</code>なので、<code>new Pair(m / n, m % n)</code>としても同じ意味になります。この<code>Pair</code>は2つの異なる型（同じ型でも良い）を返り値として返したい全ての場合に使うことができます。このように、どの型でも同じ処理を行う場合を抽象化できるのが型パラメータの利点です。</p>
+<p>ちなみに、この<code>Pair</code>のようなクラスはScalaではよく使われるため、<code>Tuple1</code>から<code>Tuple22</code>(<code>Tuple</code>の後の数字は要素数）があらかじめ用意されています。また、インスタンス化する際も、</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> m = <span class="hljs-number">7</span>
+<span class="hljs-comment">// m: Int = 7</span>
+<span class="hljs-keyword">val</span> n = <span class="hljs-number">3</span>
+<span class="hljs-comment">// n: Int = 3</span>
+<span class="hljs-keyword">new</span> <span class="hljs-type">Tuple2</span>(m / n, m % n)
+<span class="hljs-comment">// res1: (Int, Int) = (2, 1)</span>
+</code></pre>
+<p>などとしなくても、</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> m = <span class="hljs-number">7</span>
+<span class="hljs-comment">// m: Int = 7</span>
+<span class="hljs-keyword">val</span> n = <span class="hljs-number">3</span>
+<span class="hljs-comment">// n: Int = 3</span>
+(m / n, m % n)
+<span class="hljs-comment">// res2: (Int, Int) = (2, 1)</span>
+</code></pre>
+<p>とすれば良いようになっています。</p>
+<h2 id="変位指定（variance）"><a name="変位指定（variance）" class="plugin-anchor" href="#変位指定（variance）"><i class="fa fa-link" aria-hidden="true"></i></a>変位指定（variance）</h2>
+<p>この節では、型パラメータに関する性質である反変、共変について学びます。</p>
+<p>変位指定は使いこなすのが難しいため、自作クラスで利用する場合には注意が必要です。 まずは、変位指定が利用されたコードを読めるようになることを目指しましょう。</p>
+<h3 id="共変（covariant）"><a name="共変（covariant）" class="plugin-anchor" href="#共変（covariant）"><i class="fa fa-link" aria-hidden="true"></i></a>共変（covariant）</h3>
+<p>Scalaでは、何も指定しなかった型パラメータは通常は <strong>非変（invariant）</strong> になります。非変というのは、型パラメータを持ったクラス<code>G</code>、型パラメータ<code>A</code>と<code>B</code>があったとき、<code>A</code> = <code>B</code>のときにのみ</p>
+<pre><code>val : G[A] = G[B]
+</code></pre><p>というような代入が許されるという性質を表します。これは、違う型パラメータを与えたクラスは違う型になることを考えれば自然な性質です。ここであえて非変について言及したのは、Javaの組み込み配列クラスは標準で非変ではなく共変であるという設計ミスを犯しているからです。</p>
+<p>ここでまだ共変について言及していなかったので、簡単に定義を示しましょう。共変というのは、型パラメータを持ったクラス<code>G</code>、型パラメータ<code>A</code>と<code>B</code>があったとき、<code>A</code> が <code>B</code> を継承しているときにのみ、</p>
+<pre><code>val : G[B] = G[A]
+</code></pre><p>というような代入が許される性質を表します。Scalaでは、クラス定義時に</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">G</span>[+<span class="hljs-type">A</span>]</span>
+</code></pre>
+<p>のように型パラメータの前に<code>+</code>を付けるとその型パラメータは（あるいはそのクラスは）共変になります。</p>
+<p>このままだと定義が抽象的でわかりづらいかもしれないので、具体的な例として配列型を挙げて説明します。配列型はJavaでは共変なのに対してScalaでは非変であるという点において、面白い例です。まずはJavaの例です。<code>G</code> = 配列、 <code>A</code> = <code>String</code>, <code>B</code> = <code>Object</code>として読んでください。</p>
+<pre><code class="lang-java">Object[] objects = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[<span class="hljs-number">1</span>];
+objects[<span class="hljs-number">0</span>] = <span class="hljs-number">100</span>;
+</code></pre>
+<p>このコード断片はJavaのコードとしてはコンパイルを通ります。ぱっと見でも、<code>Object</code>の配列を表す変数に<code>String</code>の配列を渡すことができるのは理にかなっているように思えます。しかし、このコードを実行すると例外 <a href="https://docs.oracle.com/javase/jp/8/docs/api/java/lang/ArrayStoreException.html" target="_blank"><code>java.lang.ArrayStoreException</code></a> が発生します。これは、<code>objects</code>に入っているのが実際には<code>String</code>の配列（<code>String</code>のみを要素として持つ）なのに、2行目で<code>int</code>型（ボクシング変換されて<code>Integer</code>型）の値である<code>100</code>を渡そうとしていることによります。</p>
+<p>一方、Scalaでは同様のコードの一行目に相当するコードをコンパイルしようとした時点で、次のようなコンパイルエラーが出ます（<code>Any</code>は全ての型のスーパークラスで、<code>AnyRef</code>に加え、<code>AnyVal</code>（値型）の値も格納できます）。</p>
+<pre><code class="lang-scala">scala&gt; <span class="hljs-keyword">val</span> arr: <span class="hljs-type">Array</span>[<span class="hljs-type">Any</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>](<span class="hljs-number">1</span>)
+&lt;console&gt;:<span class="hljs-number">7</span>: error: <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">mismatch</span></span>;
+ found   : <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]
+ required: <span class="hljs-type">Array</span>[<span class="hljs-type">Any</span>]
+</code></pre>
+<p>このような結果になるのは、Scalaでは配列は非変だからです。静的型付き言語の型安全性とは、コンパイル時により多くのプログラミングエラーを捕捉するものであるとするなら、配列の設計はScalaの方がJavaより型安全であると言えます。</p>
+<p>さて、Scalaでは型パラメータを共変にした時点で、安全ではない操作はコンパイラがエラーを出してくれるので安心ですが、共変をどのような場合に使えるかを知っておくのは意味があります。たとえば、先ほど作成したクラス<code>Pair[A, B]</code>について考えてみましょう。<code>Pair[A, B]</code>は一度インスタンス化したら、変更する操作ができませんから、<code>ArrayStoreException</code>のような例外は起こり得ません。実際、<code>Pair[A, B]</code>は安全に共変にできるクラスで、<code>class Pair[+A, +B]</code>のようにしても問題が起きません。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pair</span>[+<span class="hljs-type">A</span>, +<span class="hljs-type">B</span>](<span class="hljs-params">val a: <span class="hljs-type">A</span>, val b: <span class="hljs-type">B</span></span>) </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">toString</span></span>(): <span class="hljs-type">String</span> = <span class="hljs-string">"("</span> + a + <span class="hljs-string">","</span> + b + <span class="hljs-string">")"</span>
+}
+
+<span class="hljs-keyword">val</span> pair: <span class="hljs-type">Pair</span>[<span class="hljs-type">AnyRef</span>, <span class="hljs-type">AnyRef</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">Pair</span>[<span class="hljs-type">String</span>, <span class="hljs-type">String</span>](<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>)
+<span class="hljs-comment">// pair: Pair[AnyRef, AnyRef] = (foo,bar)</span>
+</code></pre>
+<p>ここで、<code>Pair</code>は作成時に値を与えたら後は変更できず、したがって<code>ArrayStoreException</code>のような例外が発生する余地がないことがわかります。一般的には、一度作成したら変更できない（immutable）などの型パラメータは共変にしても多くの場合問題がありません。</p>
+<h4 id="練習問題"><a name="練習問題" class="plugin-anchor" href="#練習問題"><i class="fa fa-link" aria-hidden="true"></i></a>練習問題</h4>
+<p>次の<em>immutable</em>な<em>Stack</em>型の定義（途中）があります。<code>???</code>の箇所を埋めて、<em>Stack</em>の定義を完成させなさい。なお、<code>E &gt;: A</code>は、<code>E</code>は<code>A</code>の継承元である、という制約を表しています。</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">Stack</span>[+<span class="hljs-type">A</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">push</span></span>[<span class="hljs-type">E</span> &gt;: <span class="hljs-type">A</span>](e: <span class="hljs-type">E</span>): <span class="hljs-type">Stack</span>[<span class="hljs-type">E</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">top</span></span>: <span class="hljs-type">A</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pop</span></span>: <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>: <span class="hljs-type">Boolean</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NonEmptyStack</span>[+<span class="hljs-type">A</span>](<span class="hljs-params">private val first: <span class="hljs-type">A</span>, private val rest: <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>]</span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Stack</span>[<span class="hljs-type">A</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">push</span></span>[<span class="hljs-type">E</span> &gt;: <span class="hljs-type">A</span>](e: <span class="hljs-type">E</span>): <span class="hljs-type">Stack</span>[<span class="hljs-type">E</span>] = ???
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">top</span></span>: <span class="hljs-type">A</span> = ???
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pop</span></span>: <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>] = ???
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>: <span class="hljs-type">Boolean</span> = ???
+}
+
+<span class="hljs-keyword">case</span> <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">EmptyStack</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Stack</span>[<span class="hljs-type">Nothing</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">push</span></span>[<span class="hljs-type">E</span> &gt;: <span class="hljs-type">Nothing</span>](e: <span class="hljs-type">E</span>): <span class="hljs-type">Stack</span>[<span class="hljs-type">E</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">NonEmptyStack</span>[<span class="hljs-type">E</span>](e, <span class="hljs-keyword">this</span>)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">top</span></span>: <span class="hljs-type">Nothing</span> = <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"empty stack"</span>)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pop</span></span>: <span class="hljs-type">Nothing</span> = <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-type">IllegalArgumentException</span>(<span class="hljs-string">"empty stack"</span>)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>
+}
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Stack</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">apply</span></span>(): <span class="hljs-type">Stack</span>[<span class="hljs-type">Nothing</span>] = <span class="hljs-type">EmptyStack</span>
+}
+</code></pre>
+<p>また、<code>Nothing</code>は全ての型のサブクラスであるような型を表現します。<code>Stack[A]</code>は共変なので、<code>Stack[Nothing]</code>はどんな型の<code>Stack</code>変数にでも格納することができます。例えば<code>Stack[Nothing]</code>型である<code>EmptyStack</code>は、<code>Stack[Int]</code>型の変数と<code>Stack[String]</code>型の変数の両方に代入することができます。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> intStack: <span class="hljs-type">Stack</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">Stack</span>()
+<span class="hljs-comment">// intStack: Stack[Int] = EmptyStack</span>
+<span class="hljs-keyword">val</span> stringStack: <span class="hljs-type">Stack</span>[<span class="hljs-type">String</span>] = <span class="hljs-type">Stack</span>()
+<span class="hljs-comment">// stringStack: Stack[String] = EmptyStack</span>
+</code></pre>
+<div><button type="button" id="answer_ex1_show_answer_button" style="display:block" onclick="document.getElementById('answer_ex1').style.display='block'; document.getElementById('answer_ex1_show_answer_button').style.display='none'; document.getElementById('answer_ex1_hide_answer_button').style.display='block'; ">解答例を表示する</button><button type="button" id="answer_ex1_hide_answer_button" style="display:none" onclick="document.getElementById('answer_ex1').style.display='none'; document.getElementById('answer_ex1_show_answer_button').style.display='block'; document.getElementById('answer_ex1_hide_answer_button').style.display='none'; ">解答例を隠す</button></div><div id="answer_ex1" style="display:none">
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NonEmptyStack</span>[+<span class="hljs-type">A</span>](<span class="hljs-params">private val first: <span class="hljs-type">A</span>, private val rest: <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>]</span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Stack</span>[<span class="hljs-type">A</span>] </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">push</span></span>[<span class="hljs-type">E</span> &gt;: <span class="hljs-type">A</span>](e: <span class="hljs-type">E</span>): <span class="hljs-type">Stack</span>[<span class="hljs-type">E</span>] = <span class="hljs-keyword">new</span> <span class="hljs-type">NonEmptyStack</span>[<span class="hljs-type">E</span>](e, <span class="hljs-keyword">this</span>)
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">top</span></span>: <span class="hljs-type">A</span> = first
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pop</span></span>: <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>] = rest
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">false</span>
+}
+</code></pre>
+</div>
+<h3 id="反変（contravariant）"><a name="反変（contravariant）" class="plugin-anchor" href="#反変（contravariant）"><i class="fa fa-link" aria-hidden="true"></i></a>反変（contravariant）</h3>
+<p>次は共変とちょうど対になる性質である反変です。簡単に定義を示しましょう。反変というのは、型パラメータを持ったクラス<code>G</code>、型パラメータ<code>A</code>と<code>B</code>があったとき、<code>A</code> が <code>B</code> を継承しているときにのみ、</p>
+<pre><code>val : G[A] = G[B]
+</code></pre><p>というような代入が許される性質を表します。Scalaでは、クラス定義時に</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">G</span>[-<span class="hljs-type">A</span>]</span>
+</code></pre>
+<p>のように型パラメータの前に<code>-</code>を付けるとその型パラメータは（あるいはそのクラスは）反変になります。</p>
+<p>反変の例として最もわかりやすいものの1つが関数の型です。たとえば、型<code>A</code>と<code>B</code>があったとき、</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> x1: <span class="hljs-type">A</span> =&gt; <span class="hljs-type">AnyRef</span> = <span class="hljs-type">B</span> =&gt; <span class="hljs-type">AnyRef</span>型の値
+x1(<span class="hljs-type">A</span>型の値)
+</code></pre>
+<p>というプログラムの断片が成功するためには、<code>A</code>が<code>B</code>を継承する必要があります。その逆では駄目です。仮に、<code>A = String</code>, <code>B = AnyRef</code> として考えてみましょう。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> x1: <span class="hljs-type">String</span> =&gt; <span class="hljs-type">AnyRef</span> = <span class="hljs-type">AnyRef</span> =&gt; <span class="hljs-type">AnyRef</span>型の値
+x1(<span class="hljs-type">String</span>型の値)
+</code></pre>
+<p>ここで<code>x1</code>に実際に入っているのは<code>AnyRef =&gt; AnyRef</code>型の値であるため、引数として<code>String</code>型の値を与えても、<code>AnyRef</code>型の引数に<code>String</code>型の値を与えるのと同様であり、問題なく成功します。<code>A</code>と<code>B</code>が逆で、<code>A = AnyRef</code>, <code>B = String</code>の場合、<code>String</code>型の引数に<code>AnyRef</code>型の値を与えるのと同様になってしまうので、これは<code>x1</code>へ値を代入する時点でコンパイルエラーになるべきであり、実際にコンパイルエラーになります。</p>
+<p>実際にREPLで試してみましょう。</p>
+<pre><code class="lang-scala">scala&gt; <span class="hljs-keyword">val</span> x1: <span class="hljs-type">AnyRef</span> =&gt; <span class="hljs-type">AnyRef</span> = (x: <span class="hljs-type">String</span>) =&gt; (x:<span class="hljs-type">AnyRef</span>)
+&lt;console&gt;:<span class="hljs-number">7</span>: error: <span class="hljs-class"><span class="hljs-keyword">type</span> <span class="hljs-title">mismatch</span></span>;
+ found   : <span class="hljs-type">String</span> =&gt; <span class="hljs-type">AnyRef</span>
+ required: <span class="hljs-type">AnyRef</span> =&gt; <span class="hljs-type">AnyRef</span>
+       <span class="hljs-keyword">val</span> x1: <span class="hljs-type">AnyRef</span> =&gt; <span class="hljs-type">AnyRef</span> = (x: <span class="hljs-type">String</span>) =&gt; (x:<span class="hljs-type">AnyRef</span>)
+                                              ^
+
+scala&gt; <span class="hljs-keyword">val</span> x1: <span class="hljs-type">String</span> =&gt; <span class="hljs-type">AnyRef</span> = (x: <span class="hljs-type">AnyRef</span>) =&gt; x
+x1: <span class="hljs-type">String</span> =&gt; <span class="hljs-type">AnyRef</span> = &lt;function1&gt;
+</code></pre>
+<p>このように、先ほど述べたような結果になっています。</p>
+<h2 id="型パラメータの境界（bounds）"><a name="型パラメータの境界（bounds）" class="plugin-anchor" href="#型パラメータの境界（bounds）"><i class="fa fa-link" aria-hidden="true"></i></a>型パラメータの境界（bounds）</h2>
+<p>型パラメータ<code>T</code>に対して何も指定しない場合、その型パラメータ<code>T</code>は、どんな型でも入り得ることしかわかりません。そのため、何も指定しない型パラメータ<code>T</code>に対して呼び出せるメソッドは<code>Any</code>に対するもののみになります。しかし、たとえば、順序がある要素からなるリストをソートしたい場合など、<code>T</code>に対して制約を書けると便利な場合があります。そのような場合に使えるのが、型パラメータの境界（bounds）です。型パラメータの境界には2種類あります。</p>
+<h3 id="上限境界（upper-bounds）"><a name="上限境界（upper-bounds）" class="plugin-anchor" href="#上限境界（upper-bounds）"><i class="fa fa-link" aria-hidden="true"></i></a>上限境界（upper bounds）</h3>
+<p>1つ目は、型パラメータがどのような型を継承しているかを指定する上限境界（upper bounds）です。上限境界では、型パラメータの後に、<code>&lt;:</code>を記述し、それに続いて制約となる型を記述します。以下では、<code>show</code>によって文字列化できるクラス<code>Show</code>を定義したうえで、<code>Show</code>であるような型のみを要素として持つ<code>ShowablePair</code>を定義しています。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Show</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span></span>: <span class="hljs-type">String</span>
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ShowablePair</span>[<span class="hljs-type">A</span> &lt;: <span class="hljs-type">Show</span>, <span class="hljs-type">B</span> &lt;: <span class="hljs-type">Show</span>](<span class="hljs-params">val a: <span class="hljs-type">A</span>, val b: <span class="hljs-type">B</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">Show</span> </span>{
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span></span>: <span class="hljs-type">String</span> = <span class="hljs-string">"("</span> + a.show + <span class="hljs-string">","</span> + b.show + <span class="hljs-string">")"</span>
+}
+</code></pre>
+<p>ここで、型パラメータ<code>A</code>、<code>B</code>ともに上限境界として<code>Show</code>が指定されているため、<code>a</code>と<code>b</code>に対して<code>show</code>を呼び出すことができます。なお、上限境界を明示的に指定しなかった場合、<code>Any</code>が指定されたものとみなされます。</p>
+<h3 id="下限境界（lower-bounds）"><a name="下限境界（lower-bounds）" class="plugin-anchor" href="#下限境界（lower-bounds）"><i class="fa fa-link" aria-hidden="true"></i></a>下限境界（lower bounds）</h3>
+<p>2つ目は、型パラメータがどのような型のスーパータイプであるかを指定する下限境界（lower bounds）です。下限境界は、共変パラメータと共に用いることが多い機能です。実際に例を見ます。</p>
+<p>まず、共変の練習問題であったような、イミュータブルな<code>Stack</code>クラスを定義します。この<code>Stack</code>は共変にしたいとします。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stack</span>[+<span class="hljs-type">A</span>]</span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">push</span></span>(element: <span class="hljs-type">A</span>): <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">top</span></span>: <span class="hljs-type">A</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pop</span></span>: <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>: <span class="hljs-type">Boolean</span>
+}
+</code></pre>
+<p>しかし、この定義は、以下のようなコンパイルエラーになります。</p>
+<pre><code>error: covariant type A occurs in contravariant position in type A of value element
+         def push(element: A): Stack[A]
+                           ^
+</code></pre><p>このコンパイルエラーは、共変な型パラメータ<code>A</code>が反変な位置（反変な型パラメータが出現できる箇所）に出現したということを言っています。一般に、引数の位置に共変型パラメータ<code>E</code>の値が来た場合、型安全性が壊れる可能性があるため、このようなエラーが出ます。しかし、この<code>Stack</code>は配列と違ってイミュータブルであるため、本来ならば型安全性上の問題は起きません。この問題に対処するために型パラメータの下限境界を使うことができます。型パラメータ<code>E</code>を<code>push</code>に追加し、その下限境界として、<code>Stack</code>
+の型パラメータ<code>A</code>を指定します。</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stack</span>[+<span class="hljs-type">A</span>]</span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">push</span></span>[<span class="hljs-type">E</span> &gt;: <span class="hljs-type">A</span>](element: <span class="hljs-type">E</span>): <span class="hljs-type">Stack</span>[<span class="hljs-type">E</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">top</span></span>: <span class="hljs-type">A</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pop</span></span>: <span class="hljs-type">Stack</span>[<span class="hljs-type">A</span>]
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">isEmpty</span></span>: <span class="hljs-type">Boolean</span>
+}
+</code></pre>
+<p>このようにすることによって、コンパイラは、<code>Stack</code>には<code>A</code>の任意のスーパータイプの値が入れられる可能性があることがわかるようになります。そして、型パラメータ<code>E</code>は共変ではないため、どこに出現しても構いません。このようにして、下限境界を利用して、型安全な
+<code>Stack</code>と共変性を両立することができます。</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="trait.html" class="navigation navigation-prev " aria-label="Previous page: トレイト">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="function.html" class="navigation navigation-next " aria-label="Next page: 関数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"型パラメータと変位指定","level":"1.12","depth":1,"next":{"title":"関数","level":"1.13","depth":1,"path":"function.md","ref":"function.md","articles":[]},"previous":{"title":"トレイト","level":"1.11","depth":1,"path":"trait.md","ref":"trait.md","articles":[]},"dir":"ltr"},"config":{"plugins":["include-codeblock","japanese-support","footnote-string-to-number","anchors","regexplace","forkmegithub"],"root":"./honkit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"regexplace":{"substitutes":[{"pattern":"<!-- begin answer id=\"(.*)\" style=\"(.*)\" -->","flags":"g","substitute":"<div><button type=\"button\" id=\"$1_show_answer_button\" style=\"display:block\" onclick=\"document.getElementById('$1').style.display='block'; document.getElementById('$1_show_answer_button').style.display='none'; document.getElementById('$1_hide_answer_button').style.display='block'; \">解答例を表示する</button><button type=\"button\" id=\"$1_hide_answer_button\" style=\"display:none\" onclick=\"document.getElementById('$1').style.display='none'; document.getElementById('$1_show_answer_button').style.display='block'; document.getElementById('$1_hide_answer_button').style.display='none'; \">解答例を隠す</button></div><div id=\"$1\" style=\"$2\">"},{"pattern":"<!-- end answer -->","flags":"g","substitute":"</div>"}]},"search":{},"footnote-string-to-number":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"japanese-support":{},"highlight":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"forkmegithub":{"color":"darkblue","url":"https://github.com/scala-text/scala_text"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"INTRODUCTION.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scala研修テキスト","gitbook":"*"},"file":{"path":"type-parameter.md","mtime":"2024-10-03T22:41:56.246Z","type":"markdown"},"gitbook":{"version":"6.0.0","time":"2024-10-03T22:41:58.367Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-forkmegithub/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
